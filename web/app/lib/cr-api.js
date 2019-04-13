@@ -28,7 +28,8 @@ const apiUrls = {
     get topAiring() { return buildUrl('top/anime/1/airing'); },
     malDetails(id) { return buildUrl(`anime/${id}`); },
     webPage(name_token) { return buildWebUrl(`${name_token}`); },
-    listCollections(params) { return buildUrl(`list_collections.0.json`, params); }
+    listCollections(params) { return buildUrl(`list_collections.0.json`, params); },
+    listMedia(params) { return buildUrl(`list_media.0.json`, params); }
 }
 
 export default apiUrls;

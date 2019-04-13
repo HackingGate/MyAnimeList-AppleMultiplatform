@@ -41,10 +41,27 @@ var MalDetailsPage = ATV.Page.create({
 							.then((crcollexhr) => {
 
 								let firstCollectionId = crcollexhr.response.data[0].collection_id;
-								resolve({
-									response: xhr.response,
-									debug: firstCollectionId
+								
+								let reqUrl = CRAPI.listMedia({
+									collection_id: firstCollectionId,
+									include_clips: 0,
+									limit: 1000,
+									offset: 0,
+									fields: 'media.media_id,media.collection_id,media.collection_name,media.series_id,media.episode_number,media.name,media.series_name,media.description,media.premium_only',
+									locale: 'enUS',
+									version: '2.1.6'
 								});
+								ATV.Ajax
+									.get(reqUrl)
+									.then((crmediaxhr) => {
+										resolve({
+											response: xhr.response,
+											debug: crmediaxhr.response.data[0].name
+										});
+									}, (crmediaxhr) => {
+										// error
+										reject();
+									})						
 
 							}, (crcollexhr) => {
 								// error
