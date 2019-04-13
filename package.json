@@ -1,0 +1,29 @@
+{
+  "name": "appletv-myanimelist",
+  "version": "1.0.0",
+  "description": "MyAnimeList app for AppleTV using atvjs and Jikan API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackingGate/AppleTV-MyAnimeList.git"
+  },
+  "keywords": [
+    "appletv",
+    "tvml",
+    "app",
+    "tvjs",
+    "atvjs",
+    "tvmlkit",
+    "myanimelist",
+    "anime"
+  ],
+  "author": "HackingGate",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HackingGate/AppleTV-MyAnimeList/issues"
+  },
+  "homepage": "https://github.com/HackingGate/AppleTV-MyAnimeList#readme"
+}
