@@ -46,17 +46,17 @@ var MalDetailsPage = ATV.Page.create({
 									collection_id: firstCollectionId,
 									include_clips: 0,
 									limit: 1000,
-									offset: 0,
-									fields: 'media.media_id,media.collection_id,media.collection_name,media.series_id,media.episode_number,media.name,media.series_name,media.description,media.premium_only',
-									locale: 'enUS',
-									version: '2.1.6'
+									offset: 0
 								});
 								ATV.Ajax
 									.get(reqUrl)
 									.then((crmediaxhr) => {
+
+										let episodeArray = crmediaxhr.response.data;
 										resolve({
 											response: xhr.response,
-											debug: crmediaxhr.response.data[0].name
+											debug: episodeArray[0].name,
+											episodes: episodeArray
 										});
 									}, (crmediaxhr) => {
 										// error

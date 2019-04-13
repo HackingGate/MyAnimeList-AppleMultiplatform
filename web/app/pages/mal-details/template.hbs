@@ -26,6 +26,19 @@
 		</banner>
 		<shelf>
 			<header>
+				<title>Episodes</title>
+			</header>
+			<section>
+				{{#each episodes }}
+					<lockup data-href-page="mal-details" data-href-page-options="{{toJSON this }}">
+						<img class="tile" src="{{ screenshot_image.full_url }}"/>
+						<title class="showAndScrollTextOnHighlight">{{ episode_number }}. {{ name }}</title>
+					</lockup>
+				{{/each}}
+			</section>
+		</shelf>
+		<shelf>
+			<header>
 				<title>Related Animes</title>
 			</header>
 			<section>

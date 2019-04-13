@@ -47,6 +47,9 @@ const helpers = {
 		let str = [];
 		_.each(genres, (g) => str.push(g.name));
 		return new Handlebars.SafeString(str.join(', '));
+	},
+	crGetFullImgForEp(screenshot_image) {
+		return JSON.stringify(screenshot_image);;
 	}
 };
 
