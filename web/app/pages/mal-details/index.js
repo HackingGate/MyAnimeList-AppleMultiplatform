@@ -30,10 +30,26 @@ var MalDetailsPage = ATV.Page.create({
 						if (!seriesId) {
 							seriesId = 0;
 						}
-						resolve({
-							response: xhr.response,
-							debug: seriesId
+
+						let reqUrl = CRAPI.listCollections({
+        					series_id: seriesId,
+       						limit: 1000,
+        					offset: 0
 						});
+						ATV.Ajax
+							.get(reqUrl)
+							.then((crcollexhr) => {
+
+								let firstCollectionId = crcollexhr.response.data[0].collection_id;
+								resolve({
+									response: xhr.response,
+									debug: firstCollectionId
+								});
+
+							}, (crcollexhr) => {
+								// error
+								reject();
+							})
 					}, (crxhr) => {
 						// error
 						reject();

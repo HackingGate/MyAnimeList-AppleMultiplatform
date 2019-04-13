@@ -1,5 +1,5 @@
 const baseUrl = 'https://api.crunchyroll.com/';
-const session_id = '20ebecdcc1fc0799762cc6d41b2056be';
+const session_id = '5828f42150639d94c09e2fa32446bf27';
 const baseWebUrl = 'https://www.crunchyroll.com/';
 
 const toQueryString = (obj) => {
@@ -27,7 +27,8 @@ const buildWebUrl = (name_token) => toUrl(`${baseWebUrl}${name_token}?skip_wall=
 const apiUrls = {
     get topAiring() { return buildUrl('top/anime/1/airing'); },
     malDetails(id) { return buildUrl(`anime/${id}`); },
-    webPage(name_token) { return buildWebUrl(`${name_token}`); }
+    webPage(name_token) { return buildWebUrl(`${name_token}`); },
+    listCollections(params) { return buildUrl(`list_collections.0.json`, params); }
 }
 
 export default apiUrls;
