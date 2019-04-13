@@ -53,13 +53,8 @@ var MalDetailsPage = ATV.Page.create({
 									.then((crmediaxhr) => {
 
 										let episodeArray = crmediaxhr.response.data;
-										let reqUrl = CRAPI.info({
-        									fields: 'media.stream_data,media.media_id',
-        									media_id: episodeArray[0].media_id
-										})
 										resolve({
 											response: xhr.response,
-											debug: reqUrl,
 											episodes: episodeArray
 										});
 									}, (crmediaxhr) => {
