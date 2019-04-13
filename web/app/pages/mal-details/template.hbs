@@ -2,26 +2,27 @@
    <productBundleTemplate>
 	  <banner>
 		 <stack>
-			<title>{{ title }}&#13;{{ title_japanese }}</title>
+			<title>{{ response.title }}&#13;{{ response.title_japanese }}</title>
 			{{!-- <row><text>Score: {{ score }}</text></row>
 			<row><text>{{ duration }}</text></row> --}}
-			<row><text>Broadcast: {{ broadcast }}</text></row>
+			<row><text>Broadcast: {{ response.broadcast }}</text></row>
 			<row>
 				<text>{{ tagline }}</text>
 			</row>
-			<description allowsZooming="true" moreLabel="more">{{ synopsis }}</description>
+			{{!-- <description allowsZooming="true" moreLabel="more">{{ response.synopsis }}</description> --}}
+			<description allowsZooming="true" moreLabel="more">{{ debug }}</description>
 			<row>
-				<buttonLockup data-href-page="play" data-href-page-options="{{toJSON this }}">
+				<buttonLockup data-href-page="play" data-href-page-options="{{toJSON response }}">
 					<badge src="resource://button-play" />
 					<title>Play</title>
 				</buttonLockup>
-				<buttonLockup data-href-page="play" data-href-page-options="{{toJSON this }}">
+				<buttonLockup data-href-page="play" data-href-page-options="{{toJSON response }}">
 					<badge src="resource://button-preview" />
 					<title>Trailer</title>
 				</buttonLockup>
 			</row>
 		 </stack>
-		 <heroImg src="{{ image_url }}"/>
+		 <heroImg src="{{ response.image_url }}"/>
 		</banner>
 		<shelf>
 			<header>
