@@ -29,7 +29,8 @@ const apiUrls = {
     malDetails(id) { return buildUrl(`anime/${id}`); },
     webPage(name_token) { return buildWebUrl(`${name_token}`); },
     listCollections(params) { return buildUrl(`list_collections.0.json`, params); },
-    listMedia(params) { return buildUrl(`list_media.0.json`, params); }
+    listMedia(params) { return buildUrl(`list_media.0.json`, params); },
+    info(params) { return buildUrl(`info.0.json`, params); }
 }
 
 export default apiUrls;
