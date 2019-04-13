@@ -1,4 +1,5 @@
 import ATV from 'atvjs';
+import CRAPI from 'lib/cr-api';
 
 const _ = ATV._;
 
@@ -10,18 +11,30 @@ const upperBoundIndex = sampleStreamsLength - 1;
 
 var PlayPage = ATV.Page.create({
     name: 'play',
-    ready(options, resolve, reject) {
-    	let assetId = options.id;
-		let sampleStream = sampleStreams[_.random(0, upperBoundIndex)];
-		let player = new Player();
-		let mediaItem = new MediaItem('video', sampleStream);
-		let playlist = new Playlist();
+		ready(options, resolve, reject) {
+			let mediaId = options.media_id;
+			let reqUrl = CRAPI.info({
+				fields: 'media.stream_data,media.media_id',
+				media_id: mediaId
+			});
+			ATV.Ajax
+				.get(reqUrl)
+				.then((xhr) => {
 
-		playlist.push(mediaItem);
-		player.playlist = playlist;
-		player.play();
+					let streamUrl = xhr.response.data.stream_data.streams[0].url;
+					let player = new Player();
+					let mediaItem = new MediaItem('video', streamUrl);
+					let playlist = new Playlist();
 
-		resolve(false);
+					playlist.push(mediaItem);
+					player.playlist = playlist;
+					player.play();
+
+					resolve(false);
+				}, (xhr) => {
+					// error
+					reject();
+				})
     }
 });
 
