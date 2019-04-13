@@ -1,0 +1,27 @@
+<document>
+   <catalogTemplate theme="light">
+	  <banner>
+		 <title class="text-dark">TV Shows</title>
+	  </banner>
+	  <list>
+		 <section>
+			<listItemLockup>
+				<title class="text-highlight-primary scrollTextOnHighlight">All TV Shows</title>
+				<decorationImage src="{{img_url 'chevron.png'}}" width="14" height="22"/>
+				<relatedContent>
+					<grid>
+					<section>
+						{{#each results}}
+						<lockup data-href-page="tvshow-details" data-href-page-options="{{toJSON this }}">
+							<img class="tile_compact" src="{{{poster_url poster_path }}}"/>
+							<title class="showAndScrollTextOnHighlight">{{ title }}</title>
+						</lockup>
+						{{/each}}
+					</section>
+				  </grid>
+			   </relatedContent>
+			</listItemLockup>
+		 </section>
+	  </list>
+   </catalogTemplate>
+</document>

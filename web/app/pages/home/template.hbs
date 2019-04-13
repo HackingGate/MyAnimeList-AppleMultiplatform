@@ -1,0 +1,39 @@
+<document>
+	<stackTemplate theme="light">
+		<collectionList>
+			{{!-- <shelf>
+				<header><title>Popular Movies</title></header>
+				<section>
+					{{#each movies }}
+					<lockup data-href-page="movie-details" data-href-page-options="{{toJSON this }}">
+						<img class="tile" src="{{poster_url poster_path }}"/>
+						<title class="showAndScrollTextOnHighlight">{{ title }}</title>
+					</lockup>
+					{{/each}}
+				</section>
+			</shelf>
+			<shelf>
+				<header><title>Popular TV Shows</title></header>
+				<section>
+					{{#each tvShows }}
+					<lockup data-href-page="tvshow-details" data-href-page-options="{{toJSON this }}">
+						<img class="tile" src="{{poster_url poster_path }}"/>
+						<title class="showAndScrollTextOnHighlight">{{ title }}</title>
+					</lockup>
+					{{/each}}
+				</section>
+			</shelf> --}}
+			<shelf>
+				<header><title>Top Airing</title></header>
+				<section>
+					{{#each topAiring }}
+					<lockup data-href-page="mal-details" data-href-page-options="{{toJSON this }}">
+						<img class="tile" src="{{ image_url }}"/>
+						<title class="showAndScrollTextOnHighlight">{{ title }}</title>
+					</lockup>
+					{{/each}}
+				</section>
+			</shelf>
+		</collectionList>
+	</stackTemplate>
+</document>

@@ -1,0 +1,24 @@
+.scrollTextOnHighlight {
+    tv-text-highlight-style: marquee-on-highlight;
+}
+.showAndScrollTextOnHighlight {
+    tv-text-highlight-style: marquee-and-show-on-highlight;
+}
+.tile {
+    width: 259;
+    height: 375;
+}
+.tile_compact {
+    width: 250;
+    height: 376;
+}
+.tile_large {
+    width: 334;
+    height: 501;
+}
+.text-highlight-primary {
+    tv-text-style: none;
+    color: rgba(68, 68, 68, 0.5);
+    font-size: 38;
+    tv-highlight-color: rgb(74, 144, 226);
+}

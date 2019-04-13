@@ -1,0 +1,35 @@
+<document>
+   <productBundleTemplate>
+	  <banner>
+		 <stack>
+			<title>{{ title }}&#13;{{ title_japanese }}</title>
+			{{!-- <row><text>Score: {{ score }}</text></row>
+			<row><text>{{ duration }}</text></row> --}}
+			<row><text>Broadcast: {{ broadcast }}</text></row>
+			<row>
+				<text>{{ tagline }}</text>
+			</row>
+			<description allowsZooming="true" moreLabel="more">{{ synopsis }}</description>
+			<row>
+				<buttonLockup data-href-page="play" data-href-page-options="{{toJSON this }}">
+					<badge src="resource://button-play" />
+					<title>Play</title>
+				</buttonLockup>
+				<buttonLockup data-href-page="play" data-href-page-options="{{toJSON this }}">
+					<badge src="resource://button-preview" />
+					<title>Trailer</title>
+				</buttonLockup>
+			</row>
+		 </stack>
+		 <heroImg src="{{ image_url }}"/>
+		</banner>
+		<shelf>
+			<header>
+				<title>Related Animes</title>
+			</header>
+			<section>
+				<lockup></lockup>
+			</section>
+		</shelf>
+   </productBundleTemplate>
+</document>

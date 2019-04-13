@@ -1,0 +1,38 @@
+<document>
+   <productBundleTemplate>
+	  <banner>
+		 <stack>
+			<title>{{ title }}</title>
+			<row>
+				<text><badge src="resource://tomato-fresh"/> {{toFixed popularity }}%</text>
+				<text>{{duration runtime }}</text>
+				<text>{{genres genres }}</text>
+				<text>{{ release_date }}</text>
+			</row>
+			<row>
+				<text>{{ tagline }}</text>
+			</row>
+			<description allowsZooming="true" moreLabel="more">{{ overview }}</description>
+			<row>
+				<buttonLockup data-href-page="play" data-href-page-options="{{toJSON this }}">
+					<badge src="resource://button-play" />
+					<title>Play</title>
+				</buttonLockup>
+				<buttonLockup data-href-page="play" data-href-page-options="{{toJSON this }}">
+					<badge src="resource://button-preview" />
+					<title>Trailer</title>
+				</buttonLockup>
+			</row>
+		 </stack>
+		 <heroImg src="{{poster_url poster_path }}"/>
+		</banner>
+		<shelf>
+			<header>
+				<title>Related Movies</title>
+			</header>
+			<section>
+				<lockup></lockup>
+			</section>
+		</shelf>
+   </productBundleTemplate>
+</document>
