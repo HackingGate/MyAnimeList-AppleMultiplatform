@@ -1,5 +1,5 @@
 const baseUrl = 'https://api.crunchyroll.com/';
-const session_id = '5828f42150639d94c09e2fa32446bf27';
+const session_id = '7e4badaddbb37d3e8e3384b789e00be8';
 const baseWebUrl = 'https://www.crunchyroll.com/';
 
 const toQueryString = (obj) => {

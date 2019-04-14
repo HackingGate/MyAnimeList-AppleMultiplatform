@@ -8,6 +8,13 @@ String.prototype.replaceAll = function(search, replacement) {
     return target.replace(new RegExp(search, 'g'), replacement);
 };
 
+function getNameToken(name) {
+	let name_lower = name.toLowerCase();
+	let name_split = name_lower.split(':')[0];
+	let name_token = name_split.replaceAll('`', '').replaceAll(' ', '-');
+	return name_token;
+}
+
 var MalDetailsPage = ATV.Page.create({
 	name: 'mal-details',
 	template: template,
@@ -17,9 +24,12 @@ var MalDetailsPage = ATV.Page.create({
 		ATV.Ajax
 			.get(API.malDetails(malId))
 			.then((xhr) => {
-				let name_lower = xhr.response.title_english.toLowerCase();
-				let name_split = name_lower.split(':')[0];
-				let name_token = name_split.replaceAll('`', '').replaceAll(' ', '-');
+				var best_title = xhr.response.title;
+				if (xhr.response.title_english) {
+					// prefer title_english
+					best_title = xhr.response.title_english;
+				}
+				let name_token = getNameToken(best_title);
 				// download webpage from crunchyroll
 				ATV.Ajax.get(CRAPI.webPage(name_token), {responseType: 'text'})
 					.then((crxhr) => {
@@ -27,14 +37,30 @@ var MalDetailsPage = ATV.Page.create({
 					}, (crxhr) => {
 						// error
 						if (crxhr.status == 404) {
-
+							if (xhr.response.related.Adaptation[0].name) {
+								let adaptationName = xhr.response.related.Adaptation[0].name;
+								let name_token = getNameToken(adaptationName);
+								ATV.Ajax.get(CRAPI.webPage(name_token), {responseType: 'text'})
+									.then((crxhr) => {
+										getSeriesId(xhr, crxhr, resolve);
+									}, (crxhr) => {
+										resolve({
+											response: xhr.response,
+											debug: name_token
+										});
+									})
+							} else {
+								resolve({
+									response: xhr.response,
+									debug: 'no adaption name'
+								});
+							}
 						} else {
-							
+							resolve({
+								response: xhr.response,
+								debug: crxhr.status
+							});
 						}
-						resolve({
-							response: xhr.response,
-							debug: name_token
-						});
 					})
 
 				// resolve({
