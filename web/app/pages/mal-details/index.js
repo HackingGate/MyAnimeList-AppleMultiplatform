@@ -85,47 +85,68 @@ function getSeriesId(xhr, crxhr, resolve) {
 		seriesId = 0;
 	}
 
-	let reqUrl = CRAPI.listCollections({
-		series_id: seriesId,
-		   limit: 1000,
-		offset: 0
+	startSession(function(sessionId){
+		let reqUrl = CRAPI.listCollections({
+			session_id: sessionId,
+			series_id: seriesId,
+			limit: 1000,
+			offset: 0
+		});
+		ATV.Ajax
+			.get(reqUrl)
+			.then((crcollexhr) => {
+	
+				let firstCollectionId = crcollexhr.response.data[0].collection_id;
+				
+				let reqUrl = CRAPI.listMedia({
+					session_id: sessionId,
+					collection_id: firstCollectionId,
+					include_clips: 0,
+					limit: 1000,
+					offset: 0
+				});
+				ATV.Ajax
+					.get(reqUrl)
+					.then((crmediaxhr) => {
+	
+						// let episodeArray = crmediaxhr.response.data;
+						var episodeArray = crmediaxhr.response.data.map(function(el) {
+							var o = Object.assign({}, el);
+							o.session_id = sessionId;
+							return o;
+						});
+						resolve({
+							response: xhr.response,
+							episodes: episodeArray,
+							debug: reqUrl
+						});
+					}, (crmediaxhr) => {
+						// error
+						resolve({
+							response: xhr.response,
+							debug: 'crmediaxhr failed'
+						});
+					})						
+	
+			}, (crcollexhr) => {
+				// error
+				resolve({
+					response: xhr.response,
+					debug: 'crcollexhr failed'
+				});
+			})
 	});
+}
+
+function startSession(callback) {
 	ATV.Ajax
-		.get(reqUrl)
-		.then((crcollexhr) => {
-
-			let firstCollectionId = crcollexhr.response.data[0].collection_id;
-			
-			let reqUrl = CRAPI.listMedia({
-				collection_id: firstCollectionId,
-				include_clips: 0,
-				limit: 1000,
-				offset: 0
-			});
-			ATV.Ajax
-				.get(reqUrl)
-				.then((crmediaxhr) => {
-
-					let episodeArray = crmediaxhr.response.data;
-					resolve({
-						response: xhr.response,
-						episodes: episodeArray,
-						debug: reqUrl
-					});
-				}, (crmediaxhr) => {
-					// error
-					resolve({
-						response: xhr.response,
-						debug: 'crmediaxhr failed'
-					});
-				})						
-
-		}, (crcollexhr) => {
+		.get('https://api2.cr-unblocker.com/start_session')
+		.then((xhr) => {
+			if (xhr.response.data.session_id) {
+				callback(xhr.response.data.session_id);
+			}
+		}, (xhr) => {
 			// error
-			resolve({
-				response: xhr.response,
-				debug: 'crcollexhr failed'
-			});
 		})
 }
 

@@ -9,7 +9,8 @@
 			<row>
 				<text>{{ tagline }}</text>
 			</row>
-			<description allowsZooming="true" moreLabel="more">{{ debug }}</description>
+			{{!-- <description allowsZooming="true" moreLabel="more">{{ debug }}</description> --}}
+			<description allowsZooming="true" moreLabel="more">{{ response.synopsis }}</description>
 			<row>
 				<buttonLockup data-href-page="play" data-href-page-options="{{toJSON response }}">
 					<badge src="resource://button-play" />

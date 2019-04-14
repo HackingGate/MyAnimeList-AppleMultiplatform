@@ -13,7 +13,9 @@ var PlayPage = ATV.Page.create({
     name: 'play',
 		ready(options, resolve, reject) {
 			let mediaId = options.media_id;
+			let sessionId = options.session_id;
 			let reqUrl = CRAPI.info({
+				session_id: sessionId,
 				fields: 'media.stream_data,media.media_id',
 				media_id: mediaId
 			});

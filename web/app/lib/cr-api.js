@@ -1,5 +1,4 @@
 const baseUrl = 'https://api.crunchyroll.com/';
-const session_id = '7e4badaddbb37d3e8e3384b789e00be8';
 const baseWebUrl = 'https://www.crunchyroll.com/';
 
 const toQueryString = (obj) => {
@@ -21,7 +20,7 @@ const toUrl = (url = '', params = {}) => {
     }
     return urlBuffer.join('');
 };
-const buildUrl = (url, params) => toUrl(`${baseUrl}${url}?session_id=${session_id}`, params);
+const buildUrl = (url, params) => toUrl(`${baseUrl}${url}`, params);
 const buildWebUrl = (name_token) => toUrl(`${baseWebUrl}${name_token}?skip_wall=1`);
 
 const apiUrls = {
