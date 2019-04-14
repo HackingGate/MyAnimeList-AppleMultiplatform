@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "tv",
+      "filename" : "MyAnimeList-front@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "tv",
-      "filename" : "iu.jpeg",
+      "filename" : "MyAnimeList-front@2x.png",
       "scale" : "2x"
     }
   ],
