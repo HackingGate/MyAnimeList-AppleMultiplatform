@@ -104,7 +104,18 @@ function getSeriesId(xhr, crxhr, resolve) {
 		ATV.Ajax
 			.get(reqUrl)
 			.then((crcollexhr) => {
-				let firstCollectionId = crcollexhr.response.data[0].collection_id;
+				var collections = crcollexhr.response.data
+				let filteredCollections = collections
+				// attempt to ignore dubs
+				const languages = ['RU']
+				filteredCollections = collections.filter((collection) => !(
+					// check if there is (x Dub) or (Dub) there
+					/\((.*)?Dub(bed)?\)/.test(collection.name) ||
+					// check if it contains a two letter language string, like the ones above
+					languages.find((language) => collection.name.includes(`(${language})`)) !== undefined
+				))
+
+				let firstCollectionId = filteredCollections[0].collection_id;
 				
 				let reqUrl = CRAPI.listMedia({
 					session_id: sessionId,
