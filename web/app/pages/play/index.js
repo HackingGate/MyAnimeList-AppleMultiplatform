@@ -17,7 +17,9 @@ var PlayPage = ATV.Page.create({
 			let reqUrl = CRAPI.info({
 				session_id: sessionId,
 				fields: 'media.stream_data,media.media_id',
-				media_id: mediaId
+				media_id: mediaId,
+				locale: 'enUS',
+  				version: '2.1.6'
 			});
 			ATV.Ajax
 				.get(reqUrl)

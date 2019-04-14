@@ -85,17 +85,25 @@ function getSeriesId(xhr, crxhr, resolve) {
 		seriesId = 0;
 	}
 
-	startSession(function(sessionId){
+	startSession(function(sessionId, err){
+		if (err) {
+			resolve({
+				response: xhr.response,
+				debug: err
+			});
+			return;
+		}
 		let reqUrl = CRAPI.listCollections({
 			session_id: sessionId,
 			series_id: seriesId,
 			limit: 1000,
-			offset: 0
+			offset: 0,
+			locale: 'enUS',
+  			version: '2.1.6'
 		});
 		ATV.Ajax
 			.get(reqUrl)
 			.then((crcollexhr) => {
-	
 				let firstCollectionId = crcollexhr.response.data[0].collection_id;
 				
 				let reqUrl = CRAPI.listMedia({
@@ -103,7 +111,9 @@ function getSeriesId(xhr, crxhr, resolve) {
 					collection_id: firstCollectionId,
 					include_clips: 0,
 					limit: 1000,
-					offset: 0
+					offset: 0,
+					locale: 'enUS',
+  					version: '2.1.6'
 				});
 				ATV.Ajax
 					.get(reqUrl)
@@ -143,10 +153,13 @@ function startSession(callback) {
 		.get('https://api2.cr-unblocker.com/start_session')
 		.then((xhr) => {
 			if (xhr.response.data.session_id) {
-				callback(xhr.response.data.session_id);
+				callback(xhr.response.data.session_id, null);
+			} else {
+				callback(null, 'no session_id');
 			}
 		}, (xhr) => {
 			// error
+			callback(null, 'error');
 		})
 }
 
