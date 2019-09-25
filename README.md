@@ -1,7 +1,9 @@
 # AppleTV-MyAnimeList
 MyAnimeList app for AppleTV using [atvjs](https://github.com/emadalam/atvjs) and [Jikan API](https://jikan.docs.apiary.io/)
 
-**warning:** this is a early development version and features might not work
+**warning:** this is an early development version and features might not work
+
+Sept 2019 update: the project is deprecated. I'm considering to rewrite this project in SwiftUI. Please contact me if you have a good idea. 
 
 ### Getting Started
 
