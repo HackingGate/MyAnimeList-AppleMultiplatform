@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C746DC5924B75F7800A91FFF /* MyAnimeListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC5824B75F7800A91FFF /* MyAnimeListApp.swift */; };
-		C746DC5B24B75F7800A91FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC5A24B75F7800A91FFF /* ContentView.swift */; };
 		C746DC5D24B75F7900A91FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C746DC5C24B75F7900A91FFF /* Assets.xcassets */; };
 		C746DC6024B75F7900A91FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C746DC5F24B75F7900A91FFF /* Preview Assets.xcassets */; };
+		C746DC6824B765F400A91FFF /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC6724B765F400A91FFF /* MyTabView.swift */; };
+		C746DC6A24B7678E00A91FFF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC6924B7678E00A91FFF /* HomeView.swift */; };
+		C746DC6C24B7685100A91FFF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC6B24B7685100A91FFF /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C746DC5524B75F7800A91FFF /* MyAnimeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAnimeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C746DC5824B75F7800A91FFF /* MyAnimeListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeListApp.swift; sourceTree = "<group>"; };
-		C746DC5A24B75F7800A91FFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C746DC5C24B75F7900A91FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C746DC5F24B75F7900A91FFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C746DC6124B75F7900A91FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C746DC6724B765F400A91FFF /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
+		C746DC6924B7678E00A91FFF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C746DC6B24B7685100A91FFF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				C746DC5824B75F7800A91FFF /* MyAnimeListApp.swift */,
-				C746DC5A24B75F7800A91FFF /* ContentView.swift */,
+				C746DC6724B765F400A91FFF /* MyTabView.swift */,
+				C746DC6924B7678E00A91FFF /* HomeView.swift */,
+				C746DC6B24B7685100A91FFF /* SearchView.swift */,
 				C746DC5C24B75F7900A91FFF /* Assets.xcassets */,
 				C746DC6124B75F7900A91FFF /* Info.plist */,
 				C746DC5E24B75F7900A91FFF /* Preview Content */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C746DC5B24B75F7800A91FFF /* ContentView.swift in Sources */,
+				C746DC6C24B7685100A91FFF /* SearchView.swift in Sources */,
+				C746DC6A24B7678E00A91FFF /* HomeView.swift in Sources */,
+				C746DC6824B765F400A91FFF /* MyTabView.swift in Sources */,
 				C746DC5924B75F7800A91FFF /* MyAnimeListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +277,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyAnimeList/Preview Content\"";
+				DEVELOPMENT_TEAM = 77CB32R5F4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MyAnimeList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -290,6 +299,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyAnimeList/Preview Content\"";
+				DEVELOPMENT_TEAM = 77CB32R5F4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MyAnimeList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
