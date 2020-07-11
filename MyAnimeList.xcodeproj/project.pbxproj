@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C72495A724B9F1D000FF15A1 /* AnimeCrosslineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */; };
+		C72495A924B9F5BF00FF15A1 /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A824B9F5BF00FF15A1 /* Anime.swift */; };
 		C746DC5924B75F7800A91FFF /* MyAnimeListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC5824B75F7800A91FFF /* MyAnimeListApp.swift */; };
 		C746DC5D24B75F7900A91FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C746DC5C24B75F7900A91FFF /* Assets.xcassets */; };
 		C746DC6024B75F7900A91FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C746DC5F24B75F7900A91FFF /* Preview Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCrosslineRow.swift; sourceTree = "<group>"; };
+		C72495A824B9F5BF00FF15A1 /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		C746DC5524B75F7800A91FFF /* MyAnimeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAnimeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C746DC5824B75F7800A91FFF /* MyAnimeListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeListApp.swift; sourceTree = "<group>"; };
 		C746DC5C24B75F7900A91FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				C746DC5824B75F7800A91FFF /* MyAnimeListApp.swift */,
 				C746DC6724B765F400A91FFF /* MyTabView.swift */,
 				C746DC6924B7678E00A91FFF /* HomeView.swift */,
+				C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */,
+				C72495A824B9F5BF00FF15A1 /* Anime.swift */,
 				C746DC6B24B7685100A91FFF /* SearchView.swift */,
 				C746DC5C24B75F7900A91FFF /* Assets.xcassets */,
 				C746DC6124B75F7900A91FFF /* Info.plist */,
@@ -146,7 +152,9 @@
 			files = (
 				C746DC6C24B7685100A91FFF /* SearchView.swift in Sources */,
 				C746DC6A24B7678E00A91FFF /* HomeView.swift in Sources */,
+				C72495A924B9F5BF00FF15A1 /* Anime.swift in Sources */,
 				C746DC6824B765F400A91FFF /* MyTabView.swift in Sources */,
+				C72495A724B9F1D000FF15A1 /* AnimeCrosslineRow.swift in Sources */,
 				C746DC5924B75F7800A91FFF /* MyAnimeListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

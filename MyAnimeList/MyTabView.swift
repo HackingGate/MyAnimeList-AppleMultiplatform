@@ -22,7 +22,6 @@ struct MyTabView : View {
     }
 }
 
-
 struct MyTabView_Previews: PreviewProvider {
     static var previews: some View {
         MyTabView()
