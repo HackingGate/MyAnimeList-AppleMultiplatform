@@ -27,13 +27,18 @@ struct AnimeCrosslineRow: View {
 }
 
 struct AnimeDetailRowItem: View {
+    @State var modalDisplayed = false
+
     let anime: Anime
     var body: some View {
         Button(action: {
-            print(anime.title)
+            self.modalDisplayed = true
         }, label: {
             Text(anime.title)
         })
+        .sheet(isPresented: $modalDisplayed) {
+            Text(anime.title)
+        }
     }
 }
 

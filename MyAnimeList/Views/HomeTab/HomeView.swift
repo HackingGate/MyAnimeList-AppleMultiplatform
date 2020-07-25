@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    var HomeSection: some View {
-        Section {
+    var body: some View {
+        ScrollView(.vertical) {
+            // TODO: Add ForEach here
             AnimeCrosslineRow(
                 title: "Top Airing",
                 animes: [
@@ -18,11 +19,6 @@ struct HomeView: View {
                     Anime(id: 3, title: "Sword Art Online: Alicization - War of Underworld 2nd Season"),
                 ]
             )
-        }
-    }
-    var body: some View {
-        List {
-            HomeSection
         }
     }
 }
