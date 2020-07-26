@@ -37,7 +37,7 @@ struct AnimeDetailRowItem: View {
             Text(anime.title)
         })
         .sheet(isPresented: $modalDisplayed) {
-            Text(anime.title)
+            AnimeDetailView(title: anime.title)
         }
     }
 }
