@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIFlux
 
 @main
 struct MyAnimeListApp: App {
@@ -15,3 +16,7 @@ struct MyAnimeListApp: App {
         }
     }
 }
+
+let store = Store<AppState>(reducer: appStateReducer,
+                            middleware: [],
+                            state: AppState())
