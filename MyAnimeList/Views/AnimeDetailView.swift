@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct AnimeDetailView: View {
-    let title: String
+    let anime: Anime
     var body: some View {
         List {
-            Text(title)
+            Text(anime.title)
             ScrollView(.horizontal) {
                 LazyHStack(alignment: .center, spacing: 20) {
                     ForEach(1...12, id: \.self) {
                         EpisodeView(index: $0)
                     }
                 }
+            }
+            .onAppear {
+                store.dispatch(action: AnimesActions.ListCollections(seriesId: anime.seriesId))
+//                store.dispatch(action: AnimesActions.ListMedia(collectionId: anime.collectionId))
             }
         }
     }
@@ -36,6 +40,6 @@ struct EpisodeView: View {
 
 struct AnimeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimeDetailView(title: "Anime Title")
+        AnimeDetailView(anime: Anime(id: 1, title: "First", seriesId: 1, collectionId: 1))
     }
 }

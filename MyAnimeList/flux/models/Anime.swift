@@ -10,4 +10,6 @@ import SwiftUI
 struct Anime: Codable, Identifiable {
     let id: Int
     let title: String
+    let seriesId: Int
+    let collectionId: Int
 }

@@ -37,7 +37,7 @@ struct AnimeDetailRowItem: View {
             Text(anime.title)
         })
         .sheet(isPresented: $modalDisplayed) {
-            AnimeDetailView(title: anime.title)
+            AnimeDetailView(anime: anime)
         }
     }
 }
@@ -47,9 +47,9 @@ struct AnimeCrosslineRow_Previews: PreviewProvider {
         AnimeCrosslineRow(
             title: "Title",
             animes: [
-                Anime(id: 1, title: "First"),
-                Anime(id: 2, title: "Second"),
-                Anime(id: 3, title: "Third")
+                Anime(id: 1, title: "First", seriesId: 1, collectionId: 1),
+                Anime(id: 2, title: "Second", seriesId: 2, collectionId: 2),
+                Anime(id: 3, title: "Third", seriesId: 3, collectionId: 3)
             ]
         )
     }

@@ -21,7 +21,7 @@ public struct CRAPIService {
         func path() -> String {
             switch self {
             case .listCollections:
-                return "ist_collections.0.json"
+                return "list_collections.0.json"
             case .listMedia:
                 return "list_media.0.json"
             case .info:
@@ -34,6 +34,13 @@ public struct CRAPIService {
                          completionHandler: @escaping (Result<T, APIError>) -> Void) {
         let queryURL = baseURL.appendingPathComponent(endpoint.path())
         var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: true)!
+        components.queryItems = [
+            URLQueryItem(name: "session_id", value: <#T##String?#>)
+            URLQueryItem(name: "locale", value: "enUS"),
+            URLQueryItem(name: "version", value: "2.6.0"),
+            URLQueryItem(name: "limit", value: "1000"),
+            URLQueryItem(name: "offset", value: "0"),
+        ]
         if let params = params {
             for (_, value) in params.enumerated() {
                 components.queryItems?.append(URLQueryItem(name: value.key, value: value.value))
