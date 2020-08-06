@@ -1,15 +1,15 @@
 //
-//  CRAPIService.swift
+//  CRUnblockerService.swift
 //  MyAnimeList
 //
-//  Created by HG on 2020/07/11.
+//  Created by HG on 2020/08/06.
 //
 
 import Foundation
 
-public struct CRAPIService {
-    let baseURL = URL(string: "https://api.crunchyroll.com/")!
-    public static let shared = CRAPIService()
+public struct CRUnblockerService {
+    let baseURL = URL(string: "https://cr-unblocker.us.to")!
+    public static let shared = CRUnblockerService()
     let decoder = JSONDecoder()
     public enum APIError: Error {
         case noResponse
@@ -17,15 +17,11 @@ public struct CRAPIService {
         case networkError(error: Error)
     }
     public enum Endpoint {
-        case listCollections, listMedia, info
+        case startSession
         func path() -> String {
             switch self {
-            case .listCollections:
-                return "list_collections.0.json"
-            case .listMedia:
-                return "list_media.0.json"
-            case .info:
-                return "info.0.json"
+            case .startSession:
+                return "start_session"
             }
         }
     }
@@ -34,13 +30,6 @@ public struct CRAPIService {
                          completionHandler: @escaping (Result<T, APIError>) -> Void) {
         let queryURL = baseURL.appendingPathComponent(endpoint.path())
         var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: true)!
-        components.queryItems = [
-            URLQueryItem(name: "session_id", value: "6fb7b5b1469330ae6df124a0cc67e4a6"),
-            URLQueryItem(name: "locale", value: "enUS"),
-            URLQueryItem(name: "version", value: "2.6.0"),
-            URLQueryItem(name: "limit", value: "1000"),
-            URLQueryItem(name: "offset", value: "0"),
-        ]
         if let params = params {
             for (_, value) in params.enumerated() {
                 components.queryItems?.append(URLQueryItem(name: value.key, value: value.value))

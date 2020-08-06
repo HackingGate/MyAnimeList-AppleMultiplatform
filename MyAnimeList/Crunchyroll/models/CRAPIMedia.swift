@@ -1,5 +1,5 @@
 //
-//  CRMedia.swift
+//  CRAPIMedia.swift
 //  MyAnimeList
 //
 //  Created by HG on 2020/08/02.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CRMedia: Codable, Identifiable {
+struct CRAPIMedia: Codable, Identifiable {
     let id: String // media_id
     let collectionId: String
     let episodeNumber: String

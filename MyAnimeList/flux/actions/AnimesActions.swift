@@ -12,6 +12,23 @@ struct AnimesActions {
     
     // MARK: - Requests
     
+    struct StartSession: AsyncAction {
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            CRUnblockerService.shared.GET(
+                endpoint: .startSession,
+                params: nil)
+            {
+                (result: Result<CRUnblockerResponse<CRUnblockerStartSession>, CRUnblockerService.APIError>) in
+                switch result {
+                case let .success(response):
+                    print(response)
+                case .failure(_):
+                    break
+                }
+            }
+        }
+    }
+    
     struct ListCollections: AsyncAction {
         let seriesId: Int
 
@@ -25,7 +42,7 @@ struct AnimesActions {
                 endpoint: .listCollections,
                 params: params)
             {
-                (result: Result<CRResponse<CRCollection>, CRAPIService.APIError>) in
+                (result: Result<CRAPIResponse<CRAPICollection>, CRAPIService.APIError>) in
                 switch result {
                 case let .success(response):
                     print(response)
@@ -52,7 +69,7 @@ struct AnimesActions {
                 endpoint: .listMedia,
                 params: params)
             {
-                (result: Result<CRResponse<CRMedia>, CRAPIService.APIError>) in
+                (result: Result<CRAPIResponse<CRAPIMedia>, CRAPIService.APIError>) in
                 switch result {
                 case let .success(response):
                     print(response)

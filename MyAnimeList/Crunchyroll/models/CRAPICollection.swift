@@ -1,5 +1,5 @@
 //
-//  CRCollection.swift
+//  CRAPICollection.swift
 //  MyAnimeList
 //
 //  Created by HG on 2020/08/02.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CRCollection: Codable, Identifiable {
+struct CRAPICollection: Codable, Identifiable {
     let id: String // collection_id
     let seriesId: String
     let name: String

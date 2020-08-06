@@ -20,7 +20,8 @@ struct AnimeDetailView: View {
                 }
             }
             .onAppear {
-                store.dispatch(action: AnimesActions.ListCollections(seriesId: anime.seriesId))
+                store.dispatch(action: AnimesActions.StartSession())
+//                store.dispatch(action: AnimesActions.ListCollections(seriesId: anime.seriesId))
 //                store.dispatch(action: AnimesActions.ListMedia(collectionId: anime.collectionId))
             }
         }

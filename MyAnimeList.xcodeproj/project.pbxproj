@@ -10,9 +10,9 @@
 		C72495A724B9F1D000FF15A1 /* AnimeCrosslineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */; };
 		C72495A924B9F5BF00FF15A1 /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A824B9F5BF00FF15A1 /* Anime.swift */; };
 		C72495AC24BA067E00FF15A1 /* CRAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495AB24BA067E00FF15A1 /* CRAPIService.swift */; };
-		C72B075A24D662C0003C4BB6 /* CRMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B075924D662C0003C4BB6 /* CRMedia.swift */; };
-		C72B075C24D66407003C4BB6 /* CRResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B075B24D66407003C4BB6 /* CRResponse.swift */; };
-		C72B075E24D667EC003C4BB6 /* CRCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B075D24D667EC003C4BB6 /* CRCollection.swift */; };
+		C72B075A24D662C0003C4BB6 /* CRAPIMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B075924D662C0003C4BB6 /* CRAPIMedia.swift */; };
+		C72B075C24D66407003C4BB6 /* CRAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B075B24D66407003C4BB6 /* CRAPIResponse.swift */; };
+		C72B075E24D667EC003C4BB6 /* CRAPICollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B075D24D667EC003C4BB6 /* CRAPICollection.swift */; };
 		C730596124CD4740007D3A68 /* AnimeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C730596024CD4740007D3A68 /* AnimeDetailView.swift */; };
 		C730596424CD6195007D3A68 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C730596324CD6195007D3A68 /* AppReducer.swift */; };
 		C730596724CD6202007D3A68 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C730596624CD6202007D3A68 /* AppState.swift */; };
@@ -26,15 +26,18 @@
 		C746DC6A24B7678E00A91FFF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC6924B7678E00A91FFF /* HomeView.swift */; };
 		C746DC6C24B7685100A91FFF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC6B24B7685100A91FFF /* SearchView.swift */; };
 		C7C7CF0524C9672500AABA89 /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = C7C7CF0424C9672500AABA89 /* SwiftUIFlux */; };
+		C7DC7F5E24DC43C20030C366 /* CRUnblockerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC7F5D24DC43C20030C366 /* CRUnblockerService.swift */; };
+		C7DC7F6024DC441A0030C366 /* CRUnblockerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC7F5F24DC441A0030C366 /* CRUnblockerResponse.swift */; };
+		C7DC7F6224DC44FF0030C366 /* CRUnblockerStartSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC7F6124DC44FF0030C366 /* CRUnblockerStartSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCrosslineRow.swift; sourceTree = "<group>"; };
 		C72495A824B9F5BF00FF15A1 /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		C72495AB24BA067E00FF15A1 /* CRAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPIService.swift; sourceTree = "<group>"; };
-		C72B075924D662C0003C4BB6 /* CRMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRMedia.swift; sourceTree = "<group>"; };
-		C72B075B24D66407003C4BB6 /* CRResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRResponse.swift; sourceTree = "<group>"; };
-		C72B075D24D667EC003C4BB6 /* CRCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRCollection.swift; sourceTree = "<group>"; };
+		C72B075924D662C0003C4BB6 /* CRAPIMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPIMedia.swift; sourceTree = "<group>"; };
+		C72B075B24D66407003C4BB6 /* CRAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPIResponse.swift; sourceTree = "<group>"; };
+		C72B075D24D667EC003C4BB6 /* CRAPICollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPICollection.swift; sourceTree = "<group>"; };
 		C730596024CD4740007D3A68 /* AnimeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailView.swift; sourceTree = "<group>"; };
 		C730596324CD6195007D3A68 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		C730596624CD6202007D3A68 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		C746DC6724B765F400A91FFF /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		C746DC6924B7678E00A91FFF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C746DC6B24B7685100A91FFF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		C7DC7F5D24DC43C20030C366 /* CRUnblockerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUnblockerService.swift; sourceTree = "<group>"; };
+		C7DC7F5F24DC441A0030C366 /* CRUnblockerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUnblockerResponse.swift; sourceTree = "<group>"; };
+		C7DC7F6124DC44FF0030C366 /* CRUnblockerStartSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUnblockerStartSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				C72B075824D662AC003C4BB6 /* models */,
+				C7DC7F5D24DC43C20030C366 /* CRUnblockerService.swift */,
 				C72495AB24BA067E00FF15A1 /* CRAPIService.swift */,
 			);
 			path = Crunchyroll;
@@ -75,9 +82,11 @@
 		C72B075824D662AC003C4BB6 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				C72B075B24D66407003C4BB6 /* CRResponse.swift */,
-				C72B075D24D667EC003C4BB6 /* CRCollection.swift */,
-				C72B075924D662C0003C4BB6 /* CRMedia.swift */,
+				C7DC7F5F24DC441A0030C366 /* CRUnblockerResponse.swift */,
+				C7DC7F6124DC44FF0030C366 /* CRUnblockerStartSession.swift */,
+				C72B075B24D66407003C4BB6 /* CRAPIResponse.swift */,
+				C72B075D24D667EC003C4BB6 /* CRAPICollection.swift */,
+				C72B075924D662C0003C4BB6 /* CRAPIMedia.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -269,12 +278,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C730596124CD4740007D3A68 /* AnimeDetailView.swift in Sources */,
+				C7DC7F5E24DC43C20030C366 /* CRUnblockerService.swift in Sources */,
 				C730596724CD6202007D3A68 /* AppState.swift in Sources */,
-				C72B075A24D662C0003C4BB6 /* CRMedia.swift in Sources */,
+				C7DC7F6024DC441A0030C366 /* CRUnblockerResponse.swift in Sources */,
+				C72B075A24D662C0003C4BB6 /* CRAPIMedia.swift in Sources */,
 				C746DC6C24B7685100A91FFF /* SearchView.swift in Sources */,
-				C72B075C24D66407003C4BB6 /* CRResponse.swift in Sources */,
+				C72B075C24D66407003C4BB6 /* CRAPIResponse.swift in Sources */,
 				C730596E24CD6A24007D3A68 /* AnimesActions.swift in Sources */,
 				C72495AC24BA067E00FF15A1 /* CRAPIService.swift in Sources */,
+				C7DC7F6224DC44FF0030C366 /* CRUnblockerStartSession.swift in Sources */,
 				C730596424CD6195007D3A68 /* AppReducer.swift in Sources */,
 				C746DC6A24B7678E00A91FFF /* HomeView.swift in Sources */,
 				C730596924CD6255007D3A68 /* AnimesState.swift in Sources */,
@@ -282,7 +294,7 @@
 				C746DC6824B765F400A91FFF /* MyTabView.swift in Sources */,
 				C730596B24CD62C6007D3A68 /* AnimesReducer.swift in Sources */,
 				C72495A724B9F1D000FF15A1 /* AnimeCrosslineRow.swift in Sources */,
-				C72B075E24D667EC003C4BB6 /* CRCollection.swift in Sources */,
+				C72B075E24D667EC003C4BB6 /* CRAPICollection.swift in Sources */,
 				C746DC5924B75F7800A91FFF /* MyAnimeListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
