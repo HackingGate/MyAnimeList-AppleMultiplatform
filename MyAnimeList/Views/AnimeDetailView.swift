@@ -20,9 +20,12 @@ struct AnimeDetailView: View {
                 }
             }
             .onAppear {
-                store.dispatch(action: AnimesActions.StartSession())
-//                store.dispatch(action: AnimesActions.ListCollections(seriesId: anime.seriesId))
-//                store.dispatch(action: AnimesActions.ListMedia(collectionId: anime.collectionId))
+                if let session = store.state.animesState.session {
+                    store.dispatch(action: AnimesActions.ListCollections(sessionId: String(session.id),
+                                                                         seriesId: anime.seriesId))
+                    store.dispatch(action: AnimesActions.ListMedia(sessionId: String(session.id),
+                                                                   collectionId: anime.collectionId))
+                }
             }
         }
     }

@@ -19,6 +19,9 @@ struct MyTabView : View {
                     Image(systemName: "magnifyingglass").font(.system(size: 32, weight: .bold))
                 }
         }
+        .onAppear() {
+            store.dispatch(action: AnimesActions.StartSession())
+        }
     }
 }
 

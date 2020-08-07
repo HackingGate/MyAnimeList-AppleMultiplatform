@@ -35,7 +35,6 @@ public struct CRAPIService {
         let queryURL = baseURL.appendingPathComponent(endpoint.path())
         var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: true)!
         components.queryItems = [
-            URLQueryItem(name: "session_id", value: "6fb7b5b1469330ae6df124a0cc67e4a6"),
             URLQueryItem(name: "locale", value: "enUS"),
             URLQueryItem(name: "version", value: "2.6.0"),
             URLQueryItem(name: "limit", value: "1000"),

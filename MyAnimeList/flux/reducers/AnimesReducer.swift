@@ -9,5 +9,16 @@ import Foundation
 import SwiftUIFlux
 
 func animesStateReducer(state: AnimesState, action: Action) -> AnimesState {
+    var state = state
+    switch action {
+    case let action as AnimesActions.SetSession:
+        state.session = action.response.data
+    case let action as AnimesActions.SetCollections:
+        print(action)
+    case let action as AnimesActions.SetMedia:
+        print(action)
+    default:
+        break
+    }
     return state
 }

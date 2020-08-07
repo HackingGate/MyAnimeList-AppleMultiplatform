@@ -73,8 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				C72B075824D662AC003C4BB6 /* models */,
-				C7DC7F5D24DC43C20030C366 /* CRUnblockerService.swift */,
-				C72495AB24BA067E00FF15A1 /* CRAPIService.swift */,
+				C7C55C5224DE074D0033E090 /* services */,
 			);
 			path = Crunchyroll;
 			sourceTree = "<group>";
@@ -153,6 +152,15 @@
 				C746DC5F24B75F7900A91FFF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7C55C5224DE074D0033E090 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				C7DC7F5D24DC43C20030C366 /* CRUnblockerService.swift */,
+				C72495AB24BA067E00FF15A1 /* CRAPIService.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 		C7E00DB124CC7CC400A32036 /* Views */ = {
