@@ -17,6 +17,8 @@ func animesStateReducer(state: AnimesState, action: Action) -> AnimesState {
         print(action)
     case let action as AnimesActions.SetMedia:
         print(action)
+    case let action as AnimesActions.SetInfo:
+        print(action)
     default:
         break
     }

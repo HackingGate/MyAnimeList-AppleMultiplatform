@@ -21,10 +21,12 @@ struct AnimeDetailView: View {
             }
             .onAppear {
                 if let session = store.state.animesState.session {
-                    store.dispatch(action: AnimesActions.ListCollections(sessionId: String(session.id),
+                    store.dispatch(action: AnimesActions.ListCollections(sessionId: session.id,
                                                                          seriesId: anime.seriesId))
-                    store.dispatch(action: AnimesActions.ListMedia(sessionId: String(session.id),
+                    store.dispatch(action: AnimesActions.ListMedia(sessionId: session.id,
                                                                    collectionId: anime.collectionId))
+                    store.dispatch(action: AnimesActions.Info(sessionId: session.id,
+                                                              mediaId: 796204))
                 }
             }
         }

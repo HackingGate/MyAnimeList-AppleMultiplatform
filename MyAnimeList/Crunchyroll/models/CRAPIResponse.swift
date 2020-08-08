@@ -8,7 +8,8 @@
 import Foundation
 
 struct CRAPIResponse<T: Codable>: Codable {
-    let data: [T]
+    let data: T?
     let error: Bool
     let code: String
+    let message: String?
 }

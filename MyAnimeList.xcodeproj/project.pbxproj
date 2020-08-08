@@ -10,7 +10,7 @@
 		C72495A724B9F1D000FF15A1 /* AnimeCrosslineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */; };
 		C72495A924B9F5BF00FF15A1 /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A824B9F5BF00FF15A1 /* Anime.swift */; };
 		C72495AC24BA067E00FF15A1 /* CRAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495AB24BA067E00FF15A1 /* CRAPIService.swift */; };
-		C72B075A24D662C0003C4BB6 /* CRAPIMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B075924D662C0003C4BB6 /* CRAPIMedia.swift */; };
+		C72B075A24D662C0003C4BB6 /* CRAPIEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B075924D662C0003C4BB6 /* CRAPIEpisode.swift */; };
 		C72B075C24D66407003C4BB6 /* CRAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B075B24D66407003C4BB6 /* CRAPIResponse.swift */; };
 		C72B075E24D667EC003C4BB6 /* CRAPICollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B075D24D667EC003C4BB6 /* CRAPICollection.swift */; };
 		C730596124CD4740007D3A68 /* AnimeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C730596024CD4740007D3A68 /* AnimeDetailView.swift */; };
@@ -35,7 +35,7 @@
 		C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCrosslineRow.swift; sourceTree = "<group>"; };
 		C72495A824B9F5BF00FF15A1 /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		C72495AB24BA067E00FF15A1 /* CRAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPIService.swift; sourceTree = "<group>"; };
-		C72B075924D662C0003C4BB6 /* CRAPIMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPIMedia.swift; sourceTree = "<group>"; };
+		C72B075924D662C0003C4BB6 /* CRAPIEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPIEpisode.swift; sourceTree = "<group>"; };
 		C72B075B24D66407003C4BB6 /* CRAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPIResponse.swift; sourceTree = "<group>"; };
 		C72B075D24D667EC003C4BB6 /* CRAPICollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPICollection.swift; sourceTree = "<group>"; };
 		C730596024CD4740007D3A68 /* AnimeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailView.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				C7DC7F6124DC44FF0030C366 /* CRUnblockerStartSession.swift */,
 				C72B075B24D66407003C4BB6 /* CRAPIResponse.swift */,
 				C72B075D24D667EC003C4BB6 /* CRAPICollection.swift */,
-				C72B075924D662C0003C4BB6 /* CRAPIMedia.swift */,
+				C72B075924D662C0003C4BB6 /* CRAPIEpisode.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 				C7DC7F5E24DC43C20030C366 /* CRUnblockerService.swift in Sources */,
 				C730596724CD6202007D3A68 /* AppState.swift in Sources */,
 				C7DC7F6024DC441A0030C366 /* CRUnblockerResponse.swift in Sources */,
-				C72B075A24D662C0003C4BB6 /* CRAPIMedia.swift in Sources */,
+				C72B075A24D662C0003C4BB6 /* CRAPIEpisode.swift in Sources */,
 				C746DC6C24B7685100A91FFF /* SearchView.swift in Sources */,
 				C72B075C24D66407003C4BB6 /* CRAPIResponse.swift in Sources */,
 				C730596E24CD6A24007D3A68 /* AnimesActions.swift in Sources */,

@@ -44,7 +44,7 @@ struct AnimesActions {
                 endpoint: .listCollections,
                 params: params)
             {
-                (result: Result<CRAPIResponse<CRAPICollection>, CRAPIService.APIError>) in
+                (result: Result<CRAPIResponse<[CRAPICollection]>, CRAPIService.APIError>) in
                 switch result {
                 case let .success(response):
                     dispatch(SetCollections(seriesId: seriesId,
@@ -74,11 +74,39 @@ struct AnimesActions {
                 endpoint: .listMedia,
                 params: params)
             {
-                (result: Result<CRAPIResponse<CRAPIMedia>, CRAPIService.APIError>) in
+                (result: Result<CRAPIResponse<[CRAPIEpisode]>, CRAPIService.APIError>) in
                 switch result {
                 case let .success(response):
                     dispatch(SetMedia(collectionId: collectionId,
                                       response: response))
+                case .failure(_):
+                    break
+                }
+            }
+        }
+    }
+    
+    struct Info: AsyncAction {
+        let sessionId: String
+        let mediaId: Int
+        
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            
+            let params = [
+                "session_id": sessionId,
+                "fields": "media.media_id,media.collection_id,media.collection_name,media.series_id,media.episode_number,media.name,media.series_name,media.description,media.premium_only,media.url",
+                "media_id": String(mediaId)
+            ]
+            
+            CRAPIService.shared.GET(
+                endpoint: .info,
+                params: params)
+            {
+                (result: Result<CRAPIResponse<CRAPIEpisode>, CRAPIService.APIError>) in
+                switch result {
+                case let .success(response):
+                    dispatch(SetInfo(mediaId: mediaId,
+                                     response: response))
                 case .failure(_):
                     break
                 }
@@ -92,11 +120,16 @@ struct AnimesActions {
     
     struct SetCollections: Action {
         let seriesId: Int
-        let response: CRAPIResponse<CRAPICollection>
+        let response: CRAPIResponse<[CRAPICollection]>
     }
     
     struct SetMedia: Action {
         let collectionId: Int
-        let response: CRAPIResponse<CRAPIMedia>
+        let response: CRAPIResponse<[CRAPIEpisode]>
+    }
+    
+    struct SetInfo: Action {
+        let mediaId: Int
+        let response: CRAPIResponse<CRAPIEpisode>
     }
 }
