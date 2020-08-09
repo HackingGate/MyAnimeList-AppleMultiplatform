@@ -18,6 +18,7 @@ struct CRAPIEpisode: Codable, Identifiable {
     let seriesName: String
     let collectionName: String
     let premiumOnly: Bool
+    let streamData: CRAPIStreamData?
     let playhead: Int?
     
     enum CodingKeys: String, CodingKey {
@@ -30,6 +31,7 @@ struct CRAPIEpisode: Codable, Identifiable {
         case seriesName = "series_name"
         case collectionName = "collection_name"
         case premiumOnly = "premium_only"
+        case streamData = "stream_data"
         case playhead = "playhead"
     }
 }

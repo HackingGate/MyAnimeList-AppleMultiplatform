@@ -67,7 +67,7 @@ struct AnimesActions {
                 "session_id": sessionId,
                 "collection_id": String(collectionId),
                 "include_clips": "0",
-                "fields": "media.media_id,media.collection_id,media.collection_name,media.series_id,media.episode_number,media.name,media.series_name,media.description,media.premium_only,media.url"
+                "fields": "media.media_id,media.collection_id,media.collection_name,media.series_id,media.episode_number,media.name,media.series_name,media.description,media.premium_only,media.url,media.stream_data,media.media_id"
             ]
             
             CRAPIService.shared.GET(
@@ -94,7 +94,7 @@ struct AnimesActions {
             
             let params = [
                 "session_id": sessionId,
-                "fields": "media.media_id,media.collection_id,media.collection_name,media.series_id,media.episode_number,media.name,media.series_name,media.description,media.premium_only,media.url",
+                "fields": "media.media_id,media.collection_id,media.collection_name,media.series_id,media.episode_number,media.name,media.series_name,media.description,media.premium_only,media.url,media.stream_data,media.media_id",
                 "media_id": String(mediaId)
             ]
             
