@@ -14,11 +14,17 @@ func animesStateReducer(state: AnimesState, action: Action) -> AnimesState {
     case let action as AnimesActions.SetSession:
         state.session = action.response.data
     case let action as AnimesActions.SetCollections:
-        print(action)
+        if let collections = action.response.data {
+            state.series[action.seriesId] = collections
+        }
     case let action as AnimesActions.SetMedia:
-        print(action)
+        if let episodes = action.response.data {
+            state.collections[action.collectionId] = episodes
+        }
     case let action as AnimesActions.SetInfo:
-        print(action)
+        if let episode = action.response.data {
+            state.episodes[action.mediaId] = episode
+        }
     default:
         break
     }

@@ -32,7 +32,13 @@ struct AnimeDetailRowItem: View {
     let anime: Anime
     var body: some View {
         Button(action: {
-            self.modalDisplayed = true
+            if let session = store.state.animesState.session {
+                store.dispatch(action: AnimesActions.ListCollections(sessionId: session.id,
+                                                                     seriesId: anime.seriesId))
+                store.dispatch(action: AnimesActions.ListMedia(sessionId: session.id,
+                                                               collectionId: anime.collectionId))
+                self.modalDisplayed = true
+            }
         }, label: {
             Text(anime.title)
         })

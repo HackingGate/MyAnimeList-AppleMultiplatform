@@ -6,27 +6,23 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct AnimeDetailView: View {
     let anime: Anime
+    
+    var episodes: [CRAPIEpisode] {
+        return store.state.animesState.collections[anime.collectionId] ?? []
+    }
+    
     var body: some View {
         List {
             Text(anime.title)
             ScrollView(.horizontal) {
                 LazyHStack(alignment: .center, spacing: 20) {
-                    ForEach(1...12, id: \.self) {
-                        EpisodeView(index: $0)
+                    ForEach(episodes) {
+                        EpisodeView(episode: $0)
                     }
-                }
-            }
-            .onAppear {
-                if let session = store.state.animesState.session {
-                    store.dispatch(action: AnimesActions.ListCollections(sessionId: session.id,
-                                                                         seriesId: anime.seriesId))
-                    store.dispatch(action: AnimesActions.ListMedia(sessionId: session.id,
-                                                                   collectionId: anime.collectionId))
-                    store.dispatch(action: AnimesActions.Info(sessionId: session.id,
-                                                              mediaId: 796204))
                 }
             }
         }
@@ -34,13 +30,25 @@ struct AnimeDetailView: View {
 }
 
 struct EpisodeView: View {
-    let index: Int
+    @State var modalDisplayed = false
+    
+    let episode: CRAPIEpisode
     var body: some View {
         Button(action: {
-            print("Episode \(index)")
+            self.modalDisplayed = true
         }, label: {
-            Text("Episode \(index)")
+            Text("\(episode.episodeNumber) \(episode.name)")
         })
+        .sheet(isPresented: $modalDisplayed) {
+            if let streamData = episode.streamData {
+                if let adaptive = streamData.streams.first {
+                    if let url = URL(string: adaptive.url) {
+                        let player = AVPlayer(url: url)
+                        VideoPlayer(player: player)
+                    }
+                }
+            }
+        }
     }
 }
 

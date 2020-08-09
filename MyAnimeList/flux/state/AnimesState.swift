@@ -10,5 +10,7 @@ import SwiftUIFlux
 
 struct AnimesState: FluxState, Codable {
     var session: CRUnblockerStartSession?
-    var animes: [Int: Anime] = [:]
+    var series: [Int: [CRAPICollection]] = [:]
+    var collections: [Int: [CRAPIEpisode]] = [:]
+    var episodes: [Int: CRAPIEpisode] = [:]
 }
