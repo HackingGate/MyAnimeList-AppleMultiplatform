@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "MyAnimeList-front@1x.png",
       "idiom" : "tv",
       "scale" : "1x"
     },
     {
+      "filename" : "MyAnimeList-front@2x.png",
       "idiom" : "tv",
       "scale" : "2x"
     }
