@@ -46,8 +46,7 @@ struct EpisodeView: View {
             if let streamData = episode.streamData {
                 if let adaptive = streamData.streams.first {
                     if let url = URL(string: adaptive.url) {
-                        let player = AVPlayer(url: url)
-                        VideoPlayer(player: player)
+                        FullscreenVideoPlayer(streamURL: url)
                     }
                 }
             }
