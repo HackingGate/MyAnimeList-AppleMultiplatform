@@ -31,6 +31,7 @@
 		C7DC7F5E24DC43C20030C366 /* CRUnblockerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC7F5D24DC43C20030C366 /* CRUnblockerService.swift */; };
 		C7DC7F6024DC441A0030C366 /* CRUnblockerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC7F5F24DC441A0030C366 /* CRUnblockerResponse.swift */; };
 		C7DC7F6224DC44FF0030C366 /* CRUnblockerStartSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC7F6124DC44FF0030C366 /* CRUnblockerStartSession.swift */; };
+		C7DE028824E14A1C00B4E4F6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C7DE028724E14A1C00B4E4F6 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		C7DC7F5D24DC43C20030C366 /* CRUnblockerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUnblockerService.swift; sourceTree = "<group>"; };
 		C7DC7F5F24DC441A0030C366 /* CRUnblockerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUnblockerResponse.swift; sourceTree = "<group>"; };
 		C7DC7F6124DC44FF0030C366 /* CRUnblockerStartSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUnblockerStartSession.swift; sourceTree = "<group>"; };
+		C7DE028724E14A1C00B4E4F6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		C746DC4C24B75F7800A91FFF = {
 			isa = PBXGroup;
 			children = (
+				C7DE028724E14A1C00B4E4F6 /* README.md */,
 				C746DC5724B75F7800A91FFF /* MyAnimeList */,
 				C746DC5624B75F7800A91FFF /* Products */,
 			);
@@ -279,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7DE028824E14A1C00B4E4F6 /* README.md in Resources */,
 				C746DC6024B75F7900A91FFF /* Preview Assets.xcassets in Resources */,
 				C746DC5D24B75F7900A91FFF /* Assets.xcassets in Resources */,
 			);
