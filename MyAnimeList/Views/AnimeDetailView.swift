@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import SwiftUIFlux
 import AVKit
 
 struct AnimeDetailView: View {
+    @EnvironmentObject var store: Store<AppState>
+    
     let anime: Anime
     
     var episodes: [CRAPIEpisode] {

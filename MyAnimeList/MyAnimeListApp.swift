@@ -12,7 +12,9 @@ import SwiftUIFlux
 struct MyAnimeListApp: App {
     var body: some Scene {
         WindowGroup {
-            MyTabView()
+            StoreProvider(store: store) {
+                MyTabView()
+            }
         }
     }
 }
