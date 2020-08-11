@@ -43,12 +43,16 @@ struct EpisodeView: View {
             Text("\(episode.episodeNumber) \(episode.name)")
         })
         .sheet(isPresented: $modalDisplayed) {
-            if let streamData = episode.streamData {
-                if let adaptive = streamData.streams.first {
-                    if let url = URL(string: adaptive.url) {
-                        FullscreenVideoPlayer(streamURL: url)
-                    }
+            if (!episode.premiumOnly) {
+                if let streamData = episode.streamData,
+                   let adaptive = streamData.streams.last(where: { $0.quality == "adaptive" }) ?? streamData.streams.last,
+                   let url = URL(string: adaptive.url) {
+                    FullscreenVideoPlayer(streamURL: url)
+                } else {
+                    Text("Streams current not avaliable")
                 }
+            } else {
+                Text("Subscribe Crunchyroll Premium to watch this episode")
             }
         }
     }
