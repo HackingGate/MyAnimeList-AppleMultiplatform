@@ -114,6 +114,16 @@ struct AnimesActions {
         }
     }
     
+    struct SavePlayerItem: AsyncAction {
+        let mediaId: Int
+        let playerItem: PlayerItem
+        
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            dispatch(SetPlayerItem(mediaId: mediaId,
+                                    playerItem: playerItem))
+        }
+    }
+    
     struct SetSession: Action {
         let response: CRUnblockerResponse<CRUnblockerStartSession>
     }
@@ -131,5 +141,10 @@ struct AnimesActions {
     struct SetInfo: Action {
         let mediaId: Int
         let response: CRAPIResponse<CRAPIEpisode>
+    }
+    
+    struct SetPlayerItem: Action {
+        let mediaId: Int
+        let playerItem: PlayerItem
     }
 }

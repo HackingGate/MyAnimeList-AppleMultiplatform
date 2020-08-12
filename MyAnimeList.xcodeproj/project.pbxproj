@@ -28,6 +28,7 @@
 		C76FAA3C24E15A29007FBFCD /* FullscreenVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76FAA3B24E15A29007FBFCD /* FullscreenVideoPlayer.swift */; };
 		C79EEA2A24DF745D000D4D9F /* CRAPIStreamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79EEA2924DF745D000D4D9F /* CRAPIStreamData.swift */; };
 		C79EEA2C24DF7508000D4D9F /* CRAPIStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79EEA2B24DF7508000D4D9F /* CRAPIStream.swift */; };
+		C7B6A80924E4349500D8A816 /* PlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B6A80824E4349500D8A816 /* PlayerItem.swift */; };
 		C7C7CF0524C9672500AABA89 /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = C7C7CF0424C9672500AABA89 /* SwiftUIFlux */; };
 		C7DC7F5E24DC43C20030C366 /* CRUnblockerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC7F5D24DC43C20030C366 /* CRUnblockerService.swift */; };
 		C7DC7F6024DC441A0030C366 /* CRUnblockerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC7F5F24DC441A0030C366 /* CRUnblockerResponse.swift */; };
@@ -59,6 +60,7 @@
 		C76FAA3B24E15A29007FBFCD /* FullscreenVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenVideoPlayer.swift; sourceTree = "<group>"; };
 		C79EEA2924DF745D000D4D9F /* CRAPIStreamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPIStreamData.swift; sourceTree = "<group>"; };
 		C79EEA2B24DF7508000D4D9F /* CRAPIStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPIStream.swift; sourceTree = "<group>"; };
+		C7B6A80824E4349500D8A816 /* PlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerItem.swift; sourceTree = "<group>"; };
 		C7DC7F5D24DC43C20030C366 /* CRUnblockerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUnblockerService.swift; sourceTree = "<group>"; };
 		C7DC7F5F24DC441A0030C366 /* CRUnblockerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUnblockerResponse.swift; sourceTree = "<group>"; };
 		C7DC7F6124DC44FF0030C366 /* CRUnblockerStartSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUnblockerStartSession.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				C72495A824B9F5BF00FF15A1 /* Anime.swift */,
+				C7B6A80824E4349500D8A816 /* PlayerItem.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				C730596724CD6202007D3A68 /* AppState.swift in Sources */,
 				C7DC7F6024DC441A0030C366 /* CRUnblockerResponse.swift in Sources */,
 				C72B075A24D662C0003C4BB6 /* CRAPIEpisode.swift in Sources */,
+				C7B6A80924E4349500D8A816 /* PlayerItem.swift in Sources */,
 				C746DC6C24B7685100A91FFF /* SearchView.swift in Sources */,
 				C72B075C24D66407003C4BB6 /* CRAPIResponse.swift in Sources */,
 				C76FAA3C24E15A29007FBFCD /* FullscreenVideoPlayer.swift in Sources */,

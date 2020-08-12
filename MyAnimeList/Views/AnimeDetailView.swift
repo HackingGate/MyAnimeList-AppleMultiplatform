@@ -46,8 +46,9 @@ struct EpisodeView: View {
             if (!episode.premiumOnly) {
                 if let streamData = episode.streamData,
                    let adaptive = streamData.streams.last(where: { $0.quality == "adaptive" }) ?? streamData.streams.last,
-                   let url = URL(string: adaptive.url) {
-                    FullscreenVideoPlayer(streamURL: url)
+                   let url = URL(string: adaptive.url),
+                   let episodeId = Int(episode.id) {
+                    FullscreenVideoPlayer(episodeId: episodeId, streamURL: url)
                 } else {
                     Text("Streams current not avaliable")
                 }

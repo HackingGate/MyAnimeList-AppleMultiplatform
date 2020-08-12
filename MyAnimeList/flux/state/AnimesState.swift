@@ -13,4 +13,5 @@ struct AnimesState: FluxState, Codable {
     var series: [Int: [CRAPICollection]] = [:]
     var collections: [Int: [CRAPIEpisode]] = [:]
     var episodes: [Int: CRAPIEpisode] = [:]
+    var playerItems: [Int: PlayerItem] = [:]
 }

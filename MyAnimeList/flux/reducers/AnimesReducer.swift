@@ -25,6 +25,8 @@ func animesStateReducer(state: AnimesState, action: Action) -> AnimesState {
         if let episode = action.response.data {
             state.episodes[action.mediaId] = episode
         }
+    case let action as AnimesActions.SetPlayerItem:
+        state.playerItems[action.mediaId] = action.playerItem
     default:
         break
     }
