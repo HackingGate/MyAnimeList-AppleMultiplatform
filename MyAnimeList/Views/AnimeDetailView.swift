@@ -14,7 +14,7 @@ struct AnimeDetailView: View {
     
     let anime: CRAnime
     
-    var episodes: [CRAPIEpisode] {
+    var episodes: [CRAPIMedia] {
         return store.state.crState.collections[anime.collectionId] ?? []
     }
     
@@ -35,25 +35,19 @@ struct AnimeDetailView: View {
 struct EpisodeView: View {
     @State var modalDisplayed = false
     
-    let episode: CRAPIEpisode
+    let episode: CRAPIMedia
     var body: some View {
         Button(action: {
             self.modalDisplayed = true
+            if let episodeId = Int(episode.id), let session = store.state.crState.session {
+                store.dispatch(action: CRActions.Info(sessionId: session.id, mediaId: episodeId))
+            }
         }, label: {
             Text("\(episode.episodeNumber) \(episode.name)")
         })
         .sheet(isPresented: $modalDisplayed) {
-            if (!episode.premiumOnly) {
-                if let streamData = episode.streamData,
-                   let adaptive = streamData.streams.last(where: { $0.quality == "adaptive" }) ?? streamData.streams.last,
-                   let url = URL(string: adaptive.url),
-                   let episodeId = Int(episode.id) {
-                    FullscreenVideoPlayer(episodeId: episodeId, streamURL: url)
-                } else {
-                    Text("Streams current not avaliable")
-                }
-            } else {
-                Text("Subscribe Crunchyroll Premium to watch this episode")
+            if let mediaId = Int(episode.id) {
+                FullscreenVideoPlayer(mediaId: mediaId)
             }
         }
     }

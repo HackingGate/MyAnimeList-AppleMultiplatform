@@ -7,8 +7,7 @@
 
 import Foundation
 
-// For media.0.json (a list of episodes) and info.0.json (episode)
-struct CRAPIEpisode: Codable, Identifiable {
+struct CRAPIMedia: Codable, Identifiable {
     let id: String // media_id
     let collectionId: String
     let episodeNumber: String
@@ -18,7 +17,7 @@ struct CRAPIEpisode: Codable, Identifiable {
     let seriesName: String
     let collectionName: String
     let premiumOnly: Bool
-    let streamData: CRAPIStreamData?
+    var streamData: CRAPIStreamData?
     let playhead: Int?
     
     enum CodingKeys: String, CodingKey {

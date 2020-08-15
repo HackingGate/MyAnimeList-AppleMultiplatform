@@ -18,12 +18,23 @@ func crStateReducer(state: CRState, action: Action) -> CRState {
             state.series[action.seriesId] = collections
         }
     case let action as CRActions.SetMedia:
-        if let episodes = action.response.data {
-            state.collections[action.collectionId] = episodes
+        if let medias = action.response.data {
+            state.collections[action.collectionId] = medias
+            medias.forEach { media in
+                if let mediaId = Int(media.id) {
+                    state.medias[mediaId] = media
+                }
+            }
         }
     case let action as CRActions.SetInfo:
-        if let episode = action.response.data {
-            state.episodes[action.mediaId] = episode
+        if let media = action.response.data {
+            if let streamData = media.streamData {
+                // media already exist
+                state.medias[action.mediaId]?.streamData = streamData
+            } else {
+                fatalError("Cannot update CRMedia")
+//                state.medias[action.mediaId] = media
+            }
         }
     default:
         break

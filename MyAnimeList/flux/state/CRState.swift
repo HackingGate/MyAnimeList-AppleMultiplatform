@@ -11,6 +11,6 @@ import SwiftUIFlux
 struct CRState: FluxState, Codable {
     var session: CRUnblockerStartSession?
     var series: [Int: [CRAPICollection]] = [:]
-    var collections: [Int: [CRAPIEpisode]] = [:]
-    var episodes: [Int: CRAPIEpisode] = [:]
+    var collections: [Int: [CRAPIMedia]] = [:]
+    var medias: [Int: CRAPIMedia] = [:]
 }

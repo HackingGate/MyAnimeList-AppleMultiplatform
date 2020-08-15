@@ -67,14 +67,14 @@ struct CRActions {
                 "session_id": sessionId,
                 "collection_id": String(collectionId),
                 "include_clips": "0",
-                "fields": "media.media_id,media.collection_id,media.collection_name,media.series_id,media.episode_number,media.name,media.series_name,media.description,media.premium_only,media.url,media.stream_data,media.media_id"
+                "fields": "media.media_id,media.collection_id,media.collection_name,media.series_id,media.episode_number,media.name,media.series_name,media.description,media.premium_only,media.url"
             ]
             
             CRAPIService.shared.GET(
                 endpoint: .listMedia,
                 params: params)
             {
-                (result: Result<CRAPIResponse<[CRAPIEpisode]>, CRAPIService.APIError>) in
+                (result: Result<CRAPIResponse<[CRAPIMedia]>, CRAPIService.APIError>) in
                 switch result {
                 case let .success(response):
                     dispatch(SetMedia(collectionId: collectionId,
@@ -94,7 +94,7 @@ struct CRActions {
             
             let params = [
                 "session_id": sessionId,
-                "fields": "media.media_id,media.collection_id,media.collection_name,media.series_id,media.episode_number,media.name,media.series_name,media.description,media.premium_only,media.url,media.stream_data,media.media_id",
+                "fields": "media.stream_data,media.media_id",
                 "media_id": String(mediaId)
             ]
             
@@ -102,7 +102,7 @@ struct CRActions {
                 endpoint: .info,
                 params: params)
             {
-                (result: Result<CRAPIResponse<CRAPIEpisode>, CRAPIService.APIError>) in
+                (result: Result<CRAPIResponse<CRAPIInfo>, CRAPIService.APIError>) in
                 switch result {
                 case let .success(response):
                     dispatch(SetInfo(mediaId: mediaId,
@@ -125,11 +125,11 @@ struct CRActions {
     
     struct SetMedia: Action {
         let collectionId: Int
-        let response: CRAPIResponse<[CRAPIEpisode]>
+        let response: CRAPIResponse<[CRAPIMedia]>
     }
     
     struct SetInfo: Action {
         let mediaId: Int
-        let response: CRAPIResponse<CRAPIEpisode>
+        let response: CRAPIResponse<CRAPIInfo>
     }
 }
