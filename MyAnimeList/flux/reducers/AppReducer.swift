@@ -10,6 +10,7 @@ import SwiftUIFlux
 
 func appStateReducer(state: AppState, action: Action) -> AppState {
     var state = state
-    state.animesState = animesStateReducer(state: state.animesState, action: action)
+    state.crState = crStateReducer(state: state.crState, action: action)
+    state.playState = playStateReducer(state: state.playState, action: action)
     return state
 }

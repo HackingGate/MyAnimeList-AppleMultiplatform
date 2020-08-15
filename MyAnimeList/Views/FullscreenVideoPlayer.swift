@@ -17,7 +17,7 @@ struct FullscreenVideoPlayer: View {
         VideoPlayer(player: player)
             .edgesIgnoringSafeArea(.all)
             .onAppear() {
-                if let playerItem = store.state.animesState.playerItems[episodeId] {
+                if let playerItem = store.state.playState.playerItems[episodeId] {
                     let timeToSeek = CMTime(seconds: playerItem.currentTime, preferredTimescale: 1)
                     player.seek(to: timeToSeek)
                 }
@@ -28,7 +28,7 @@ struct FullscreenVideoPlayer: View {
                     let currentTime = CMTimeGetSeconds(item.currentTime())
                     let duration = CMTimeGetSeconds(item.duration)
                     let playerItem = PlayerItem(currentTime: currentTime, duration: duration)
-                    store.dispatch(action: AnimesActions.SavePlayerItem(mediaId: episodeId,
+                    store.dispatch(action: PlayActions.SavePlayerItem(mediaId: episodeId,
                                                                         playerItem: playerItem))
                 }
             }

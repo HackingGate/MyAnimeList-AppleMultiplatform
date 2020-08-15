@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnimeCrosslineRow: View {
     let title: String
-    let animes: [Anime]
+    let animes: [CRAnime]
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -29,13 +29,13 @@ struct AnimeCrosslineRow: View {
 struct AnimeDetailRowItem: View {
     @State var modalDisplayed = false
 
-    let anime: Anime
+    let anime: CRAnime
     var body: some View {
         Button(action: {
-            if let session = store.state.animesState.session {
-                store.dispatch(action: AnimesActions.ListCollections(sessionId: session.id,
+            if let session = store.state.crState.session {
+                store.dispatch(action: CRActions.ListCollections(sessionId: session.id,
                                                                      seriesId: anime.seriesId))
-                store.dispatch(action: AnimesActions.ListMedia(sessionId: session.id,
+                store.dispatch(action: CRActions.ListMedia(sessionId: session.id,
                                                                collectionId: anime.collectionId))
                 self.modalDisplayed = true
             }
@@ -53,9 +53,9 @@ struct AnimeCrosslineRow_Previews: PreviewProvider {
         AnimeCrosslineRow(
             title: "Title",
             animes: [
-                Anime(id: 1, title: "First", seriesId: 1, collectionId: 1),
-                Anime(id: 2, title: "Second", seriesId: 2, collectionId: 2),
-                Anime(id: 3, title: "Third", seriesId: 3, collectionId: 3)
+                CRAnime(id: 1, title: "First", seriesId: 1, collectionId: 1),
+                CRAnime(id: 2, title: "Second", seriesId: 2, collectionId: 2),
+                CRAnime(id: 3, title: "Third", seriesId: 3, collectionId: 3)
             ]
         )
     }

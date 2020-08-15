@@ -12,10 +12,10 @@ import AVKit
 struct AnimeDetailView: View {
     @EnvironmentObject var store: Store<AppState>
     
-    let anime: Anime
+    let anime: CRAnime
     
     var episodes: [CRAPIEpisode] {
-        return store.state.animesState.collections[anime.collectionId] ?? []
+        return store.state.crState.collections[anime.collectionId] ?? []
     }
     
     var body: some View {
@@ -61,6 +61,6 @@ struct EpisodeView: View {
 
 struct AnimeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimeDetailView(anime: Anime(id: 1, title: "First", seriesId: 1, collectionId: 1))
+        AnimeDetailView(anime: CRAnime(id: 1, title: "First", seriesId: 1, collectionId: 1))
     }
 }

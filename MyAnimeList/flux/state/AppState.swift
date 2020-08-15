@@ -9,9 +9,11 @@ import Foundation
 import SwiftUIFlux
 
 struct AppState: FluxState, Codable {
-    var animesState: AnimesState
+    var crState: CRState
+    var playState: PlayState
     
     init() {
-        self.animesState = AnimesState()
+        self.crState = CRState()
+        self.playState = PlayState()
     }
 }

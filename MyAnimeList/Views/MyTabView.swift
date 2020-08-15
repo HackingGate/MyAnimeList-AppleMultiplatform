@@ -20,7 +20,7 @@ struct MyTabView : View {
                 }
         }
         .onAppear() {
-            store.dispatch(action: AnimesActions.StartSession())
+            store.dispatch(action: CRActions.StartSession())
         }
     }
 }
