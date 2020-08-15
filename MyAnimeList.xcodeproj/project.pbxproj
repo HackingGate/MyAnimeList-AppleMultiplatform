@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7177E1124E82FFD00C112FE /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = C7177E1024E82FFD00C112FE /* Kanna */; };
 		C72495A724B9F1D000FF15A1 /* AnimeCrosslineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */; };
 		C72495A924B9F5BF00FF15A1 /* CRAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A824B9F5BF00FF15A1 /* CRAnime.swift */; };
 		C72495AC24BA067E00FF15A1 /* CRAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495AB24BA067E00FF15A1 /* CRAPIService.swift */; };
@@ -80,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7177E1124E82FFD00C112FE /* Kanna in Frameworks */,
 				C7C7CF0524C9672500AABA89 /* SwiftUIFlux in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +257,7 @@
 			name = MyAnimeList;
 			packageProductDependencies = (
 				C7C7CF0424C9672500AABA89 /* SwiftUIFlux */,
+				C7177E1024E82FFD00C112FE /* Kanna */,
 			);
 			productName = MyAnimeList;
 			productReference = C746DC5524B75F7800A91FFF /* MyAnimeList.app */;
@@ -285,6 +288,7 @@
 			mainGroup = C746DC4C24B75F7800A91FFF;
 			packageReferences = (
 				C7C7CF0324C9672500AABA89 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
+				C7177E0F24E82FFD00C112FE /* XCRemoteSwiftPackageReference "Kanna" */,
 			);
 			productRefGroup = C746DC5624B75F7800A91FFF /* Products */;
 			projectDirPath = "";
@@ -530,6 +534,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C7177E0F24E82FFD00C112FE /* XCRemoteSwiftPackageReference "Kanna" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tid-kijyun/Kanna";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
 		C7C7CF0324C9672500AABA89 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Dimillian/SwiftUIFlux";
@@ -541,6 +553,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C7177E1024E82FFD00C112FE /* Kanna */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7177E0F24E82FFD00C112FE /* XCRemoteSwiftPackageReference "Kanna" */;
+			productName = Kanna;
+		};
 		C7C7CF0424C9672500AABA89 /* SwiftUIFlux */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C7C7CF0324C9672500AABA89 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
