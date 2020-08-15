@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C7177E1124E82FFD00C112FE /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = C7177E1024E82FFD00C112FE /* Kanna */; };
+		C7177E1424E831BE00C112FE /* CRWebParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7177E1324E831BE00C112FE /* CRWebParser.swift */; };
 		C72495A724B9F1D000FF15A1 /* AnimeCrosslineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */; };
 		C72495A924B9F5BF00FF15A1 /* CRAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A824B9F5BF00FF15A1 /* CRAnime.swift */; };
 		C72495AC24BA067E00FF15A1 /* CRAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495AB24BA067E00FF15A1 /* CRAPIService.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7177E1324E831BE00C112FE /* CRWebParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRWebParser.swift; sourceTree = "<group>"; };
 		C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCrosslineRow.swift; sourceTree = "<group>"; };
 		C72495A824B9F5BF00FF15A1 /* CRAnime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAnime.swift; sourceTree = "<group>"; };
 		C72495AB24BA067E00FF15A1 /* CRAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAPIService.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7177E1224E830F000C112FE /* CrunchyrollWeb */ = {
+			isa = PBXGroup;
+			children = (
+				C7177E1324E831BE00C112FE /* CRWebParser.swift */,
+			);
+			path = CrunchyrollWeb;
+			sourceTree = "<group>";
+		};
 		C72495AA24BA066A00FF15A1 /* Crunchyroll */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +176,7 @@
 				C7E00DB124CC7CC400A32036 /* Views */,
 				C7E00DB224CC7D2800A32036 /* flux */,
 				C72495AA24BA066A00FF15A1 /* Crunchyroll */,
+				C7177E1224E830F000C112FE /* CrunchyrollWeb */,
 				C746DC5C24B75F7900A91FFF /* Assets.xcassets */,
 				C746DC6124B75F7900A91FFF /* Info.plist */,
 				C746DC5E24B75F7900A91FFF /* Preview Content */,
@@ -326,6 +337,7 @@
 				C7B6A80924E4349500D8A816 /* PlayerItem.swift in Sources */,
 				C746DC6C24B7685100A91FFF /* SearchView.swift in Sources */,
 				C72B075C24D66407003C4BB6 /* CRAPIResponse.swift in Sources */,
+				C7177E1424E831BE00C112FE /* CRWebParser.swift in Sources */,
 				C7985BC724E7EBE200355C07 /* PlayReducer.swift in Sources */,
 				C76FAA3C24E15A29007FBFCD /* FullscreenVideoPlayer.swift in Sources */,
 				C7985BC324E7EA8100355C07 /* PlayActions.swift in Sources */,
