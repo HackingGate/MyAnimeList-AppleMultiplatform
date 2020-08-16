@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUIFlux
+import CrunchyrollSwift
 
 struct CRActions {
     

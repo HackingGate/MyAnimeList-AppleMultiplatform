@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftUIFlux
 import AVKit
+import CrunchyrollSwift
 
 struct AnimeDetailView: View {
     @EnvironmentObject var store: Store<AppState>

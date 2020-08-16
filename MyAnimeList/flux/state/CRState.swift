@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUIFlux
+import CrunchyrollSwift
 
 struct CRState: FluxState, Codable {
     var session: CRUnblockerStartSession?
