@@ -14,7 +14,6 @@ struct JikanActions {
     // MARK: - Requests
     
     struct Anime: AsyncAction {
-        // https://jikan.docs.apiary.io/#reference/0/anime
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             JikanAPIService.shared.loadAnime(
                 id: 1,
@@ -22,6 +21,27 @@ struct JikanActions {
                 params: nil)
             {
                 (result: Result<JikanAPIAnime, JikanAPIService.APIError>) in
+                switch result {
+                case let .success(response):
+                    #if DEBUG
+                    print(response)
+                    #endif
+                case .failure(_):
+                    break
+                }
+            }
+        }
+    }
+    
+    struct Top: AsyncAction {
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            JikanAPIService.shared.loadTop(
+                type: "anime",
+                page: 1,
+                subtype: "airing",
+                params: nil)
+            {
+                (result: Result<JikanAPITop<[JikanAPIAnime]>, JikanAPIService.APIError>) in
                 switch result {
                 case let .success(response):
                     #if DEBUG

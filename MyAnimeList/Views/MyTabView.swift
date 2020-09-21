@@ -23,6 +23,7 @@ struct MyTabView : View {
             store.dispatch(action: CRActions.StartSession())
             // for testing
             store.dispatch(action: JikanActions.Anime())
+            store.dispatch(action: JikanActions.Top())
         }
     }
 }

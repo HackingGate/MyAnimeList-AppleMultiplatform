@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C71AED6925184B280040931A /* JikanSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C71AED6825184B280040931A /* JikanSwift */; };
 		C71AED6B25184B3A0040931A /* JikanActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71AED6A25184B3A0040931A /* JikanActions.swift */; };
 		C72495A724B9F1D000FF15A1 /* AnimeCrosslineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */; };
 		C72495A924B9F5BF00FF15A1 /* CRAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72495A824B9F5BF00FF15A1 /* CRAnime.swift */; };
@@ -23,6 +22,7 @@
 		C746DC6824B765F400A91FFF /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC6724B765F400A91FFF /* MyTabView.swift */; };
 		C746DC6A24B7678E00A91FFF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC6924B7678E00A91FFF /* HomeView.swift */; };
 		C746DC6C24B7685100A91FFF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC6B24B7685100A91FFF /* SearchView.swift */; };
+		C7578DC92519149800834EBB /* JikanSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7578DC82519149800834EBB /* JikanSwift */; };
 		C76C332F24E9535200961E9B /* CrunchyrollSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C76C332E24E9535200961E9B /* CrunchyrollSwift */; };
 		C76C333124E9535200961E9B /* CrunchyrollSwiftWeb in Frameworks */ = {isa = PBXBuildFile; productRef = C76C333024E9535200961E9B /* CrunchyrollSwiftWeb */; };
 		C76FAA3C24E15A29007FBFCD /* FullscreenVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76FAA3B24E15A29007FBFCD /* FullscreenVideoPlayer.swift */; };
@@ -35,7 +35,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C71AED6625184B1B0040931A /* JikanSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JikanSwift; sourceTree = "<group>"; };
 		C71AED6A25184B3A0040931A /* JikanActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanActions.swift; sourceTree = "<group>"; };
 		C72495A624B9F1D000FF15A1 /* AnimeCrosslineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCrosslineRow.swift; sourceTree = "<group>"; };
 		C72495A824B9F5BF00FF15A1 /* CRAnime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAnime.swift; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		C746DC6724B765F400A91FFF /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		C746DC6924B7678E00A91FFF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C746DC6B24B7685100A91FFF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		C7578DC62519149300834EBB /* JikanSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JikanSwift; sourceTree = "<group>"; };
 		C76C333224E954AF00961E9B /* CrunchyrollSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CrunchyrollSwift; sourceTree = "<group>"; };
 		C76FAA3B24E15A29007FBFCD /* FullscreenVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenVideoPlayer.swift; sourceTree = "<group>"; };
 		C7985BC224E7EA8100355C07 /* PlayActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayActions.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C71AED6925184B280040931A /* JikanSwift in Frameworks */,
+				C7578DC92519149800834EBB /* JikanSwift in Frameworks */,
 				C76C332F24E9535200961E9B /* CrunchyrollSwift in Frameworks */,
 				C7C7CF0524C9672500AABA89 /* SwiftUIFlux in Frameworks */,
 				C76C333124E9535200961E9B /* CrunchyrollSwiftWeb in Frameworks */,
@@ -206,7 +206,7 @@
 		C7F09B3924E9414C009ABF92 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				C71AED6625184B1B0040931A /* JikanSwift */,
+				C7578DC62519149300834EBB /* JikanSwift */,
 				C76C333224E954AF00961E9B /* CrunchyrollSwift */,
 			);
 			path = Packages;
@@ -232,7 +232,7 @@
 				C7C7CF0424C9672500AABA89 /* SwiftUIFlux */,
 				C76C332E24E9535200961E9B /* CrunchyrollSwift */,
 				C76C333024E9535200961E9B /* CrunchyrollSwiftWeb */,
-				C71AED6825184B280040931A /* JikanSwift */,
+				C7578DC82519149800834EBB /* JikanSwift */,
 			);
 			productName = MyAnimeList;
 			productReference = C746DC5524B75F7800A91FFF /* MyAnimeList.app */;
@@ -510,7 +510,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C71AED6825184B280040931A /* JikanSwift */ = {
+		C7578DC82519149800834EBB /* JikanSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = JikanSwift;
 		};
