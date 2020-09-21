@@ -21,6 +21,8 @@ struct MyTabView : View {
         }
         .onAppear() {
             store.dispatch(action: CRActions.StartSession())
+            // for testing
+            store.dispatch(action: JikanActions.Anime())
         }
     }
 }
