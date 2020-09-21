@@ -9,6 +9,8 @@ MyAnimeList app for AppleTV rewritten in SwiftUI
 ### Dependencies
 
 - [SwiftUIFlux](https://github.com/Dimillian/SwiftUIFlux): A very naive implementation of Redux using Combine BindableObject to serve as an example
+- [JikanSwift](https://github.com/HackingGate/JikanSwift): 
+Jikan Swift wrapper
 - [CrunchyrollSwift](https://github.com/HackingGate/CrunchyrollSwift): 
 Crunchyroll Swift wrapper unofficial
 
