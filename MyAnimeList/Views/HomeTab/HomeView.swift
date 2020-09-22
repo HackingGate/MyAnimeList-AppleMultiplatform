@@ -6,19 +6,26 @@
 //
 
 import SwiftUI
+import SwiftUIFlux
+import JikanSwift
 
 struct HomeView: View {
+    @EnvironmentObject var store: Store<AppState>
+    
+    var top: [JikanAPIAnime] {
+        return store.state.jikanState.top?.top ?? []
+    }
+    
     var body: some View {
         ScrollView(.vertical) {
             // TODO: Add ForEach here
             AnimeCrosslineRow(
                 title: "Top Airing",
-                animes: [
-                    CRAnime(id: 1, title: "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season", seriesId: 269787, collectionId: 25186),
-                    CRAnime(id: 2, title: "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Kan", seriesId: 253981, collectionId: 25190),
-                    CRAnime(id: 3, title: "Sword Art Online: Alicization - War of Underworld 2nd Season", seriesId: 246948, collectionId: 24998),
-                ]
+                animes: top
             )
+        }
+        .onAppear() {
+            store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .airing, params: nil))
         }
     }
 }

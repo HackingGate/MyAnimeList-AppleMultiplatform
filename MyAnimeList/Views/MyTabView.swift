@@ -21,9 +21,6 @@ struct MyTabView : View {
         }
         .onAppear() {
             store.dispatch(action: CRActions.StartSession())
-            // for testing
-            store.dispatch(action: JikanActions.Anime(id: 1, request: .all, params: nil))
-            store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .airing, params: nil))
         }
     }
 }
