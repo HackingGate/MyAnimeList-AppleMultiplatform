@@ -22,6 +22,8 @@
 		C746DC6824B765F400A91FFF /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC6724B765F400A91FFF /* MyTabView.swift */; };
 		C746DC6A24B7678E00A91FFF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC6924B7678E00A91FFF /* HomeView.swift */; };
 		C746DC6C24B7685100A91FFF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746DC6B24B7685100A91FFF /* SearchView.swift */; };
+		C74D250D2519B6A100A6045D /* JikanReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74D250C2519B6A100A6045D /* JikanReducer.swift */; };
+		C74D25122519B9CF00A6045D /* JikanState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74D25112519B9CF00A6045D /* JikanState.swift */; };
 		C7578DC92519149800834EBB /* JikanSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7578DC82519149800834EBB /* JikanSwift */; };
 		C76C332F24E9535200961E9B /* CrunchyrollSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C76C332E24E9535200961E9B /* CrunchyrollSwift */; };
 		C76C333124E9535200961E9B /* CrunchyrollSwiftWeb in Frameworks */ = {isa = PBXBuildFile; productRef = C76C333024E9535200961E9B /* CrunchyrollSwiftWeb */; };
@@ -52,6 +54,8 @@
 		C746DC6724B765F400A91FFF /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		C746DC6924B7678E00A91FFF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C746DC6B24B7685100A91FFF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		C74D250C2519B6A100A6045D /* JikanReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanReducer.swift; sourceTree = "<group>"; };
+		C74D25112519B9CF00A6045D /* JikanState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanState.swift; sourceTree = "<group>"; };
 		C7578DC62519149300834EBB /* JikanSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JikanSwift; sourceTree = "<group>"; };
 		C76C333224E954AF00961E9B /* CrunchyrollSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CrunchyrollSwift; sourceTree = "<group>"; };
 		C76FAA3B24E15A29007FBFCD /* FullscreenVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenVideoPlayer.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				C730596324CD6195007D3A68 /* AppReducer.swift */,
+				C74D250C2519B6A100A6045D /* JikanReducer.swift */,
 				C730596A24CD62C6007D3A68 /* CRReducer.swift */,
 				C7985BC624E7EBE200355C07 /* PlayReducer.swift */,
 			);
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				C730596624CD6202007D3A68 /* AppState.swift */,
+				C74D25112519B9CF00A6045D /* JikanState.swift */,
 				C730596824CD6255007D3A68 /* CRState.swift */,
 				C7985BC424E7EB4D00355C07 /* PlayState.swift */,
 			);
@@ -100,9 +106,9 @@
 		C730596C24CD6A0C007D3A68 /* actions */ = {
 			isa = PBXGroup;
 			children = (
+				C71AED6A25184B3A0040931A /* JikanActions.swift */,
 				C730596D24CD6A24007D3A68 /* CRActions.swift */,
 				C7985BC224E7EA8100355C07 /* PlayActions.swift */,
-				C71AED6A25184B3A0040931A /* JikanActions.swift */,
 			);
 			path = actions;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 				C7B6A80924E4349500D8A816 /* PlayerItem.swift in Sources */,
 				C746DC6C24B7685100A91FFF /* SearchView.swift in Sources */,
 				C7985BC724E7EBE200355C07 /* PlayReducer.swift in Sources */,
+				C74D25122519B9CF00A6045D /* JikanState.swift in Sources */,
 				C76FAA3C24E15A29007FBFCD /* FullscreenVideoPlayer.swift in Sources */,
 				C7985BC324E7EA8100355C07 /* PlayActions.swift in Sources */,
 				C730596E24CD6A24007D3A68 /* CRActions.swift in Sources */,
@@ -306,6 +313,7 @@
 				C72495A924B9F5BF00FF15A1 /* CRAnime.swift in Sources */,
 				C746DC6824B765F400A91FFF /* MyTabView.swift in Sources */,
 				C7985BC524E7EB4D00355C07 /* PlayState.swift in Sources */,
+				C74D250D2519B6A100A6045D /* JikanReducer.swift in Sources */,
 				C730596B24CD62C6007D3A68 /* CRReducer.swift in Sources */,
 				C72495A724B9F1D000FF15A1 /* AnimeCrosslineRow.swift in Sources */,
 				C746DC5924B75F7800A91FFF /* MyAnimeListApp.swift in Sources */,

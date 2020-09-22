@@ -26,6 +26,7 @@ struct JikanActions {
                     #if DEBUG
                     print(response)
                     #endif
+                    dispatch(SetAnime(malID: 1, response: response))
                 case .failure(_):
                     break
                 }
@@ -47,10 +48,20 @@ struct JikanActions {
                     #if DEBUG
                     print(response)
                     #endif
+                    dispatch(SetTop(response: response))
                 case .failure(_):
                     break
                 }
             }
         }
+    }
+    
+    struct SetAnime: Action {
+        let malID: Int
+        let response: JikanAPIAnime
+    }
+    
+    struct SetTop: Action {
+        let response: JikanAPITop<[JikanAPIAnime]>
     }
 }
