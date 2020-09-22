@@ -14,11 +14,15 @@ struct JikanActions {
     // MARK: - Requests
     
     struct Anime: AsyncAction {
+        let id: Int
+        let request: JikanAPIAnimeRequest
+        let params: [String: String]?
+        
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             JikanAPIService.shared.loadAnime(
-                id: 1,
-                request: "/",
-                params: nil)
+                id: id,
+                request: request,
+                params: params)
             {
                 (result: Result<JikanAPIAnime, JikanAPIService.APIError>) in
                 switch result {
@@ -35,11 +39,16 @@ struct JikanActions {
     }
     
     struct Top: AsyncAction {
+        let type: JikanAPITopType
+        let page: Int
+        let subtype: JikanAPITopSubtype
+        let params: [String: String]?
+
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             JikanAPIService.shared.loadTop(
-                type: "anime",
-                page: 1,
-                subtype: "airing",
+                type: type,
+                page: page,
+                subtype: subtype,
                 params: nil)
             {
                 (result: Result<JikanAPITop<[JikanAPIAnime]>, JikanAPIService.APIError>) in
@@ -48,7 +57,7 @@ struct JikanActions {
                     #if DEBUG
                     print(response)
                     #endif
-                    dispatch(SetTop(response: response))
+                    dispatch(SetTop(page: page, response: response))
                 case .failure(_):
                     break
                 }
@@ -62,6 +71,7 @@ struct JikanActions {
     }
     
     struct SetTop: Action {
+        let page: Int
         let response: JikanAPITop<[JikanAPIAnime]>
     }
 }

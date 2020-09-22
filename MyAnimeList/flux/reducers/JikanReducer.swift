@@ -14,7 +14,11 @@ func jikanStateReducer(state: JikanState, action: Action) -> JikanState {
     case let action as JikanActions.SetAnime:
         state.animes[action.malID] = action.response
     case let action as JikanActions.SetTop:
-        state.top = action.response
+        if action.page == 1 {
+            state.top = action.response
+        } else {
+            // TODO: append
+        }
     default:
         break
     }
