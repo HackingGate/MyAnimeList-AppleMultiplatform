@@ -34,18 +34,15 @@ struct AnimeDetailRowItem: View {
     let anime: JikanAPIAnime
     var body: some View {
         Button(action: {
-            if let session = store.state.crState.session {
-//                store.dispatch(action: CRActions.ListCollections(sessionId: session.id,
-//                                                                     seriesId: anime.seriesId))
-//                store.dispatch(action: CRActions.ListMedia(sessionId: session.id,
-//                                                               collectionId: anime.collectionId))
-                self.modalDisplayed = true
-            }
+            store.dispatch(action: JikanActions.Anime(id: anime.id,
+                                                      request: .all,
+                                                      params: nil))
+            self.modalDisplayed = true
         }, label: {
             Text(anime.title)
         })
         .sheet(isPresented: $modalDisplayed) {
-//            AnimeDetailView(anime: anime).environmentObject(store)
+            AnimeDetailView(anime: anime).environmentObject(store)
         }
     }
 }
