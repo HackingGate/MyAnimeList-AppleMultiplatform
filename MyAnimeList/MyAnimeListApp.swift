@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftUIFlux
+import AVFoundation
 
 @main
 struct MyAnimeListApp: App {
@@ -14,6 +15,13 @@ struct MyAnimeListApp: App {
         WindowGroup {
             StoreProvider(store: store) {
                 MyTabView()
+            }.onAppear() {
+                // The app's AVAudioSession must be a PiP-appropriate audio category, such as AVAudioSessionCategoryPlayback.
+                do {
+                    try AVAudioSession.sharedInstance().setCategory(.playback, mode: .moviePlayback)
+                } catch {
+                    print("Setting category to AVAudioSessionCategoryPlayback failed.")
+                }
             }
         }
     }
