@@ -27,7 +27,29 @@ func jikanStateReducer(state: JikanState, action: Action) -> JikanState {
         }
     case let action as JikanActions.SetTop:
         if action.page == 1 {
-            state.top = action.response
+            switch action.subtype {
+            case .airing:
+                state.topAiring = action.response
+            case .upcoming:
+                state.topUpcoming = action.response
+            case .tv:
+                state.topTv = action.response
+            case .movie:
+                state.topMovie = action.response
+            case .ova:
+                state.topOva = action.response
+            case .special:
+                state.topSpecial = action.response
+            case .bypopularity:
+                state.topBypopularity = action.response
+            case .favorite:
+                state.topFavorite = action.response
+            default:
+                fatalError("Unsupported subtype")
+            }
+            if action.subtype == .airing {
+                state.topAiring = action.response
+            }
         } else {
             // TODO: append
         }

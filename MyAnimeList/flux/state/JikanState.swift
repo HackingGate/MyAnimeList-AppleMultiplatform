@@ -10,6 +10,14 @@ import SwiftUIFlux
 import JikanSwift
 
 struct JikanState: FluxState, Codable {
-    var top: JikanAPITop<[JikanAPIAnime]>?
+    var topAiring: JikanAPITop<[JikanAPIAnime]>?
+    var topUpcoming: JikanAPITop<[JikanAPIAnime]>?
+    var topTv: JikanAPITop<[JikanAPIAnime]>?
+    var topMovie: JikanAPITop<[JikanAPIAnime]>?
+    var topOva: JikanAPITop<[JikanAPIAnime]>?
+    var topSpecial: JikanAPITop<[JikanAPIAnime]>?
+    var topBypopularity: JikanAPITop<[JikanAPIAnime]>?
+    var topFavorite: JikanAPITop<[JikanAPIAnime]>?
+
     var animes: [Int: JikanAPIAnime] = [:]
 }

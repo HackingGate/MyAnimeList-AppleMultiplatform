@@ -57,7 +57,7 @@ struct JikanActions {
                     #if DEBUG
                     print(response)
                     #endif
-                    dispatch(SetTop(page: page, response: response))
+                    dispatch(SetTop(page: page, subtype: subtype, response: response))
                 case .failure(_):
                     break
                 }
@@ -72,6 +72,7 @@ struct JikanActions {
     
     struct SetTop: Action {
         let page: Int
+        let subtype: JikanAPITopSubtype
         let response: JikanAPITop<[JikanAPIAnime]>
     }
 }
