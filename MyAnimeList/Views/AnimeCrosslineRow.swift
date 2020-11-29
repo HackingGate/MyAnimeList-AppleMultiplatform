@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SwiftUIFlux
+import JikanSwift
 
 struct AnimeCrosslineRow: View {
     let title: String
-    let animes: [CRAnime]
+    let animes: [JikanAPIAnime]
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -29,16 +31,13 @@ struct AnimeCrosslineRow: View {
 struct AnimeDetailRowItem: View {
     @State var modalDisplayed = false
 
-    let anime: CRAnime
+    let anime: JikanAPIAnime
     var body: some View {
         Button(action: {
-            if let session = store.state.crState.session {
-                store.dispatch(action: CRActions.ListCollections(sessionId: session.id,
-                                                                     seriesId: anime.seriesId))
-                store.dispatch(action: CRActions.ListMedia(sessionId: session.id,
-                                                               collectionId: anime.collectionId))
-                self.modalDisplayed = true
-            }
+            store.dispatch(action: JikanActions.Anime(id: anime.id,
+                                                      request: .all,
+                                                      params: nil))
+            self.modalDisplayed = true
         }, label: {
             Text(anime.title)
         })
@@ -52,11 +51,7 @@ struct AnimeCrosslineRow_Previews: PreviewProvider {
     static var previews: some View {
         AnimeCrosslineRow(
             title: "Title",
-            animes: [
-                CRAnime(id: 1, title: "First", seriesId: 1, collectionId: 1),
-                CRAnime(id: 2, title: "Second", seriesId: 2, collectionId: 2),
-                CRAnime(id: 3, title: "Third", seriesId: 3, collectionId: 3)
-            ]
+            animes: []
         )
     }
 }

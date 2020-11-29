@@ -1,3 +1,6 @@
 [submodule "Packages/CrunchyrollSwift"]
 	path = Packages/CrunchyrollSwift
 	url = https://github.com/HackingGate/CrunchyrollSwift
+[submodule "Packages/JikanSwift"]
+	path = Packages/JikanSwift
+	url = https://github.com/HackingGate/JikanSwift.git
