@@ -26,7 +26,10 @@ struct EpisodeListView: View {
         }
         .onAppear() {
             if let session = store.state.crState.session {
-                store.dispatch(action: CRActions.ListMedia(sessionId: session.id, collectionId: collectionId))
+                if (episodes.count == 0) {
+                    // Request only when data not yet avaliable
+                    store.dispatch(action: CRActions.ListMedia(sessionId: session.id, collectionId: collectionId))
+                }
             }
         }
     }
@@ -47,7 +50,7 @@ struct EpisodeView: View {
         })
         .sheet(isPresented: $modalDisplayed) {
             if let mediaId = Int(episode.id) {
-                FullscreenVideoPlayer(mediaId: mediaId)
+                FullscreenVideoPlayer(mediaId: mediaId).environmentObject(store)
             }
         }
     }
