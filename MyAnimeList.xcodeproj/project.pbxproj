@@ -178,8 +178,8 @@
 				C795B3F32576922D009EC5E8 /* Shared */,
 				C795B3FD2576922D009EC5E8 /* iOS */,
 				C795B4042576922D009EC5E8 /* macOS */,
-				C795B48725769472009EC5E8 /* Packages */,
 				C795B584257697C1009EC5E8 /* tvOS */,
+				C795B48725769472009EC5E8 /* Packages */,
 				C795B3FC2576922D009EC5E8 /* Products */,
 				C795B47F257693FE009EC5E8 /* Frameworks */,
 			);
@@ -226,13 +226,13 @@
 		C795B45425769398009EC5E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C795B45525769398009EC5E8 /* FullscreenVideoPlayer.swift */,
-				C795B45625769398009EC5E8 /* AnimeEpisodeListView.swift */,
-				C795B45725769398009EC5E8 /* HomeTab */,
 				C795B45925769398009EC5E8 /* MyTabView.swift */,
-				C795B45A25769398009EC5E8 /* AnimeCrosslineRow.swift */,
+				C795B45725769398009EC5E8 /* HomeTab */,
 				C795B45B25769398009EC5E8 /* SearchTab */,
+				C795B45A25769398009EC5E8 /* AnimeCrosslineRow.swift */,
 				C795B45D25769398009EC5E8 /* AnimeDetailView.swift */,
+				C795B45625769398009EC5E8 /* AnimeEpisodeListView.swift */,
+				C795B45525769398009EC5E8 /* FullscreenVideoPlayer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,10 +272,10 @@
 		C795B53225769529009EC5E8 /* flux */ = {
 			isa = PBXGroup;
 			children = (
-				C795B53325769529009EC5E8 /* models */,
-				C795B53625769529009EC5E8 /* state */,
 				C795B53C25769529009EC5E8 /* actions */,
 				C795B54125769529009EC5E8 /* reducers */,
+				C795B53625769529009EC5E8 /* state */,
+				C795B53325769529009EC5E8 /* models */,
 			);
 			path = flux;
 			sourceTree = "<group>";
