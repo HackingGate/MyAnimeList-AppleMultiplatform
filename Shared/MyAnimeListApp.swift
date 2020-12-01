@@ -16,12 +16,15 @@ struct MyAnimeListApp: App {
             StoreProvider(store: store) {
                 MyTabView()
             }.onAppear() {
+                // AVAudioSession not avaliable on macOS
+                #if canImport(UIKit)
                 // The app's AVAudioSession must be a PiP-appropriate audio category, such as AVAudioSessionCategoryPlayback.
                 do {
                     try AVAudioSession.sharedInstance().setCategory(.playback, mode: .moviePlayback)
                 } catch {
                     print("Setting category to AVAudioSessionCategoryPlayback failed.")
                 }
+                #endif
             }
         }
     }
