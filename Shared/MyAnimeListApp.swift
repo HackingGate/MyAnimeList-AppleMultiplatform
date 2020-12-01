@@ -14,7 +14,7 @@ struct MyAnimeListApp: App {
     var body: some Scene {
         WindowGroup {
             StoreProvider(store: store) {
-                MyTabView()
+                MainTabView()
             }.onAppear() {
                 // AVAudioSession not avaliable on macOS
                 #if canImport(UIKit)
