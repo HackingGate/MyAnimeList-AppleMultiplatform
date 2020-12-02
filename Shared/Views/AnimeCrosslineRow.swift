@@ -29,21 +29,39 @@ struct AnimeCrosslineRow: View {
 }
 
 struct AnimeDetailRowItem: View {
-    @State var modalDisplayed = false
+    @State private var isShowingDetailView = false
 
     let anime: JikanAPIAnime
     var body: some View {
+        #if os(iOS)
+        // Sample code from https://www.hackingwithswift.com/articles/216/complete-guide-to-navigationview-in-swiftui
+        // EmptyView() is not really empty on tvOS 14.2
+        VStack {
+            NavigationLink(destination: AnimeDetailView(anime: anime).environmentObject(store), isActive: $isShowingDetailView) {
+                EmptyView()
+            }
+            Button(anime.title) {
+                displayAction()
+            }
+        }
+        .frame(width: 80.0, height: 320.0, alignment: .center)
+        #else
         Button(action: {
-            store.dispatch(action: JikanActions.Anime(id: anime.id,
-                                                      request: .all,
-                                                      params: nil))
-            self.modalDisplayed = true
+            displayAction()
         }, label: {
             Text(anime.title)
         })
-        .sheet(isPresented: $modalDisplayed) {
+        .sheet(isPresented: $isShowingDetailView) {
             AnimeDetailView(anime: anime).environmentObject(store)
         }
+        #endif
+    }
+
+    func displayAction() {
+        self.isShowingDetailView = true
+        store.dispatch(action: JikanActions.Anime(id: anime.id,
+                                                  request: .all,
+                                                  params: nil))
     }
 }
 

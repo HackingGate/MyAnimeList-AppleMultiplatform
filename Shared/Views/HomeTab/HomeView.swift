@@ -23,29 +23,32 @@ struct HomeView: View {
     }
     
     var body: some View {
-        ScrollView(.vertical) {
-            // TODO: Add ForEach here
-            AnimeCrosslineRow(
-                title: "Most Popular",
-                animes: topBypopularity
-            )
-            .onAppear() {
-                store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .bypopularity, params: nil))
+        NavigationView {
+            ScrollView(.vertical) {
+                // TODO: Add ForEach here
+                AnimeCrosslineRow(
+                    title: "Most Popular",
+                    animes: topBypopularity
+                )
+                .onAppear() {
+                    store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .bypopularity, params: nil))
+                }
+                AnimeCrosslineRow(
+                    title: "Top Airing",
+                    animes: topAiring
+                )
+                .onAppear() {
+                    store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .airing, params: nil))
+                }
+                AnimeCrosslineRow(
+                    title: "Top TV Series",
+                    animes: topTv
+                )
+                .onAppear() {
+                    store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .tv, params: nil))
+                }
             }
-            AnimeCrosslineRow(
-                title: "Top Airing",
-                animes: topAiring
-            )
-            .onAppear() {
-                store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .airing, params: nil))
-            }
-            AnimeCrosslineRow(
-                title: "Top TV Series",
-                animes: topTv
-            )
-            .onAppear() {
-                store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .tv, params: nil))
-            }
+            .navigationTitle("Home")
         }
     }
 }
