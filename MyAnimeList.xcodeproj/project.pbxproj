@@ -134,6 +134,7 @@
 		C795B583257697C1009EC5E8 /* MyAnimeList (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyAnimeList (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C795B58C257697C2009EC5E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C795B58E257697C2009EC5E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7A39699257BA95D000EB209 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +185,7 @@
 		C795B3EE2576922C009EC5E8 = {
 			isa = PBXGroup;
 			children = (
+				C7A39699257BA95D000EB209 /* README.md */,
 				C795B3F32576922D009EC5E8 /* Shared */,
 				C795B3FD2576922D009EC5E8 /* iOS */,
 				C795B4042576922D009EC5E8 /* macOS */,

@@ -1,10 +1,10 @@
-# AppleTV-MyAnimeList
-MyAnimeList app for AppleTV rewritten in SwiftUI
+# MyAnimeList-AppleMultiplatform
+Unofficial MyAnimeList app for Apple TV, iPhone, iPad and Mac rewritten in SwiftUI (previous was TVML/TVJS)
 
 ### Requirements
 
 - Xcode 12
-- tvOS 14
+- tvOS 14 or iOS 14 or macOS 11
 
 ### Dependencies
 
