@@ -26,10 +26,16 @@ struct MALSyncActions {
                     #if DEBUG
                     print(response)
                     #endif
+                    dispatch(SetAnime(malID: id, response: response.sites))
                 case .failure(_):
                     break
                 }
             }
         }
+    }
+
+    struct SetAnime: Action {
+        let malID: Int
+        let response: MALSyncMALSites
     }
 }

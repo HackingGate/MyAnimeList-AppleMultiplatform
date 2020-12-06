@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C783F8E1257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
+		C783F8E2257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
+		C783F8E3257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
+		C783F8E8257CBAD9001EB646 /* MALSyncState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E7257CBAD9001EB646 /* MALSyncState.swift */; };
+		C783F8E9257CBAD9001EB646 /* MALSyncState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E7257CBAD9001EB646 /* MALSyncState.swift */; };
+		C783F8EA257CBAD9001EB646 /* MALSyncState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E7257CBAD9001EB646 /* MALSyncState.swift */; };
 		C79519F1257BD34B00420BA9 /* MALSyncSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C79519F0257BD34B00420BA9 /* MALSyncSwift */; };
 		C79519F3257BD35600420BA9 /* MALSyncSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C79519F2257BD35600420BA9 /* MALSyncSwift */; };
 		C795B4072576922D009EC5E8 /* MyAnimeListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B3F42576922D009EC5E8 /* MyAnimeListApp.swift */; };
@@ -105,6 +111,8 @@
 
 /* Begin PBXFileReference section */
 		C7387FA425793A1100EDC0B8 /* MyAnimeList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAnimeList.entitlements; sourceTree = "<group>"; };
+		C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncReducer.swift; sourceTree = "<group>"; };
+		C783F8E7257CBAD9001EB646 /* MALSyncState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncState.swift; sourceTree = "<group>"; };
 		C795B3F42576922D009EC5E8 /* MyAnimeListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeListApp.swift; sourceTree = "<group>"; };
 		C795B3F62576922D009EC5E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C795B3FB2576922D009EC5E8 /* MyAnimeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAnimeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -318,6 +326,7 @@
 			children = (
 				C795B53725769529009EC5E8 /* AppState.swift */,
 				C795B53825769529009EC5E8 /* JikanCRState.swift */,
+				C783F8E7257CBAD9001EB646 /* MALSyncState.swift */,
 				C795B53925769529009EC5E8 /* PlayState.swift */,
 				C795B53A25769529009EC5E8 /* JikanState.swift */,
 				C795B53B25769529009EC5E8 /* CRState.swift */,
@@ -342,6 +351,7 @@
 			children = (
 				C795B54225769529009EC5E8 /* PlayReducer.swift */,
 				C795B54325769529009EC5E8 /* CRReducer.swift */,
+				C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */,
 				C795B54425769529009EC5E8 /* AppReducer.swift */,
 				C795B54525769529009EC5E8 /* JikanReducer.swift */,
 				C795B54625769529009EC5E8 /* JikanCRReducer.swift */,
@@ -523,6 +533,7 @@
 				C795B56B2576952A009EC5E8 /* CRReducer.swift in Sources */,
 				C795B55C25769529009EC5E8 /* JikanCRActions.swift in Sources */,
 				C795B46A25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */,
+				C783F8E8257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B55F25769529009EC5E8 /* JikanActions.swift in Sources */,
 				C795B54725769529009EC5E8 /* CRAnime.swift in Sources */,
 				C795B55025769529009EC5E8 /* JikanCRState.swift in Sources */,
@@ -533,6 +544,7 @@
 				C7BC4C8D257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */,
 				C795B46D25769398009EC5E8 /* SearchView.swift in Sources */,
 				C795B5682576952A009EC5E8 /* PlayReducer.swift in Sources */,
+				C783F8E1257CBACC001EB646 /* MALSyncReducer.swift in Sources */,
 				C795B54D25769529009EC5E8 /* AppState.swift in Sources */,
 				C795B46425769398009EC5E8 /* HomeView.swift in Sources */,
 				C795B55925769529009EC5E8 /* CRState.swift in Sources */,
@@ -555,6 +567,7 @@
 				C795B56C2576952A009EC5E8 /* CRReducer.swift in Sources */,
 				C795B55D25769529009EC5E8 /* JikanCRActions.swift in Sources */,
 				C795B46B25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */,
+				C783F8E9257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B56025769529009EC5E8 /* JikanActions.swift in Sources */,
 				C795B54825769529009EC5E8 /* CRAnime.swift in Sources */,
 				C795B55125769529009EC5E8 /* JikanCRState.swift in Sources */,
@@ -565,6 +578,7 @@
 				C7BC4C8E257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */,
 				C795B46E25769398009EC5E8 /* SearchView.swift in Sources */,
 				C795B5692576952A009EC5E8 /* PlayReducer.swift in Sources */,
+				C783F8E2257CBACC001EB646 /* MALSyncReducer.swift in Sources */,
 				C795B54E25769529009EC5E8 /* AppState.swift in Sources */,
 				C795B46525769398009EC5E8 /* HomeView.swift in Sources */,
 				C795B55A25769529009EC5E8 /* CRState.swift in Sources */,
@@ -587,6 +601,7 @@
 				C795B5BA25769838009EC5E8 /* CRAnime.swift in Sources */,
 				C795B5B825769838009EC5E8 /* PlayActions.swift in Sources */,
 				C795B5BE25769838009EC5E8 /* HomeView.swift in Sources */,
+				C783F8EA257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B5BF25769838009EC5E8 /* CRReducer.swift in Sources */,
 				C795B5AE25769838009EC5E8 /* JikanCRReducer.swift in Sources */,
 				C795B5B425769838009EC5E8 /* AppState.swift in Sources */,
@@ -597,6 +612,7 @@
 				C7BC4C8F257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */,
 				C795B5B625769838009EC5E8 /* JikanActions.swift in Sources */,
 				C795B5BD25769838009EC5E8 /* MyAnimeListApp.swift in Sources */,
+				C783F8E3257CBACC001EB646 /* MALSyncReducer.swift in Sources */,
 				C795B5BB25769838009EC5E8 /* CRState.swift in Sources */,
 				C795B5C025769838009EC5E8 /* JikanCRState.swift in Sources */,
 				C795B5A925769838009EC5E8 /* PlayReducer.swift in Sources */,
