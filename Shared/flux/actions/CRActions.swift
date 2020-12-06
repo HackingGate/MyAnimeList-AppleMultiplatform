@@ -95,7 +95,7 @@ struct CRActions {
             
             let params = [
                 "session_id": sessionId,
-                "fields": "media.stream_data,media.media_id",
+                "fields": "media.stream_data,media.media_id,media.collection_id,series_id",
                 "media_id": String(mediaId)
             ]
             
