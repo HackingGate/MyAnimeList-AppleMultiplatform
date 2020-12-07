@@ -11,8 +11,8 @@ Unofficial MyAnimeList app for Apple TV, iPhone, iPad and Mac rewritten in Swift
 - [SwiftUIFlux](https://github.com/Dimillian/SwiftUIFlux): A very naive implementation of Redux using Combine BindableObject to serve as an example
 - [JikanSwift](https://github.com/HackingGate/JikanSwift): 
 Jikan Swift wrapper
-- [CrunchyrollSwift](https://github.com/HackingGate/CrunchyrollSwift): 
-Crunchyroll Swift wrapper unofficial
+- [MALSyncSwift](https://github.com/HackingGate/MALSyncSwift): MALSync Api Swift wrapper
+- [CrunchyrollSwift](https://github.com/HackingGate/CrunchyrollSwift): Crunchyroll Swift wrapper unofficial
 
 ### Development
 
