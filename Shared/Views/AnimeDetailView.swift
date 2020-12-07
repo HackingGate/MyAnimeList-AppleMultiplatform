@@ -18,7 +18,7 @@ struct AnimeDetailView: View {
     
     let anime: JikanAPIAnime
     
-    var sites: MALSyncMALSites? {
+    var sites: MALSyncAPIMALSites? {
         if let sites = store.state.malSyncState.malIDSites[anime.id] {
             return sites
         }
@@ -49,6 +49,16 @@ struct AnimeDetailView: View {
         return result
     }
     
+    var malSyncCRMediaIdsCollectionIds: [Int: Int] {
+        var result = [Int: Int]()
+        for malSyncCRMediaId in malSyncCRMediaIds {
+            if let collectionId = store.state.crState.mediaIdToCollectionId[malSyncCRMediaId.value] {
+                result[malSyncCRMediaId.value] = collectionId
+            }
+        }
+        return result
+    }
+    
     var collections: [CRAPICollection] {
         if let seriesId = store.state.jikanCRState.malIdSeriesId[anime.id] {
             return store.state.crState.series[seriesId] ?? []
@@ -63,12 +73,17 @@ struct AnimeDetailView: View {
                 ForEach(malSyncCRArray) { malSyncCR in
                     if let mediaId = malSyncCRMediaIds[malSyncCR.id] {
                         Text(malSyncCR.title)
-                            .onAppear() {
+                            .onAppear () {
                                 if let session = store.state.crState.session {
-                                    // Need to know collectionId
+                                    // fetch CRAPIInfo to know collectionId
                                     store.dispatch(action: CRActions.Info(sessionId: session.id, mediaId: mediaId))
                                 }
                             }
+                        if let collectionId = malSyncCRMediaIdsCollectionIds[mediaId] {
+                            ScrollView(.horizontal) {
+                                EpisodeListView(collectionId: collectionId)
+                            }
+                        }
                     }
                 }
             } else {

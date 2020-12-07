@@ -14,4 +14,5 @@ struct CRState: FluxState, Codable {
     var series: [Int: [CRAPICollection]] = [:]
     var collections: [Int: [CRAPIMedia]] = [:]
     var medias: [Int: CRAPIMedia] = [:]
+    var mediaIdToCollectionId: [Int: Int] = [:]
 }

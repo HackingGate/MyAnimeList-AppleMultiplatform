@@ -23,6 +23,7 @@ func crStateReducer(state: CRState, action: Action) -> CRState {
             medias.forEach { media in
                 if let mediaId = Int(media.id) {
                     state.medias[mediaId] = media
+                    state.mediaIdToCollectionId[mediaId] = action.collectionId
                 }
             }
         }
@@ -34,6 +35,9 @@ func crStateReducer(state: CRState, action: Action) -> CRState {
             } else {
                 fatalError("Cannot update CRMedia")
 //                state.medias[action.mediaId] = media
+            }
+            if let collectionIdString = media.collectionId, let collectionId = Int(collectionIdString) {
+                state.mediaIdToCollectionId[action.mediaId] = collectionId
             }
         }
     default:

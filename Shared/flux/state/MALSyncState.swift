@@ -10,5 +10,5 @@ import SwiftUIFlux
 import MALSyncSwift
 
 struct MALSyncState: FluxState, Codable {
-    var malIDSites: [Int: MALSyncMALSites] = [:]
+    var malIDSites: [Int: MALSyncAPIMALSites] = [:]
 }

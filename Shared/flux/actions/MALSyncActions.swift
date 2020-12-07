@@ -20,7 +20,7 @@ struct MALSyncActions {
             MALSyncAPIService.shared.loadMALAnime(
                 id: id,
                 params: params)
-            { (result: Result<MALSyncMAL, MALSyncAPIService.APIError>) in
+            { (result: Result<MALSyncAPIMAL, MALSyncAPIService.APIError>) in
                 switch result {
                 case let .success(response):
                     #if DEBUG
@@ -36,6 +36,6 @@ struct MALSyncActions {
 
     struct SetAnime: Action {
         let malID: Int
-        let response: MALSyncMALSites
+        let response: MALSyncAPIMALSites
     }
 }
