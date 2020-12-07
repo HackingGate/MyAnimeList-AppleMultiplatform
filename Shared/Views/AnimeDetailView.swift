@@ -9,8 +9,6 @@ import SwiftUI
 import SwiftUIFlux
 import AVKit
 import JikanSwift
-import CrunchyrollSwiftWeb
-import CrunchyrollSwift
 import MALSyncSwift
 
 struct AnimeDetailView: View {
@@ -59,38 +57,20 @@ struct AnimeDetailView: View {
         return result
     }
     
-    var collections: [CRAPICollection] {
-        if let seriesId = store.state.jikanCRState.malIdSeriesId[anime.id] {
-            return store.state.crState.series[seriesId] ?? []
-        }
-        return []
-    }
-    
     var body: some View {
         List {
-            if malSyncCRMediaIds.count > 0 {
-                // MALSync -> Crunchyroll mapper mached
-                ForEach(malSyncCRArray) { malSyncCR in
-                    if let mediaId = malSyncCRMediaIds[malSyncCR.id] {
-                        Text(malSyncCR.title)
-                            .onAppear () {
-                                if let session = store.state.crState.session {
-                                    // fetch CRAPIInfo to know collectionId
-                                    store.dispatch(action: CRActions.Info(sessionId: session.id, mediaId: mediaId))
-                                }
-                            }
-                        if let collectionId = malSyncCRMediaIdsCollectionIds[mediaId] {
-                            ScrollView(.horizontal) {
-                                EpisodeListView(collectionId: collectionId)
+            // MALSync -> Crunchyroll mapper mached
+            ForEach(malSyncCRArray) { malSyncCR in
+                if let mediaId = malSyncCRMediaIds[malSyncCR.id] {
+                    Text(malSyncCR.title)
+                        .onAppear () {
+                            if let session = store.state.crState.session {
+                                // fetch CRAPIInfo to know collectionId
+                                store.dispatch(action: CRActions.Info(sessionId: session.id, mediaId: mediaId))
                             }
                         }
-                    }
-                }
-            } else {
-                ForEach(collections) { collection in
-                    Text(collection.name)
-                    ScrollView(.horizontal) {
-                        if let collectionId = Int(collection.id) {
+                    if let collectionId = malSyncCRMediaIdsCollectionIds[mediaId] {
+                        ScrollView(.horizontal) {
                             EpisodeListView(collectionId: collectionId)
                         }
                     }
