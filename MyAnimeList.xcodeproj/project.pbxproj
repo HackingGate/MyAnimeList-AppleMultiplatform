@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C704B13E2580FAD5005C1B66 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C704B13D2580FAD5005C1B66 /* KingfisherSwiftUI */; };
+		C704B1432580FAF0005C1B66 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C704B1422580FAF0005C1B66 /* KingfisherSwiftUI */; };
+		C704B1452580FAF9005C1B66 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C704B1442580FAF9005C1B66 /* KingfisherSwiftUI */; };
+		C704B14A2581077D005C1B66 /* AnimeDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C704B1492581077D005C1B66 /* AnimeDetailItem.swift */; };
+		C704B14F258107AE005C1B66 /* AnimeDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C704B14E258107AE005C1B66 /* AnimeDetailItem.swift */; };
 		C783F8E1257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
 		C783F8E2257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
 		C783F8E3257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
@@ -107,6 +112,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C704B1492581077D005C1B66 /* AnimeDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailItem.swift; sourceTree = "<group>"; };
+		C704B14E258107AE005C1B66 /* AnimeDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailItem.swift; sourceTree = "<group>"; };
 		C7387FA425793A1100EDC0B8 /* MyAnimeList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAnimeList.entitlements; sourceTree = "<group>"; };
 		C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncReducer.swift; sourceTree = "<group>"; };
 		C783F8E7257CBAD9001EB646 /* MALSyncState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncState.swift; sourceTree = "<group>"; };
@@ -159,6 +166,7 @@
 				C795B51B257694AD009EC5E8 /* CrunchyrollSwift in Frameworks */,
 				C795B47B257693E1009EC5E8 /* SwiftUIFlux in Frameworks */,
 				C7BC4CBB257BD1A000EEBAFC /* MALSyncSwift in Frameworks */,
+				C704B13E2580FAD5005C1B66 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +178,7 @@
 				C795B521257694B3009EC5E8 /* CrunchyrollSwift in Frameworks */,
 				C795B481257693FE009EC5E8 /* SwiftUIFlux in Frameworks */,
 				C79519F1257BD34B00420BA9 /* MALSyncSwift in Frameworks */,
+				C704B1432580FAF0005C1B66 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +190,7 @@
 				C795B5A2257697DD009EC5E8 /* SwiftUIFlux in Frameworks */,
 				C795B5A0257697DD009EC5E8 /* JikanSwift in Frameworks */,
 				C79519F3257BD35600420BA9 /* MALSyncSwift in Frameworks */,
+				C704B1452580FAF9005C1B66 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +245,7 @@
 			children = (
 				C795B3FE2576922D009EC5E8 /* Info.plist */,
 				C7387FAE25793B2F00EDC0B8 /* Mac Catalyst */,
+				C704B1492581077D005C1B66 /* AnimeDetailItem.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -358,6 +369,7 @@
 			children = (
 				C795B58E257697C2009EC5E8 /* Info.plist */,
 				C795B58B257697C2009EC5E8 /* Preview Content */,
+				C704B14E258107AE005C1B66 /* AnimeDetailItem.swift */,
 			);
 			path = tvOS;
 			sourceTree = "<group>";
@@ -391,6 +403,7 @@
 				C795B51A257694AD009EC5E8 /* CrunchyrollSwift */,
 				C795B51E257694AD009EC5E8 /* JikanSwift */,
 				C7BC4CBA257BD1A000EEBAFC /* MALSyncSwift */,
+				C704B13D2580FAD5005C1B66 /* KingfisherSwiftUI */,
 			);
 			productName = "MyAnimeList (iOS)";
 			productReference = C795B3FB2576922D009EC5E8 /* MyAnimeList.app */;
@@ -414,6 +427,7 @@
 				C795B520257694B3009EC5E8 /* CrunchyrollSwift */,
 				C795B524257694B3009EC5E8 /* JikanSwift */,
 				C79519F0257BD34B00420BA9 /* MALSyncSwift */,
+				C704B1422580FAF0005C1B66 /* KingfisherSwiftUI */,
 			);
 			productName = "MyAnimeList (macOS)";
 			productReference = C795B4032576922D009EC5E8 /* MyAnimeList.app */;
@@ -437,6 +451,7 @@
 				C795B59F257697DD009EC5E8 /* JikanSwift */,
 				C795B5A1257697DD009EC5E8 /* SwiftUIFlux */,
 				C79519F2257BD35600420BA9 /* MALSyncSwift */,
+				C704B1442580FAF9005C1B66 /* KingfisherSwiftUI */,
 			);
 			productName = MyAnimeList;
 			productReference = C795B583257697C1009EC5E8 /* MyAnimeList (tvOS).app */;
@@ -473,6 +488,7 @@
 			mainGroup = C795B3EE2576922C009EC5E8;
 			packageReferences = (
 				C795B479257693E1009EC5E8 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
+				C704B13C2580FAD5005C1B66 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = C795B3FC2576922D009EC5E8 /* Products */;
 			projectDirPath = "";
@@ -526,6 +542,7 @@
 				C795B46A25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */,
 				C783F8E8257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B55F25769529009EC5E8 /* JikanActions.swift in Sources */,
+				C704B14A2581077D005C1B66 /* AnimeDetailItem.swift in Sources */,
 				C795B54725769529009EC5E8 /* CRAnime.swift in Sources */,
 				C795B55025769529009EC5E8 /* JikanCRState.swift in Sources */,
 				C795B4072576922D009EC5E8 /* MyAnimeListApp.swift in Sources */,
@@ -594,6 +611,7 @@
 				C795B5BE25769838009EC5E8 /* HomeView.swift in Sources */,
 				C783F8EA257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B5BF25769838009EC5E8 /* CRReducer.swift in Sources */,
+				C704B14F258107AE005C1B66 /* AnimeDetailItem.swift in Sources */,
 				C795B5AE25769838009EC5E8 /* JikanCRReducer.swift in Sources */,
 				C795B5B425769838009EC5E8 /* AppState.swift in Sources */,
 				C795B5B025769838009EC5E8 /* JikanCRActions.swift in Sources */,
@@ -920,6 +938,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C704B13C2580FAD5005C1B66 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.8;
+			};
+		};
 		C795B479257693E1009EC5E8 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Dimillian/SwiftUIFlux";
@@ -931,6 +957,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C704B13D2580FAD5005C1B66 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C704B13C2580FAD5005C1B66 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+		C704B1422580FAF0005C1B66 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C704B13C2580FAD5005C1B66 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+		C704B1442580FAF9005C1B66 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C704B13C2580FAD5005C1B66 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
 		C79519F0257BD34B00420BA9 /* MALSyncSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MALSyncSwift;

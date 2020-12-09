@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftUIFlux
 import JikanSwift
+import KingfisherSwiftUI
 
 struct AnimeCrosslineRow: View {
     let title: String
@@ -18,8 +19,8 @@ struct AnimeCrosslineRow: View {
                 Text(title)
             }
             ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(spacing: 32) {
-                    ForEach(self.animes) { anime in
+                LazyHStack(spacing: 20) {
+                    ForEach(animes) { anime in
                         AnimeDetailRowItem(anime: anime)
                     }
                 }.padding(.leading)
@@ -40,19 +41,29 @@ struct AnimeDetailRowItem: View {
             NavigationLink(destination: AnimeDetailView(anime: anime).environmentObject(store), isActive: $isShowingDetailView) {
                 EmptyView()
             }
-            Button(anime.title) {
+            Button(action: {
                 displayAction()
+            }) {
+                AnimeDetailItem(anime: anime)
             }
+            .buttonStyle(PlainButtonStyle())
         }
-        .frame(width: 80.0, height: 320.0, alignment: .center)
         #else
-        Button(action: {
-            displayAction()
-        }, label: {
+        VStack {
+            Button(action: {
+                displayAction()
+            }) {
+                AnimeDetailItem(anime: anime)
+                    .frame(width: 200.0, height: 300.0, alignment: .center)
+            }
+            .buttonStyle(CardButtonStyle())
+            .frame(width: 250.0, height: 350.0, alignment: .center)
+            .sheet(isPresented: $isShowingDetailView) {
+                AnimeDetailView(anime: anime).environmentObject(store)
+            }
             Text(anime.title)
-        })
-        .sheet(isPresented: $isShowingDetailView) {
-            AnimeDetailView(anime: anime).environmentObject(store)
+                .frame(width: 200.0)
+            Spacer()
         }
         #endif
     }
