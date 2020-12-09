@@ -66,7 +66,7 @@ struct AnimePlayer: View {
 
     var body: some View {
         VideoPlayer(player: player)
-            .edgesIgnoringSafeArea(.all)
+            .ignoresSafeArea()
             .onAppear() {
                 if let playerItem = store.state.playState.playerItems[itemId] {
                     let timeToSeek = CMTime(seconds: playerItem.currentTime, preferredTimescale: 1)
