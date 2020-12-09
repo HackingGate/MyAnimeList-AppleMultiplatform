@@ -19,27 +19,45 @@ struct FullscreenVideoPlayer: View {
         return store.state.crState.medias[mediaId]
     }
     
-    var player: AVPlayer? {
-        if let media = self.media,
-           let streamData = media.streamData,
-           let adaptive = streamData.streams.last(where: { $0.quality == "adaptive" }) ?? streamData.streams.last,
-           let url = URL(string: adaptive.url) {
-            return AVPlayer(url: url)
-        }
-        return nil
-    }
+    @State var player: AVPlayer?
     
     var body: some View {
         // TODO: https://www.swiftbysundell.com/tips/optional-swiftui-views/
-        if ((media != nil) && !media!.premiumOnly) {
-            if ((player) != nil) {
-                AnimePlayer(itemId: mediaId, player: player!)
-            } else {
+        if let media = media, !media.premiumOnly {
+            if let player = player {
+                AnimePlayer(itemId: mediaId, player: player)
+            } else if let streamData = media.streamData,
+                      let adaptive = streamData.streams.last(where: { $0.quality == "adaptive" }) ?? streamData.streams.last,
+                      let url = URL(string: adaptive.url) {
                 Text("Loading anime stream")
+                    .onAppear() {
+                        player = AVPlayer(url: url)
+                    }
+            } else {
+                Text("No anime stream")
+                CloseButton()
             }
         } else {
             Text("Subscribe Crunchyroll Premium to watch this episode")
+            CloseButton()
         }
+    }
+}
+
+struct CloseButton: View {
+    @Environment(\.presentationMode) private var presentationMode
+    
+    var body: some View {
+        #if os(tvOS)
+        EmptyView()
+        #else
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            Text("Dismiss")
+        }
+        .padding()
+        #endif
     }
 }
 
