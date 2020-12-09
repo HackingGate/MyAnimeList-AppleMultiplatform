@@ -10,11 +10,11 @@ import SwiftUIFlux
 import CrunchyrollSwift
 
 struct EpisodeListView: View {
-    @EnvironmentObject var store: Store<AppState>
+    @EnvironmentObject private var store: Store<AppState>
     
     let collectionId: Int
     
-    var episodes: [CRAPIMedia] {
+    private var episodes: [CRAPIMedia] {
         return store.state.crState.collections[collectionId] ?? []
     }
     
@@ -38,7 +38,7 @@ struct EpisodeListView: View {
 }
 
 struct EpisodeView: View {
-    @State var modalDisplayed = false
+    @State private var modalDisplayed = false
     
     let episode: CRAPIMedia
     let mediaId: Int

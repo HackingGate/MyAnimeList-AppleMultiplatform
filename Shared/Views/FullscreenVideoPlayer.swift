@@ -11,30 +11,29 @@ import AVKit
 import CrunchyrollSwift
 
 struct FullscreenVideoPlayer: View {
-    @EnvironmentObject var store: Store<AppState>
+    @EnvironmentObject private var store: Store<AppState>
 
     let mediaId: Int
     
-    var media: CRAPIMedia? {
+    private var media: CRAPIMedia? {
         return store.state.crState.medias[mediaId]
     }
     
-    @State var player: AVPlayer?
+    @State private var player: AVPlayer?
     
     var body: some View {
-        // TODO: https://www.swiftbysundell.com/tips/optional-swiftui-views/
         if let media = media, !media.premiumOnly {
             if let player = player {
                 AnimePlayer(itemId: mediaId, player: player)
             } else if let streamData = media.streamData,
                       let adaptive = streamData.streams.last(where: { $0.quality == "adaptive" }) ?? streamData.streams.last,
                       let url = URL(string: adaptive.url) {
-                Text("Loading anime stream")
+                Text("Loaded")
                     .onAppear() {
                         player = AVPlayer(url: url)
                     }
             } else {
-                Text("No anime stream")
+                Text("Loading anime stream")
                 CloseButton()
             }
         } else {

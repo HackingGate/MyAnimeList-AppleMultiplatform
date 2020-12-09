@@ -12,18 +12,18 @@ import JikanSwift
 import MALSyncSwift
 
 struct AnimeDetailView: View {
-    @EnvironmentObject var store: Store<AppState>
+    @EnvironmentObject private var store: Store<AppState>
     
     let anime: JikanAPIAnime
     
-    var sites: MALSyncAPIMALSites? {
+    private var sites: MALSyncAPIMALSites? {
         if let sites = store.state.malSyncState.malIDSites[anime.id] {
             return sites
         }
         return nil
     }
     
-    var malSyncCRArray: [MALSyncMALSiteType1] {
+    private var malSyncCRArray: [MALSyncMALSiteType1] {
         if let sites = sites,
            let crunchyroll = sites.crunchyroll {
             return crunchyroll.array
@@ -31,7 +31,7 @@ struct AnimeDetailView: View {
         return []
     }
     
-    var malSyncCRMediaIds: [String: Int] {
+    private var malSyncCRMediaIds: [String: Int] {
         var result = [String: Int]()
         for malSyncCR in malSyncCRArray {
             if let queryItems = URLComponents(string: malSyncCR.url)?.queryItems {
@@ -47,7 +47,7 @@ struct AnimeDetailView: View {
         return result
     }
     
-    var malSyncCRMediaIdsCollectionIds: [Int: Int] {
+    private var malSyncCRMediaIdsCollectionIds: [Int: Int] {
         var result = [Int: Int]()
         for malSyncCRMediaId in malSyncCRMediaIds {
             if let collectionId = store.state.crState.mediaIdToCollectionId[malSyncCRMediaId.value] {

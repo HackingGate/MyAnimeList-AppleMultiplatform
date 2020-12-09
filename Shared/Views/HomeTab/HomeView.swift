@@ -10,15 +10,15 @@ import SwiftUIFlux
 import JikanSwift
 
 struct HomeView: View {
-    @EnvironmentObject var store: Store<AppState>
+    @EnvironmentObject private var store: Store<AppState>
     
-    var topBypopularity: [JikanAPIAnime] {
+    private var topBypopularity: [JikanAPIAnime] {
         store.state.jikanState.topBypopularity?.top ?? []
     }
-    var topAiring: [JikanAPIAnime] {
+    private var topAiring: [JikanAPIAnime] {
         store.state.jikanState.topAiring?.top ?? []
     }
-    var topTv: [JikanAPIAnime] {
+    private var topTv: [JikanAPIAnime] {
         store.state.jikanState.topTv?.top ?? []
     }
     
