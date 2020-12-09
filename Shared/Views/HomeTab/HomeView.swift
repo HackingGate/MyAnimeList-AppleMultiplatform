@@ -12,43 +12,45 @@ import JikanSwift
 struct HomeView: View {
     @EnvironmentObject private var store: Store<AppState>
     
-    private var topBypopularity: [JikanAPIAnime] {
-        store.state.jikanState.topBypopularity?.top ?? []
+    private var topBypopularity: [JikanAPIAnime]? {
+        store.state.jikanState.topBypopularity?.top
     }
-    private var topAiring: [JikanAPIAnime] {
-        store.state.jikanState.topAiring?.top ?? []
+    private var topAiring: [JikanAPIAnime]? {
+        store.state.jikanState.topAiring?.top
     }
-    private var topTv: [JikanAPIAnime] {
-        store.state.jikanState.topTv?.top ?? []
+    private var topTv: [JikanAPIAnime]? {
+        store.state.jikanState.topTv?.top
     }
     
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
                 // TODO: Add ForEach here
-                AnimeCrosslineRow(
-                    title: "Most Popular",
-                    animes: topBypopularity
-                )
-                .onAppear() {
-                    store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .bypopularity, params: nil))
+                if let topBypopularity = topBypopularity {
+                    AnimeCrosslineRow(
+                        title: "Most Popular",
+                        animes: topBypopularity
+                    )
                 }
-                AnimeCrosslineRow(
-                    title: "Top Airing",
-                    animes: topAiring
-                )
-                .onAppear() {
-                    store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .airing, params: nil))
+                if let topAiring = topAiring {
+                    AnimeCrosslineRow(
+                        title: "Top Airing",
+                        animes: topAiring
+                    )
                 }
-                AnimeCrosslineRow(
-                    title: "Top TV Series",
-                    animes: topTv
-                )
-                .onAppear() {
-                    store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .tv, params: nil))
+                if let topTv = topTv {
+                    AnimeCrosslineRow(
+                        title: "Top TV Series",
+                        animes: topTv
+                    )
                 }
             }
             .navigationTitle("Home")
+        }
+        .onAppear() {
+            store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .bypopularity, params: nil))
+            store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .airing, params: nil))
+            store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .tv, params: nil))
         }
     }
 }
