@@ -15,9 +15,9 @@ struct AnimeCrosslineRow: View {
     let animes: [JikanAPIAnime]
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Text(title)
-            }
+            Divider()
+            Text(title)
+                .padding(.leading)
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 20) {
                     ForEach(animes) { anime in
@@ -44,7 +44,8 @@ struct AnimeDetailRowItem: View {
             Button(action: {
                 displayAction()
             }) {
-                AnimeDetailItem(anime: anime)
+                AnimeDetailItem(title: anime.title, imageURL: anime.imageURL)
+                    .frame(width: 100.0, height: 216.0)
             }
             .buttonStyle(PlainButtonStyle())
         }
@@ -53,16 +54,16 @@ struct AnimeDetailRowItem: View {
             Button(action: {
                 displayAction()
             }) {
-                AnimeDetailItem(anime: anime)
-                    .frame(width: 200.0, height: 300.0, alignment: .center)
+                AnimeDetailItem(imageURL: anime.imageURL)
+                    .frame(width: 200.0, height: 300.0)
             }
             .buttonStyle(CardButtonStyle())
-            .frame(width: 250.0, height: 350.0, alignment: .center)
+            .frame(width: 250.0, height: 350.0)
             .sheet(isPresented: $isShowingDetailView) {
                 AnimeDetailView(anime: anime).environmentObject(store)
             }
             Text(anime.title)
-                .frame(width: 200.0)
+                .frame(width: 200.0, alignment: .leading)
             Spacer()
         }
         #endif
