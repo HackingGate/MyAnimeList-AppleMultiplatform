@@ -45,7 +45,7 @@ struct AnimeDetailRowItem: View {
                 displayAction()
             }) {
                 AnimeDetailItem(title: anime.title, imageURL: anime.imageURL)
-                    .frame(width: 100.0, height: 216.0)
+                    .frame(width: 100.0, height: 212.0)
             }
             .buttonStyle(PlainButtonStyle())
         }

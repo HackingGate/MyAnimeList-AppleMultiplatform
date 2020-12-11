@@ -24,12 +24,12 @@ struct AnimeDetailItem: View {
                         .frame(width: geometry.size.width, height: geometry.size.width * 1.5)
                         .cornerRadius(8)
                     Text(title)
-                        .font(.system(size: 14))
+                        .font(.caption)
                         .frame(width: geometry.size.width, alignment: .leading)
                     Spacer()
                 } else {
                     Text(title)
-                        .font(.system(size: 14))
+                        .font(.caption)
                         .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
                 }
             }
