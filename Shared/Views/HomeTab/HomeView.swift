@@ -24,7 +24,7 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView(.vertical) {
+            ScrollView(.vertical, showsIndicators: false) {
                 // TODO: Add ForEach here
                 if let topBypopularity = topBypopularity {
                     AnimeCrosslineRow(
