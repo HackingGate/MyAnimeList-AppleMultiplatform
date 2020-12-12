@@ -10,14 +10,27 @@ import JikanSwift
 import KingfisherSwiftUI
 
 struct AnimeDetailItem: View {
+    @Environment(\.isFocused) private var isFocused
+    var isFocusedBinding: Binding<Bool>?
+    
     let imageURL: String
         
     var body: some View {
-        if let imageURL = URL(string: imageURL) {
-            KFImage(imageURL)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
+        ZStack {
+            report()
+            if let imageURL = URL(string: imageURL) {
+                KFImage(imageURL)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            }
         }
+    }
+    
+    func report() -> some View {
+        DispatchQueue.main.async {
+            self.isFocusedBinding?.wrappedValue = self.isFocused
+        }
+        return EmptyView()
     }
 }
 

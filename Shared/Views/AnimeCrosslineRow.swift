@@ -31,7 +31,11 @@ struct AnimeCrosslineRow: View {
 
 struct AnimeDetailRowItem: View {
     @State private var isShowingDetailView = false
-
+    #if os(tvOS)
+    // https://stackoverflow.com/a/59196076/4063462
+    @State private var cardButtonFocusd = false
+    #endif
+    
     let anime: JikanAPIAnime
     var body: some View {
         #if os(iOS)
@@ -54,21 +58,27 @@ struct AnimeDetailRowItem: View {
             Button(action: {
                 displayAction()
             }) {
-                AnimeDetailItem(imageURL: anime.imageURL)
+                AnimeDetailItem(isFocusedBinding: $cardButtonFocusd,
+                                imageURL: anime.imageURL)
                     .frame(width: 200.0, height: 300.0)
             }
             .buttonStyle(CardButtonStyle())
-            .frame(width: 250.0, height: 350.0)
+            .padding(.all, 25)
             .sheet(isPresented: $isShowingDetailView) {
                 AnimeDetailView(anime: anime).environmentObject(store)
             }
             Text(anime.title)
-                .frame(width: 200.0, alignment: .leading)
+                .lineLimit(1)
+                .frame(width: cardButtonFocusd ? 225.0 : 200.0, alignment: .leading)
+                .padding(.top, cardButtonFocusd ? 0 : -25)
+                .padding(.bottom, cardButtonFocusd ? 0 : 25)
             Spacer()
         }
         #endif
     }
+}
 
+extension AnimeDetailRowItem {
     func displayAction() {
         self.isShowingDetailView = true
         store.dispatch(action: JikanActions.Anime(id: anime.id,
