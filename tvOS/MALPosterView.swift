@@ -13,14 +13,16 @@ struct MALPosterView: View {
     // https://stackoverflow.com/a/59196076/4063462
     @State private var cardButtonFocusd = false
     
-    let imageWidth: CGFloat = 200.0
-    let imageHeight: CGFloat = 300.0
-    let paddingWhenFocused: CGFloat = 25.0
-    func carButtonAnimation(isFocused: Bool) -> Animation {
+    let anime: JikanAPIAnime
+    var imageWidth: CGFloat = 200.0
+    var imageHeight: CGFloat {
+        imageWidth * 1.5
+    }
+    private let paddingWhenFocused: CGFloat = 25.0
+    private func carButtonAnimation(isFocused: Bool) -> Animation {
         return Animation.easeOut(duration: isFocused ? 0.1 : 0.3)
     }
     
-    let anime: JikanAPIAnime
     var body: some View {
         VStack {
             Button(action: {

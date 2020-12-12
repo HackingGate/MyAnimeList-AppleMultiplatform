@@ -9,9 +9,14 @@ import SwiftUI
 import JikanSwift
 
 struct MALPosterView: View {
+    let anime: JikanAPIAnime
+    var imageWidth: CGFloat = 100.0
+    var imageHeight: CGFloat {
+        imageWidth * 1.5
+    }
+    
     @State var isShowingDetailView = false
     
-    let anime: JikanAPIAnime
     var body: some View {
         VStack {
             NavigationLink(destination: AnimeDetailView(anime: anime).environmentObject(store), isActive: $isShowingDetailView) {
@@ -21,7 +26,7 @@ struct MALPosterView: View {
                 displayAction()
             }) {
                 MALPosterItem(title: anime.title, imageURL: anime.imageURL)
-                    .frame(width: 100.0, height: 212.0)
+                    .frame(width: imageWidth, height: imageHeight + 62)
             }
             .buttonStyle(PlainButtonStyle())
         }
