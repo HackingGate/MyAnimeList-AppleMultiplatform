@@ -4,3 +4,6 @@
 [submodule "Packages/JikanSwift"]
 	path = Packages/JikanSwift
 	url = https://github.com/HackingGate/JikanSwift.git
+[submodule "Packages/MALSyncSwift"]
+	path = Packages/MALSyncSwift
+	url = https://github.com/HackingGate/MALSyncSwift.git
