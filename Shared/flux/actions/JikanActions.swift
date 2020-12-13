@@ -30,7 +30,7 @@ struct JikanActions {
                     #if DEBUG
                     print(response)
                     #endif
-                    dispatch(SetAnime(malID: 1, response: response))
+                    dispatch(SetAnime(malID: id, response: response))
                 case .failure(_):
                     break
                 }
