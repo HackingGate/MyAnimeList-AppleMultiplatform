@@ -19,3 +19,17 @@ Jikan Swift wrapper
 The project use SwiftUI and SwiftUIFlux.
 
 You can learn SwiftUIFlux and SwiftUI with [MovieSwiftUI](https://github.com/Dimillian/MovieSwiftUI).
+
+Swift packages made for this porject are intergrated as git submodules. Once the sub packages are well developed. I'll consider to change it back to the way to install a SwiftPM that everybody know.
+
+Example to clone with submodules:
+
+```sh
+$ git clone --recurse-submodules
+```
+
+Example to install submodules if you didn't use above command:
+
+```sh
+$ git submodule update --init --recursive
+```
