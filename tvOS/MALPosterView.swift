@@ -14,9 +14,9 @@ struct MALPosterView: View {
     @State private var cardButtonFocusd = false
     
     let anime: JikanAPIAnime
-    var imageWidth: CGFloat = 200.0
+    var imageWidth: CGFloat = Common.PosterImage.width
     var imageHeight: CGFloat {
-        imageWidth * 1.5
+        imageWidth * Common.PosterImage.ratio
     }
     private let paddingWhenFocused: CGFloat = 25.0
     private func carButtonAnimation(isFocused: Bool) -> Animation {
