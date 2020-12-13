@@ -13,6 +13,7 @@ Unofficial MyAnimeList app for Apple TV, iPhone, iPad and Mac rewritten in Swift
 Jikan Swift wrapper
 - [MALSyncSwift](https://github.com/HackingGate/MALSyncSwift): MALSync Api Swift wrapper
 - [CrunchyrollSwift](https://github.com/HackingGate/CrunchyrollSwift): Crunchyroll Swift wrapper unofficial
+- [Kingfisher](https://github.com/onevcat/Kingfisher): A lightweight, pure-Swift library for downloading and caching images from the web.
 
 ### Development
 

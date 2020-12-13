@@ -70,9 +70,7 @@ struct AnimeDetailView: View {
                             }
                         }
                     if let collectionId = malSyncCRMediaIdsCollectionIds[mediaId] {
-                        ScrollView(.horizontal) {
-                            EpisodeListView(collectionId: collectionId)
-                        }
+                        EpisodeListView(collectionId: collectionId)
                     }
                 }
             }

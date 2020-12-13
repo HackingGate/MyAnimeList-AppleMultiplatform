@@ -19,10 +19,12 @@ struct EpisodeListView: View {
     }
     
     var body: some View {
-        LazyHStack(alignment: .center, spacing: 20) {
-            ForEach(episodes) {
-                if let mediaId = Int($0.id) {
-                    EpisodeView(episode: $0, mediaId: mediaId)
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack(alignment: .center, spacing: 20) {
+                ForEach(episodes) {
+                    if let mediaId = Int($0.id) {
+                        EpisodeView(episode: $0, mediaId: mediaId)
+                    }
                 }
             }
         }
