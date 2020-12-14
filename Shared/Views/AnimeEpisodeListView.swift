@@ -32,7 +32,7 @@ struct EpisodeListView: View {
             if let session = store.state.crState.session {
                 if (episodes.count == 0) {
                     // Request only when data not yet avaliable
-                    store.dispatch(action: CRActions.ListMedia(sessionId: session.id, collectionId: collectionId))
+                    store.dispatch(action: CRActions.ListMedia(sessionId: session.id, collectionId: collectionId, fields: [.id, .episodeNumber, .name, .premiumOnly, .screenshotImage, .url]))
                 }
             }
         }
@@ -49,7 +49,7 @@ struct EpisodeView: View {
         Button(action: {
             displayAction()
         }, label: {
-            Text("\(episode.episodeNumber) \(episode.name)")
+            Text("\(episode.episodeNumber ?? "?") \(episode.name ?? "Unknow")")
         })
         .fullScreenCover(isPresented: $modalDisplayed) {
             FullscreenVideoPlayer(mediaId: mediaId).environmentObject(store)

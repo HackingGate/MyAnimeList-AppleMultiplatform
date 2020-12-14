@@ -61,6 +61,7 @@ struct CRActions {
     struct ListMedia: AsyncAction {
         let sessionId: String
         let collectionId: Int
+        var fields: [CRAPIMedia.CodingKeys] = []
         
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             
@@ -68,7 +69,7 @@ struct CRActions {
                 "session_id": sessionId,
                 "collection_id": String(collectionId),
                 "include_clips": "0",
-                "fields": "media.media_id,media.collection_id,media.collection_name,media.series_id,media.episode_number,media.name,media.series_name,media.description,media.premium_only,media.url"
+                "fields": fields.map({ "media." + $0.stringValue }).joined(separator: ",")
             ]
             
             CRAPIService.shared.GET(
