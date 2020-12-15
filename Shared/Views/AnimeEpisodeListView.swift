@@ -40,34 +40,17 @@ struct EpisodeListView: View {
 }
 
 struct EpisodeView: View {
-    @State private var modalDisplayed = false
-    
     let episode: CRAPIMedia
     let mediaId: Int
     var body: some View {
-        #if canImport(UIKit)
-        Button(action: {
+        ImageTextView(data: episode, imageType: Common().episodeImage) {
             displayAction()
-        }, label: {
-            Text("\(episode.episodeNumber ?? "?") \(episode.name ?? "Unknow")")
-        })
-        .fullScreenCover(isPresented: $modalDisplayed) {
+        } sheetContent: {
             FullscreenVideoPlayer(mediaId: mediaId).environmentObject(store)
         }
-        #else
-        Button(action: {
-            displayAction()
-        }, label: {
-            Text("\(episode.episodeNumber) \(episode.name)")
-        })
-        .sheet(isPresented: $modalDisplayed) {
-            FullscreenVideoPlayer(mediaId: mediaId).environmentObject(store)
-        }
-        #endif
     }
 
     func displayAction() {
-        self.modalDisplayed = true
         if let episodeId = Int(episode.id), let session = store.state.crState.session {
             store.dispatch(action: CRActions.Info(sessionId: session.id, mediaId: episodeId))
         }

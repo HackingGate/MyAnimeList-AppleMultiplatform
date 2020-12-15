@@ -9,7 +9,7 @@ import SwiftUI
 import JikanSwift
 import KingfisherSwiftUI
 
-struct MALPosterItem: View {
+struct ImageTextItem: View {
     let title: String
     let imageURL: String
 
@@ -21,7 +21,7 @@ struct MALPosterItem: View {
                         .resizable()
                         .clipped()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: geometry.size.width, height: geometry.size.width * 1.5)
+                        .frame(width: geometry.size.width, height: geometry.size.height - 62)
                         .cornerRadius(8)
                     Text(title)
                         .font(.caption)
@@ -39,6 +39,6 @@ struct MALPosterItem: View {
 
 struct AnimeDetailItem_Previews: PreviewProvider {
     static var previews: some View {
-        MALPosterItem(title: "Kimi no Na wa.", imageURL: "https://cdn.myanimelist.net/images/anime/5/87048.jpg?s=2bca128fcb9dfd6d0908f3d9986576c6")
+        ImageTextItem(title: "Kimi no Na wa.", imageURL: "https://cdn.myanimelist.net/images/anime/5/87048.jpg?s=2bca128fcb9dfd6d0908f3d9986576c6")
     }
 }

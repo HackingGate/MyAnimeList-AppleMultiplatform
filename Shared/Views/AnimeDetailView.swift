@@ -85,7 +85,7 @@ struct AnimeDetailView: View {
                 KFImage(imageURL)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: Common.PosterImage.width, height: Common.PosterImage.heigth)
+                    .frame(width: Common().posterImage.width, height: Common().posterImage.height)
             }
         }
     }
