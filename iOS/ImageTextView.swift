@@ -17,7 +17,14 @@ struct ImageTextView<D: Codable, IT: ImageType, SheetContent: View>: View {
             return anime.title
         }
         if let episode = data as? CRAPIMedia {
-            return episode.name
+            var title: String?
+            if let episodeNumber = episode.episodeNumber {
+                title = "\(episodeNumber): "
+            }
+            if let name = episode.name {
+                title = "\((title ?? "") + name)"
+            }
+            return title
         }
         return nil
     }
@@ -57,18 +64,13 @@ struct ImageTextView<D: Codable, IT: ImageType, SheetContent: View>: View {
                         .frame(width: imageType.width, height: imageType.height + 62)
                 }
                 .buttonStyle(PlainButtonStyle())
-            }
-            if let episode = data as? CRAPIMedia {
+            } else if let title = title, let imageURL = imageURL {
                 Button(action: {
                     self.modalDisplayed = true
                     action()
                 }, label: {
-                    if let episodeNumber = episode.episodeNumber,
-                       let name = episode.name,
-                       let iamgeURL = episode.screenshotImage?.fwide_url {
-                        ImageTextItem(title: "\(episodeNumber) \(name)", imageURL: iamgeURL)
-                            .frame(width: imageType.width, height: imageType.height + 62)
-                    }
+                    ImageTextItem(title: title, imageURL: imageURL)
+                        .frame(width: imageType.width, height: imageType.height + 62)
                 })
                 .fullScreenCover(isPresented: $modalDisplayed) {
                     self.sheetContent

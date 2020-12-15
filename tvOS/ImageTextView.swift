@@ -17,7 +17,14 @@ struct ImageTextView<D: Codable, IT: ImageType, SheetContent: View>: View {
             return anime.title
         }
         if let episode = data as? CRAPIMedia {
-            return episode.name
+            var title: String?
+            if let episodeNumber = episode.episodeNumber {
+                title = "\(episodeNumber): "
+            }
+            if let name = episode.name {
+                title = "\((title ?? "") + name)"
+            }
+            return title
         }
         return nil
     }
