@@ -9,10 +9,10 @@ import SwiftUI
 import JikanSwift
 import CrunchyrollSwift
 
-struct ImageTextView<D: Codable, IT: ImageType, SheetContent: View>: View {
+struct ImageTextView<D: Codable, IT: ImageType, Content: View>: View {
     let data: D
     let imageType: IT
-    var title: String? {
+    private var title: String? {
         if let anime = data as? JikanAPIAnime {
             return anime.title
         }
@@ -28,7 +28,7 @@ struct ImageTextView<D: Codable, IT: ImageType, SheetContent: View>: View {
         }
         return nil
     }
-    var imageURL: String? {
+    private var imageURL: String? {
         if let anime = data as? JikanAPIAnime {
             return anime.imageURL
         }
@@ -39,12 +39,19 @@ struct ImageTextView<D: Codable, IT: ImageType, SheetContent: View>: View {
     }
     
     var action: () -> Void
-    var sheetContent: SheetContent? = nil
-    init(data: D, imageType: IT, action: @escaping () -> Void, @ViewBuilder sheetContent: () -> SheetContent) {
+    var content: Content
+    var useModal: Bool
+    init(data: D,
+         imageType: IT,
+         useModal: Bool = false,
+         @ViewBuilder content: () -> Content,
+         action: @escaping () -> Void
+    ) {
         self.data = data
         self.imageType = imageType
+        self.useModal = useModal
+        self.content = content()
         self.action = action
-        self.sheetContent = sheetContent()
     }
     
     @State private var isShowingDetailView = false
@@ -52,28 +59,20 @@ struct ImageTextView<D: Codable, IT: ImageType, SheetContent: View>: View {
     
     var body: some View {
         VStack {
-            if let anime = data as? JikanAPIAnime {
-                NavigationLink(destination: AnimeDetailView(anime: anime).environmentObject(store), isActive: $isShowingDetailView) {
+            if let title = title, let imageURL = imageURL {
+                NavigationLink(destination: content, isActive: $isShowingDetailView) {
                     EmptyView()
                 }
                 Button(action: {
-                    self.isShowingDetailView = true
+                    isShowingDetailView = true && !useModal
+                    modalDisplayed = true && useModal
                     action()
                 }) {
-                    ImageTextItem(title: anime.title, imageURL: anime.imageURL)
-                        .frame(width: imageType.width, height: imageType.height + 62)
-                }
-                .buttonStyle(PlainButtonStyle())
-            } else if let title = title, let imageURL = imageURL {
-                Button(action: {
-                    self.modalDisplayed = true
-                    action()
-                }, label: {
                     ImageTextItem(title: title, imageURL: imageURL)
                         .frame(width: imageType.width, height: imageType.height + 62)
-                })
+                }
                 .fullScreenCover(isPresented: $modalDisplayed) {
-                    self.sheetContent
+                    content
                 }
                 .buttonStyle(PlainButtonStyle())
             }

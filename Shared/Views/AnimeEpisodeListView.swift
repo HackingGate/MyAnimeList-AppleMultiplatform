@@ -43,10 +43,12 @@ struct EpisodeView: View {
     let episode: CRAPIMedia
     let mediaId: Int
     var body: some View {
-        ImageTextView(data: episode, imageType: Common().episodeImage) {
-            displayAction()
-        } sheetContent: {
+        ImageTextView(data: episode,
+                      imageType: Common().episodeImage,
+                      useModal: true) {
             FullscreenVideoPlayer(mediaId: mediaId).environmentObject(store)
+        } action: {
+            displayAction()
         }
     }
 

@@ -21,18 +21,15 @@ struct AnimeCrosslineRow: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 20) {
                     ForEach(animes) { anime in
-                        ImageTextView(data: anime, imageType: Common().posterImage) {
+                        ImageTextView(data: anime,
+                                      imageType: Common().posterImage) {
+                            AnimeDetailView(anime: anime).environmentObject(store)
+                        } action: {
                             store.dispatch(action: JikanActions.Anime(id: anime.id,
                                                                       request: .all,
                                                                       params: nil))
                             store.dispatch(action: MALSyncActions.MALAnime(id: anime.id,
                                                                            params: nil))
-                        } sheetContent: {
-                            #if os(tvOS)
-                            AnimeDetailView(anime: anime).environmentObject(store)
-                            #else
-                            EmptyView()
-                            #endif
                         }
                     }
                 }.padding(.leading)

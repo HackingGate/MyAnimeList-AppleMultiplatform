@@ -9,10 +9,10 @@ import SwiftUI
 import JikanSwift
 import CrunchyrollSwift
 
-struct ImageTextView<D: Codable, IT: ImageType, SheetContent: View>: View {
+struct ImageTextView<D: Codable, IT: ImageType, Content: View>: View {
     let data: D
     let imageType: IT
-    var title: String? {
+    private var title: String? {
         if let anime = data as? JikanAPIAnime {
             return anime.title
         }
@@ -28,7 +28,7 @@ struct ImageTextView<D: Codable, IT: ImageType, SheetContent: View>: View {
         }
         return nil
     }
-    var imageURL: String? {
+    private var imageURL: String? {
         if let anime = data as? JikanAPIAnime {
             return anime.imageURL
         }
@@ -39,12 +39,19 @@ struct ImageTextView<D: Codable, IT: ImageType, SheetContent: View>: View {
     }
     
     var action: () -> Void
-    var sheetContent: SheetContent? = nil
-    init(data: D, imageType: IT, action: @escaping () -> Void, @ViewBuilder sheetContent: () -> SheetContent) {
+    var content: Content
+    var useModal: Bool
+    init(data: D,
+         imageType: IT,
+         useModal: Bool = true,
+         @ViewBuilder content: () -> Content,
+         action: @escaping () -> Void
+    ) {
         self.data = data
         self.imageType = imageType
+        self.useModal = useModal
+        self.content = content()
         self.action = action
-        self.sheetContent = sheetContent()
     }
     
     @State private var isShowingDetailView = false
@@ -71,7 +78,7 @@ struct ImageTextView<D: Codable, IT: ImageType, SheetContent: View>: View {
                 .buttonStyle(CardButtonStyle())
                 .padding(.all, paddingWhenFocused)
                 .sheet(isPresented: $isShowingDetailView) {
-                    sheetContent
+                    content
                 }
                 Text(title)
                     .lineLimit(1)
