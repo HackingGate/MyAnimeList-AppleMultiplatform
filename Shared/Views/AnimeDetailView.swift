@@ -94,6 +94,7 @@ struct AnimeDetailView: View {
         ScrollView(.vertical) {
             LazyVStack(alignment: .leading) {
                 informationView
+                    .padding()
                 Divider()
                 // MALSync -> Crunchyroll mapper mached
                 ForEach(malSyncCRArray) { malSyncCR in
@@ -105,6 +106,7 @@ struct AnimeDetailView: View {
                                     store.dispatch(action: CRActions.Info(sessionId: session.id, mediaId: mediaId))
                                 }
                             }
+                            .padding(.leading)
                         if let collectionId = malSyncCRMediaIdsCollectionIds[mediaId] {
                             EpisodeListView(collectionId: collectionId)
                         }

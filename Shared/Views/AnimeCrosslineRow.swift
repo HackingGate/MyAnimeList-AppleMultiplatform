@@ -32,7 +32,8 @@ struct AnimeCrosslineRow: View {
                                                                            params: nil))
                         }
                     }
-                }.padding(.leading)
+                }
+                .padding(.horizontal)
             }
         }
     }

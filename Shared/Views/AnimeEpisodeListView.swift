@@ -27,6 +27,7 @@ struct EpisodeListView: View {
                     }
                 }
             }
+            .padding(.horizontal)
         }
         .onAppear() {
             if let session = store.state.crState.session {
