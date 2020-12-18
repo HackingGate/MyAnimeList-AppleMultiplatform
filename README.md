@@ -34,3 +34,8 @@ Example to install submodules if you didn't use above command:
 ```sh
 $ git submodule update --init --recursive
 ```
+
+### Screenshots
+
+![TV_Home.png](https://github.com/HackingGate/MyAnimeList-AppleMultiplatform/raw/main/Screenshots/TV_Home.png)
+![TV_Detail.png](https://github.com/HackingGate/MyAnimeList-AppleMultiplatform/raw/main/Screenshots/TV_Detail.png)
