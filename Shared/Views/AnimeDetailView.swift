@@ -62,39 +62,13 @@ struct AnimeDetailView: View {
         return result
     }
     
-    @ViewBuilder
-    var informationView: some View {
-        HStack(alignment: .center, spacing: 20) {
-            VStack(alignment: .leading, spacing: 20) {
-                #if os(tvOS)
-                Text(anime.title)
-                    .font(.title)
-                #endif
-                if let titleJapanese = animeDetail.titleJapanese {
-                    Text(titleJapanese)
-                        .font(.title)
-                }
-                if let synopsis = animeDetail.synopsis {
-                    Text(synopsis)
-                        .font(.body)
-                        .lineLimit(4)
-                }
-            }
-            Spacer()
-            if let imageURL = URL(string: anime.imageURL) {
-                KFImage(imageURL)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: Common().posterImage.width, height: Common().posterImage.height)
-            }
-        }
-    }
-    
     var body: some View {
         ScrollView(.vertical) {
             LazyVStack(alignment: .leading) {
-                informationView
-                    .padding()
+                HStack(alignment: .center, spacing: 20) {
+                    AnimeInformationView(animeDetail: animeDetail)
+                }
+                .padding()
                 Divider()
                 // MALSync -> Crunchyroll mapper mached
                 ForEach(malSyncCRArray) { malSyncCR in
