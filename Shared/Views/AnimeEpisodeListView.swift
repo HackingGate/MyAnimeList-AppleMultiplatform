@@ -27,12 +27,13 @@ struct EpisodeListView: View {
                     }
                 }
             }
+            .padding(.horizontal)
         }
         .onAppear() {
             if let session = store.state.crState.session {
                 if (episodes.count == 0) {
                     // Request only when data not yet avaliable
-                    store.dispatch(action: CRActions.ListMedia(sessionId: session.id, collectionId: collectionId))
+                    store.dispatch(action: CRActions.ListMedia(sessionId: session.id, collectionId: collectionId, fields: [.id, .episodeNumber, .name, .premiumOnly, .screenshotImage, .url]))
                 }
             }
         }
@@ -40,34 +41,19 @@ struct EpisodeListView: View {
 }
 
 struct EpisodeView: View {
-    @State private var modalDisplayed = false
-    
     let episode: CRAPIMedia
     let mediaId: Int
     var body: some View {
-        #if canImport(UIKit)
-        Button(action: {
-            displayAction()
-        }, label: {
-            Text("\(episode.episodeNumber) \(episode.name)")
-        })
-        .fullScreenCover(isPresented: $modalDisplayed) {
+        ImageTextView(data: episode,
+                      imageType: Common().episodeImage,
+                      useModal: true) {
             FullscreenVideoPlayer(mediaId: mediaId).environmentObject(store)
-        }
-        #else
-        Button(action: {
+        } action: {
             displayAction()
-        }, label: {
-            Text("\(episode.episodeNumber) \(episode.name)")
-        })
-        .sheet(isPresented: $modalDisplayed) {
-            FullscreenVideoPlayer(mediaId: mediaId).environmentObject(store)
         }
-        #endif
     }
 
     func displayAction() {
-        self.modalDisplayed = true
         if let episodeId = Int(episode.id), let session = store.state.crState.session {
             store.dispatch(action: CRActions.Info(sessionId: session.id, mediaId: episodeId))
         }

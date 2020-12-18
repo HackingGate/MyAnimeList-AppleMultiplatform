@@ -10,11 +10,16 @@ import SwiftUIFlux
 import AVKit
 import JikanSwift
 import MALSyncSwift
+import KingfisherSwiftUI
 
 struct AnimeDetailView: View {
     @EnvironmentObject private var store: Store<AppState>
     
     let anime: JikanAPIAnime
+    
+    private var animeDetail: JikanAPIAnime {
+        store.state.jikanState.animes[anime.id] ?? anime
+    }
     
     private var sites: MALSyncAPIMALSites? {
         if let sites = store.state.malSyncState.malIDSites[anime.id] {
@@ -58,22 +63,31 @@ struct AnimeDetailView: View {
     }
     
     var body: some View {
-        List {
-            // MALSync -> Crunchyroll mapper mached
-            ForEach(malSyncCRArray) { malSyncCR in
-                if let mediaId = malSyncCRMediaIds[malSyncCR.id] {
-                    Text(malSyncCR.title)
-                        .onAppear () {
-                            if let session = store.state.crState.session {
-                                // fetch CRAPIInfo to know collectionId
-                                store.dispatch(action: CRActions.Info(sessionId: session.id, mediaId: mediaId))
+        ScrollView(.vertical) {
+            LazyVStack(alignment: .leading) {
+                HStack(alignment: .center, spacing: 20) {
+                    AnimeInformationView(animeDetail: animeDetail)
+                }
+                .padding()
+                Divider()
+                // MALSync -> Crunchyroll mapper mached
+                ForEach(malSyncCRArray) { malSyncCR in
+                    if let mediaId = malSyncCRMediaIds[malSyncCR.id] {
+                        Text(malSyncCR.title)
+                            .onAppear () {
+                                if let session = store.state.crState.session {
+                                    // fetch CRAPIInfo to know collectionId
+                                    store.dispatch(action: CRActions.Info(sessionId: session.id, mediaId: mediaId))
+                                }
                             }
+                            .padding(.leading)
+                        if let collectionId = malSyncCRMediaIdsCollectionIds[mediaId] {
+                            EpisodeListView(collectionId: collectionId)
                         }
-                    if let collectionId = malSyncCRMediaIdsCollectionIds[mediaId] {
-                        EpisodeListView(collectionId: collectionId)
                     }
                 }
             }
         }
+        .navigationTitle(anime.title)
     }
 }

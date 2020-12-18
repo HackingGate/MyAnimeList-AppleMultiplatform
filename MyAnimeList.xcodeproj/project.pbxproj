@@ -10,8 +10,17 @@
 		C704B13E2580FAD5005C1B66 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C704B13D2580FAD5005C1B66 /* KingfisherSwiftUI */; };
 		C704B1432580FAF0005C1B66 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C704B1422580FAF0005C1B66 /* KingfisherSwiftUI */; };
 		C704B1452580FAF9005C1B66 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C704B1442580FAF9005C1B66 /* KingfisherSwiftUI */; };
-		C704B14A2581077D005C1B66 /* MALPosterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C704B1492581077D005C1B66 /* MALPosterItem.swift */; };
-		C704B14F258107AE005C1B66 /* MALPosterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C704B14E258107AE005C1B66 /* MALPosterItem.swift */; };
+		C704B14A2581077D005C1B66 /* ImageTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C704B1492581077D005C1B66 /* ImageTextItem.swift */; };
+		C704B14F258107AE005C1B66 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C704B14E258107AE005C1B66 /* ImageItem.swift */; };
+		C73CB101258BB1ED006A0C9C /* TextSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CB100258BB1ED006A0C9C /* TextSheetView.swift */; };
+		C73CB102258BB1ED006A0C9C /* TextSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CB100258BB1ED006A0C9C /* TextSheetView.swift */; };
+		C73CB103258BB1ED006A0C9C /* TextSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CB100258BB1ED006A0C9C /* TextSheetView.swift */; };
+		C75EBBDB2588F55300754DC6 /* NavigationViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */; };
+		C75EBBDC2588F55300754DC6 /* NavigationViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */; };
+		C75EBBDD2588F55300754DC6 /* NavigationViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */; };
+		C77CDE8B25864A5700DD1FFC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* Common.swift */; };
+		C77CDE8C25864A5700DD1FFC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* Common.swift */; };
+		C77CDE8D25864A5700DD1FFC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* Common.swift */; };
 		C783F8E1257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
 		C783F8E2257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
 		C783F8E3257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
@@ -105,18 +114,24 @@
 		C795B5BF25769838009EC5E8 /* CRReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B54325769529009EC5E8 /* CRReducer.swift */; };
 		C795B5C025769838009EC5E8 /* JikanCRState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B53825769529009EC5E8 /* JikanCRState.swift */; };
 		C795B5D0257699C9009EC5E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C795B3F62576922D009EC5E8 /* Assets.xcassets */; };
+		C7AD2EC3258BA181008804A2 /* AnimeInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AD2EC2258BA181008804A2 /* AnimeInformationView.swift */; };
+		C7AD2EC4258BA181008804A2 /* AnimeInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AD2EC2258BA181008804A2 /* AnimeInformationView.swift */; };
+		C7AD2EC5258BA181008804A2 /* AnimeInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AD2EC2258BA181008804A2 /* AnimeInformationView.swift */; };
 		C7BC4C8D257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BC4C8C257BCD9B00EEBAFC /* MALSyncActions.swift */; };
 		C7BC4C8E257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BC4C8C257BCD9B00EEBAFC /* MALSyncActions.swift */; };
 		C7BC4C8F257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BC4C8C257BCD9B00EEBAFC /* MALSyncActions.swift */; };
 		C7BC4CBB257BD1A000EEBAFC /* MALSyncSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7BC4CBA257BD1A000EEBAFC /* MALSyncSwift */; };
-		C7D13411258511600058F301 /* MALPosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13410258511600058F301 /* MALPosterView.swift */; };
-		C7D13419258511A90058F301 /* MALPosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13418258511A90058F301 /* MALPosterView.swift */; };
+		C7D13411258511600058F301 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13410258511600058F301 /* ImageTextView.swift */; };
+		C7D13419258511A90058F301 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13418258511A90058F301 /* ImageTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C704B1492581077D005C1B66 /* MALPosterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALPosterItem.swift; sourceTree = "<group>"; };
-		C704B14E258107AE005C1B66 /* MALPosterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALPosterItem.swift; sourceTree = "<group>"; };
+		C704B1492581077D005C1B66 /* ImageTextItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextItem.swift; sourceTree = "<group>"; };
+		C704B14E258107AE005C1B66 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		C7387FA425793A1100EDC0B8 /* MyAnimeList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAnimeList.entitlements; sourceTree = "<group>"; };
+		C73CB100258BB1ED006A0C9C /* TextSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSheetView.swift; sourceTree = "<group>"; };
+		C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewIOS.swift; sourceTree = "<group>"; };
+		C77CDE8A25864A5700DD1FFC /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncReducer.swift; sourceTree = "<group>"; };
 		C783F8E7257CBAD9001EB646 /* MALSyncState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncState.swift; sourceTree = "<group>"; };
 		C795B3F42576922D009EC5E8 /* MyAnimeListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeListApp.swift; sourceTree = "<group>"; };
@@ -155,10 +170,11 @@
 		C795B58C257697C2009EC5E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C795B58E257697C2009EC5E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7A39699257BA95D000EB209 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C7AD2EC2258BA181008804A2 /* AnimeInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeInformationView.swift; sourceTree = "<group>"; };
 		C7BC4C8C257BCD9B00EEBAFC /* MALSyncActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncActions.swift; sourceTree = "<group>"; };
 		C7BC4CAB257BD17200EEBAFC /* MALSyncSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MALSyncSwift; sourceTree = "<group>"; };
-		C7D13410258511600058F301 /* MALPosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALPosterView.swift; sourceTree = "<group>"; };
-		C7D13418258511A90058F301 /* MALPosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALPosterView.swift; sourceTree = "<group>"; };
+		C7D13410258511600058F301 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
+		C7D13418258511A90058F301 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +225,23 @@
 			path = "Mac Catalyst";
 			sourceTree = "<group>";
 		};
+		C75EBBE12588F5F900754DC6 /* RouteView */ = {
+			isa = PBXGroup;
+			children = (
+				C795B45925769398009EC5E8 /* MainTabView.swift */,
+				C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */,
+			);
+			path = RouteView;
+			sourceTree = "<group>";
+		};
+		C77CDE8925864A3F00DD1FFC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C77CDE8A25864A5700DD1FFC /* Common.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		C795B3EE2576922C009EC5E8 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				C795B3F42576922D009EC5E8 /* MyAnimeListApp.swift */,
+				C77CDE8925864A3F00DD1FFC /* Common */,
 				C795B45425769398009EC5E8 /* Views */,
 				C795B53225769529009EC5E8 /* flux */,
 				C795B3F62576922D009EC5E8 /* Assets.xcassets */,
@@ -249,8 +283,8 @@
 			children = (
 				C795B3FE2576922D009EC5E8 /* Info.plist */,
 				C7387FAE25793B2F00EDC0B8 /* Mac Catalyst */,
-				C7D13418258511A90058F301 /* MALPosterView.swift */,
-				C704B1492581077D005C1B66 /* MALPosterItem.swift */,
+				C7D13418258511A90058F301 /* ImageTextView.swift */,
+				C704B1492581077D005C1B66 /* ImageTextItem.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -267,11 +301,13 @@
 		C795B45425769398009EC5E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C795B45925769398009EC5E8 /* MainTabView.swift */,
+				C75EBBE12588F5F900754DC6 /* RouteView */,
 				C795B45725769398009EC5E8 /* HomeTab */,
 				C795B45B25769398009EC5E8 /* SearchTab */,
 				C795B45A25769398009EC5E8 /* AnimeCrosslineRow.swift */,
 				C795B45D25769398009EC5E8 /* AnimeDetailView.swift */,
+				C7AD2EC2258BA181008804A2 /* AnimeInformationView.swift */,
+				C73CB100258BB1ED006A0C9C /* TextSheetView.swift */,
 				C795B45625769398009EC5E8 /* AnimeEpisodeListView.swift */,
 				C795B45525769398009EC5E8 /* FullscreenVideoPlayer.swift */,
 			);
@@ -374,8 +410,8 @@
 			children = (
 				C795B58E257697C2009EC5E8 /* Info.plist */,
 				C795B58B257697C2009EC5E8 /* Preview Content */,
-				C7D13410258511600058F301 /* MALPosterView.swift */,
-				C704B14E258107AE005C1B66 /* MALPosterItem.swift */,
+				C7D13410258511600058F301 /* ImageTextView.swift */,
+				C704B14E258107AE005C1B66 /* ImageItem.swift */,
 			);
 			path = tvOS;
 			sourceTree = "<group>";
@@ -540,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7AD2EC3258BA181008804A2 /* AnimeInformationView.swift in Sources */,
 				C795B45E25769398009EC5E8 /* FullscreenVideoPlayer.swift in Sources */,
 				C795B5622576952A009EC5E8 /* PlayActions.swift in Sources */,
 				C795B47025769398009EC5E8 /* AnimeDetailView.swift in Sources */,
@@ -548,23 +585,26 @@
 				C795B46A25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */,
 				C783F8E8257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B55F25769529009EC5E8 /* JikanActions.swift in Sources */,
-				C704B14A2581077D005C1B66 /* MALPosterItem.swift in Sources */,
+				C704B14A2581077D005C1B66 /* ImageTextItem.swift in Sources */,
 				C795B54725769529009EC5E8 /* CRAnime.swift in Sources */,
 				C795B55025769529009EC5E8 /* JikanCRState.swift in Sources */,
 				C795B4072576922D009EC5E8 /* MyAnimeListApp.swift in Sources */,
+				C75EBBDB2588F55300754DC6 /* NavigationViewIOS.swift in Sources */,
 				C795B55325769529009EC5E8 /* PlayState.swift in Sources */,
 				C795B55625769529009EC5E8 /* JikanState.swift in Sources */,
 				C795B56E2576952A009EC5E8 /* AppReducer.swift in Sources */,
 				C7BC4C8D257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */,
 				C795B46D25769398009EC5E8 /* SearchView.swift in Sources */,
-				C7D13419258511A90058F301 /* MALPosterView.swift in Sources */,
+				C7D13419258511A90058F301 /* ImageTextView.swift in Sources */,
 				C795B5682576952A009EC5E8 /* PlayReducer.swift in Sources */,
 				C783F8E1257CBACC001EB646 /* MALSyncReducer.swift in Sources */,
 				C795B54D25769529009EC5E8 /* AppState.swift in Sources */,
 				C795B46425769398009EC5E8 /* HomeView.swift in Sources */,
 				C795B55925769529009EC5E8 /* CRState.swift in Sources */,
 				C795B54A25769529009EC5E8 /* PlayerItem.swift in Sources */,
+				C77CDE8B25864A5700DD1FFC /* Common.swift in Sources */,
 				C795B5742576952A009EC5E8 /* JikanCRReducer.swift in Sources */,
+				C73CB101258BB1ED006A0C9C /* TextSheetView.swift in Sources */,
 				C795B5652576952A009EC5E8 /* CRActions.swift in Sources */,
 				C795B46725769398009EC5E8 /* MainTabView.swift in Sources */,
 				C795B5712576952A009EC5E8 /* JikanReducer.swift in Sources */,
@@ -584,16 +624,20 @@
 				C795B46B25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */,
 				C783F8E9257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B56025769529009EC5E8 /* JikanActions.swift in Sources */,
+				C7AD2EC4258BA181008804A2 /* AnimeInformationView.swift in Sources */,
 				C795B54825769529009EC5E8 /* CRAnime.swift in Sources */,
 				C795B55125769529009EC5E8 /* JikanCRState.swift in Sources */,
+				C77CDE8C25864A5700DD1FFC /* Common.swift in Sources */,
 				C795B4082576922D009EC5E8 /* MyAnimeListApp.swift in Sources */,
 				C795B55425769529009EC5E8 /* PlayState.swift in Sources */,
 				C795B55725769529009EC5E8 /* JikanState.swift in Sources */,
+				C75EBBDC2588F55300754DC6 /* NavigationViewIOS.swift in Sources */,
 				C795B56F2576952A009EC5E8 /* AppReducer.swift in Sources */,
 				C7BC4C8E257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */,
 				C795B46E25769398009EC5E8 /* SearchView.swift in Sources */,
 				C795B5692576952A009EC5E8 /* PlayReducer.swift in Sources */,
 				C783F8E2257CBACC001EB646 /* MALSyncReducer.swift in Sources */,
+				C73CB102258BB1ED006A0C9C /* TextSheetView.swift in Sources */,
 				C795B54E25769529009EC5E8 /* AppState.swift in Sources */,
 				C795B46525769398009EC5E8 /* HomeView.swift in Sources */,
 				C795B55A25769529009EC5E8 /* CRState.swift in Sources */,
@@ -610,6 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7AD2EC5258BA181008804A2 /* AnimeInformationView.swift in Sources */,
 				C795B5B725769838009EC5E8 /* JikanState.swift in Sources */,
 				C795B5AD25769838009EC5E8 /* CRActions.swift in Sources */,
 				C795B5B325769838009EC5E8 /* AnimeDetailView.swift in Sources */,
@@ -618,23 +663,26 @@
 				C795B5BE25769838009EC5E8 /* HomeView.swift in Sources */,
 				C783F8EA257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B5BF25769838009EC5E8 /* CRReducer.swift in Sources */,
-				C704B14F258107AE005C1B66 /* MALPosterItem.swift in Sources */,
+				C704B14F258107AE005C1B66 /* ImageItem.swift in Sources */,
 				C795B5AE25769838009EC5E8 /* JikanCRReducer.swift in Sources */,
 				C795B5B425769838009EC5E8 /* AppState.swift in Sources */,
 				C795B5B025769838009EC5E8 /* JikanCRActions.swift in Sources */,
+				C75EBBDD2588F55300754DC6 /* NavigationViewIOS.swift in Sources */,
 				C795B5B225769838009EC5E8 /* AnimeEpisodeListView.swift in Sources */,
 				C795B5B125769838009EC5E8 /* AppReducer.swift in Sources */,
 				C795B5B925769838009EC5E8 /* JikanReducer.swift in Sources */,
 				C7BC4C8F257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */,
 				C795B5B625769838009EC5E8 /* JikanActions.swift in Sources */,
-				C7D13411258511600058F301 /* MALPosterView.swift in Sources */,
+				C7D13411258511600058F301 /* ImageTextView.swift in Sources */,
 				C795B5BD25769838009EC5E8 /* MyAnimeListApp.swift in Sources */,
 				C783F8E3257CBACC001EB646 /* MALSyncReducer.swift in Sources */,
 				C795B5BB25769838009EC5E8 /* CRState.swift in Sources */,
 				C795B5C025769838009EC5E8 /* JikanCRState.swift in Sources */,
 				C795B5A925769838009EC5E8 /* PlayReducer.swift in Sources */,
 				C795B5BC25769838009EC5E8 /* MainTabView.swift in Sources */,
+				C77CDE8D25864A5700DD1FFC /* Common.swift in Sources */,
 				C795B5AF25769838009EC5E8 /* SearchView.swift in Sources */,
+				C73CB103258BB1ED006A0C9C /* TextSheetView.swift in Sources */,
 				C795B5B525769838009EC5E8 /* AnimeCrosslineRow.swift in Sources */,
 				C795B5AC25769838009EC5E8 /* PlayState.swift in Sources */,
 				C795B5AA25769838009EC5E8 /* FullscreenVideoPlayer.swift in Sources */,

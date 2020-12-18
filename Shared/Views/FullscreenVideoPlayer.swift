@@ -22,7 +22,7 @@ struct FullscreenVideoPlayer: View {
     @State private var player: AVPlayer?
     
     var body: some View {
-        if let media = media, !media.premiumOnly {
+        if let media = media, let premiumOnly = media.premiumOnly, !premiumOnly {
             if let player = player {
                 AnimePlayer(itemId: mediaId, player: player)
             } else if let streamData = media.streamData,
