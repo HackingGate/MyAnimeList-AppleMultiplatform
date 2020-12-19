@@ -53,8 +53,6 @@
 		C795B51F257694AD009EC5E8 /* JikanSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C795B51E257694AD009EC5E8 /* JikanSwift */; };
 		C795B521257694B3009EC5E8 /* CrunchyrollSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C795B520257694B3009EC5E8 /* CrunchyrollSwift */; };
 		C795B525257694B3009EC5E8 /* JikanSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C795B524257694B3009EC5E8 /* JikanSwift */; };
-		C795B54725769529009EC5E8 /* CRAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B53425769529009EC5E8 /* CRAnime.swift */; };
-		C795B54825769529009EC5E8 /* CRAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B53425769529009EC5E8 /* CRAnime.swift */; };
 		C795B54A25769529009EC5E8 /* PlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B53525769529009EC5E8 /* PlayerItem.swift */; };
 		C795B54B25769529009EC5E8 /* PlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B53525769529009EC5E8 /* PlayerItem.swift */; };
 		C795B54D25769529009EC5E8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B53725769529009EC5E8 /* AppState.swift */; };
@@ -106,7 +104,6 @@
 		C795B5B725769838009EC5E8 /* JikanState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B53A25769529009EC5E8 /* JikanState.swift */; };
 		C795B5B825769838009EC5E8 /* PlayActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B53F25769529009EC5E8 /* PlayActions.swift */; };
 		C795B5B925769838009EC5E8 /* JikanReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B54525769529009EC5E8 /* JikanReducer.swift */; };
-		C795B5BA25769838009EC5E8 /* CRAnime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B53425769529009EC5E8 /* CRAnime.swift */; };
 		C795B5BB25769838009EC5E8 /* CRState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B53B25769529009EC5E8 /* CRState.swift */; };
 		C795B5BC25769838009EC5E8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45925769398009EC5E8 /* MainTabView.swift */; };
 		C795B5BD25769838009EC5E8 /* MyAnimeListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B3F42576922D009EC5E8 /* MyAnimeListApp.swift */; };
@@ -150,7 +147,6 @@
 		C795B45D25769398009EC5E8 /* AnimeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeDetailView.swift; sourceTree = "<group>"; };
 		C795B5152576947F009EC5E8 /* JikanSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JikanSwift; sourceTree = "<group>"; };
 		C795B5162576947F009EC5E8 /* CrunchyrollSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CrunchyrollSwift; sourceTree = "<group>"; };
-		C795B53425769529009EC5E8 /* CRAnime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRAnime.swift; sourceTree = "<group>"; };
 		C795B53525769529009EC5E8 /* PlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerItem.swift; sourceTree = "<group>"; };
 		C795B53725769529009EC5E8 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		C795B53825769529009EC5E8 /* JikanCRState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JikanCRState.swift; sourceTree = "<group>"; };
@@ -361,7 +357,6 @@
 		C795B53325769529009EC5E8 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				C795B53425769529009EC5E8 /* CRAnime.swift */,
 				C795B53525769529009EC5E8 /* PlayerItem.swift */,
 			);
 			path = models;
@@ -586,7 +581,6 @@
 				C783F8E8257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B55F25769529009EC5E8 /* JikanActions.swift in Sources */,
 				C704B14A2581077D005C1B66 /* ImageTextItem.swift in Sources */,
-				C795B54725769529009EC5E8 /* CRAnime.swift in Sources */,
 				C795B55025769529009EC5E8 /* JikanCRState.swift in Sources */,
 				C795B4072576922D009EC5E8 /* MyAnimeListApp.swift in Sources */,
 				C75EBBDB2588F55300754DC6 /* NavigationViewIOS.swift in Sources */,
@@ -625,7 +619,6 @@
 				C783F8E9257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B56025769529009EC5E8 /* JikanActions.swift in Sources */,
 				C7AD2EC4258BA181008804A2 /* AnimeInformationView.swift in Sources */,
-				C795B54825769529009EC5E8 /* CRAnime.swift in Sources */,
 				C795B55125769529009EC5E8 /* JikanCRState.swift in Sources */,
 				C77CDE8C25864A5700DD1FFC /* Common.swift in Sources */,
 				C795B4082576922D009EC5E8 /* MyAnimeListApp.swift in Sources */,
@@ -658,7 +651,6 @@
 				C795B5B725769838009EC5E8 /* JikanState.swift in Sources */,
 				C795B5AD25769838009EC5E8 /* CRActions.swift in Sources */,
 				C795B5B325769838009EC5E8 /* AnimeDetailView.swift in Sources */,
-				C795B5BA25769838009EC5E8 /* CRAnime.swift in Sources */,
 				C795B5B825769838009EC5E8 /* PlayActions.swift in Sources */,
 				C795B5BE25769838009EC5E8 /* HomeView.swift in Sources */,
 				C783F8EA257CBAD9001EB646 /* MALSyncState.swift in Sources */,

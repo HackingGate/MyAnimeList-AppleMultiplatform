@@ -27,9 +27,6 @@ struct JikanActions {
                 (result: Result<JikanAPIAnime, JikanAPIService.APIError>) in
                 switch result {
                 case let .success(response):
-                    #if DEBUG
-                    print(response)
-                    #endif
                     dispatch(SetAnime(malID: id, response: response))
                 case .failure(_):
                     break
@@ -54,9 +51,6 @@ struct JikanActions {
                 (result: Result<JikanAPITop<[JikanAPIAnime]>, JikanAPIService.APIError>) in
                 switch result {
                 case let .success(response):
-                    #if DEBUG
-                    print(response)
-                    #endif
                     dispatch(SetTop(page: page, subtype: subtype, response: response))
                 case .failure(_):
                     break

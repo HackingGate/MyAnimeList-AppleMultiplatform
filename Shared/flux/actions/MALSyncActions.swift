@@ -23,9 +23,6 @@ struct MALSyncActions {
             { (result: Result<MALSyncAPIMAL, MALSyncAPIService.APIError>) in
                 switch result {
                 case let .success(response):
-                    #if DEBUG
-                    print(response)
-                    #endif
                     dispatch(SetAnime(malID: id, response: response.sites))
                 case .failure(_):
                     break
