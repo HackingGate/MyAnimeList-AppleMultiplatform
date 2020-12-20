@@ -14,7 +14,7 @@ struct MALSyncActions {
 
     struct MALAnime: AsyncAction {
         let id: Int
-        let params: [String: String]?
+        var params: [String: String] = [:]
 
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             MALSyncAPIService.shared.loadMALAnime(

@@ -33,7 +33,9 @@ struct EpisodeListView: View {
             if let session = store.state.crState.session {
                 if (episodes.count == 0) {
                     // Request only when data not yet avaliable
-                    store.dispatch(action: CRActions.ListMedia(sessionId: session.id, collectionId: collectionId, fields: [.id, .episodeNumber, .name, .premiumOnly, .screenshotImage, .url]))
+                    store.dispatch(action: CRActions.ListMedia(sessionId: session.id,
+                                                               collectionId: collectionId,
+                                                               fields: [.id, .episodeNumber, .name, .screenshotImage, .freeAvailable]))
                 }
             }
         }
@@ -55,7 +57,9 @@ struct EpisodeView: View {
 
     func displayAction() {
         if let episodeId = Int(episode.id), let session = store.state.crState.session {
-            store.dispatch(action: CRActions.Info(sessionId: session.id, mediaId: episodeId))
+            store.dispatch(action: CRActions.Info(sessionId: session.id,
+                                                  mediaId: episodeId,
+                                                  fields: [.id, .streamData]))
         }
     }
 }

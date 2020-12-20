@@ -47,9 +47,15 @@ struct HomeView: View {
             }
         }
         .onAppear() {
-            store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .bypopularity, params: nil))
-            store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .airing, params: nil))
-            store.dispatch(action: JikanActions.Top(type: .anime, page: 1, subtype: .tv, params: nil))
+            store.dispatch(action: JikanActions.Top(type: .anime,
+                                                    page: 1,
+                                                    subtype: .bypopularity))
+            store.dispatch(action: JikanActions.Top(type: .anime,
+                                                    page: 1,
+                                                    subtype: .airing))
+            store.dispatch(action: JikanActions.Top(type: .anime,
+                                                    page: 1,
+                                                    subtype: .tv))
         }
     }
 }

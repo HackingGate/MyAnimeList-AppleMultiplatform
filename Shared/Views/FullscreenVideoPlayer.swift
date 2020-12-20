@@ -22,7 +22,7 @@ struct FullscreenVideoPlayer: View {
     @State private var player: AVPlayer?
     
     var body: some View {
-        if let media = media, let premiumOnly = media.premiumOnly, !premiumOnly {
+        if let media = media, let freeAvailable = media.freeAvailable, freeAvailable {
             if let player = player {
                 AnimePlayer(itemId: mediaId, player: player)
             } else if let streamData = media.streamData,
@@ -37,7 +37,7 @@ struct FullscreenVideoPlayer: View {
                 CloseButton()
             }
         } else {
-            Text("Subscribe Crunchyroll Premium to watch this episode")
+            Text("This episode is not available for free")
             CloseButton()
         }
     }
@@ -80,7 +80,7 @@ struct AnimePlayer: View {
                     let duration = CMTimeGetSeconds(item.duration)
                     let playerItem = PlayerItem(currentTime: currentTime, duration: duration)
                     store.dispatch(action: PlayActions.SavePlayerItem(mediaId: itemId,
-                                                                        playerItem: playerItem))
+                                                                      playerItem: playerItem))
                 }
             }
     }

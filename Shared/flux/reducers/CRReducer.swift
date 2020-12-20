@@ -32,9 +32,6 @@ func crStateReducer(state: CRState, action: Action) -> CRState {
             if let streamData = media.streamData {
                 // media already exist
                 state.medias[action.mediaId]?.streamData = streamData
-            } else {
-                fatalError("Cannot update CRMedia")
-//                state.medias[action.mediaId] = media
             }
             if let collectionIdString = media.collectionId, let collectionId = Int(collectionIdString) {
                 state.mediaIdToCollectionId[action.mediaId] = collectionId

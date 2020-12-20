@@ -26,10 +26,8 @@ struct AnimeCrosslineRow: View {
                             AnimeDetailView(anime: anime).environmentObject(store)
                         } action: {
                             store.dispatch(action: JikanActions.Anime(id: anime.id,
-                                                                      request: .all,
-                                                                      params: nil))
-                            store.dispatch(action: MALSyncActions.MALAnime(id: anime.id,
-                                                                           params: nil))
+                                                                      request: .all))
+                            store.dispatch(action: MALSyncActions.MALAnime(id: anime.id))
                         }
                     }
                 }

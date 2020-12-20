@@ -68,7 +68,6 @@ struct CRActions {
             let params = [
                 "session_id": sessionId,
                 "collection_id": String(collectionId),
-                "include_clips": "0",
                 "fields": fields.map({ "media." + $0.stringValue }).joined(separator: ",")
             ]
             
@@ -91,20 +90,21 @@ struct CRActions {
     struct Info: AsyncAction {
         let sessionId: String
         let mediaId: Int
+        var fields: [CRAPIMedia.CodingKeys] = []
         
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             
             let params = [
                 "session_id": sessionId,
-                "fields": "media.stream_data,media.media_id,media.collection_id,series_id",
-                "media_id": String(mediaId)
+                "media_id": String(mediaId),
+                "fields": fields.map({ "media." + $0.stringValue }).joined(separator: ",")
             ]
             
             CRAPIService.shared.GET(
                 endpoint: .info,
                 params: params)
             {
-                (result: Result<CRAPIResponse<CRAPIInfo>, CRAPIService.APIError>) in
+                (result: Result<CRAPIResponse<CRAPIMedia>, CRAPIService.APIError>) in
                 switch result {
                 case let .success(response):
                     dispatch(SetInfo(mediaId: mediaId,
@@ -132,6 +132,6 @@ struct CRActions {
     
     struct SetInfo: Action {
         let mediaId: Int
-        let response: CRAPIResponse<CRAPIInfo>
+        let response: CRAPIResponse<CRAPIMedia>
     }
 }

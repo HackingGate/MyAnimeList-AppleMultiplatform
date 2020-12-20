@@ -76,8 +76,10 @@ struct AnimeDetailView: View {
                         Text(malSyncCR.title)
                             .onAppear () {
                                 if let session = store.state.crState.session {
-                                    // fetch CRAPIInfo to know collectionId
-                                    store.dispatch(action: CRActions.Info(sessionId: session.id, mediaId: mediaId))
+                                    // fetch info to know collectionId
+                                    store.dispatch(action: CRActions.Info(sessionId: session.id,
+                                                                          mediaId: mediaId,
+                                                                          fields: [.id, .collectionId]))
                                 }
                             }
                             .padding(.leading)
