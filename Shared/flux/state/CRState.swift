@@ -11,6 +11,7 @@ import CrunchyrollSwift
 
 struct CRState: FluxState, Codable {
     var session: CRUnblockerStartSession?
+    var queries: [String: [CRAPISeries]] = [:]
     var series: [Int: [CRAPICollection]] = [:]
     var collections: [Int: [CRAPIMedia]] = [:]
     var medias: [Int: CRAPIMedia] = [:]
