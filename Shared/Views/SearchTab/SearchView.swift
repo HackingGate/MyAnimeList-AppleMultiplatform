@@ -25,12 +25,21 @@ struct SearchView: View {
                     print("changed: \(changed), text: \(searchText)")
                 } onCommit: {
                     print("onCommit, text: \(searchText)")
-                    if let session = store.state.crState.session {
+                    if let session = store.state.crState.session, searchText.trimmingCharacters(in: .whitespacesAndNewlines).count > 0 {
                         store.dispatch(action: CRActions.Autocomplete(sessionId: session.id, q: searchText))
                     }
                 }
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                .padding(7)
+                .modify {
+                    #if os(iOS)
+                    $0
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                        .padding(.horizontal, 10)
+                    #else
+                    $0
+                    #endif
+                }
                 CRSearchResult(result: result)
             }
         }, title: "Search")
