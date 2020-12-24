@@ -14,17 +14,19 @@ struct CRSearchResult: View {
     let result: [CRAPISeries]
     
     @State private var isShowingDetailView = false
+    @State private var selectedSeries: CRAPISeries?
     
     var body: some View {
         LazyVStack(alignment: .leading) {
             ForEach(result) { series in
                 #if os(iOS)
-                NavigationLink(destination: CRCollectionView(series: series), isActive: $isShowingDetailView) {
+                NavigationLink(destination: CRCollectionView(series: $selectedSeries).environmentObject(store), isActive: $isShowingDetailView) {
                     EmptyView()
                 }
                 #endif
                 Button(action: {
                     isShowingDetailView = true
+                    selectedSeries = series
                     if let session = store.state.crState.session, let seriesId = Int(series.id) {
                         store.dispatch(action: CRActions.ListCollections(sessionId: session.id, seriesId: seriesId))
                     }
@@ -42,17 +44,16 @@ struct CRSearchResult: View {
                                 .lineLimit(2)
                             Text(series.description)
                                 .font(.subheadline)
-                                .lineLimit(3)
+                                .lineLimit(4)
                         }
                     }
                     .padding()
-                    Divider()
                 }
                 .modify {
                     #if os(tvOS)
                     $0
                         .sheet(isPresented: $isShowingDetailView) {
-                            CRCollectionView(series: series)
+                            CRCollectionView(series: $selectedSeries).environmentObject(store)
                         }
                         .buttonStyle(PlainButtonStyle())
                     #else
@@ -60,6 +61,7 @@ struct CRSearchResult: View {
                         .buttonStyle(PlainButtonStyle())
                     #endif
                 }
+                Divider()
             }
         }
     }
