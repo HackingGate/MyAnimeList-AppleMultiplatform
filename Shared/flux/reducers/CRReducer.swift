@@ -13,6 +13,10 @@ func crStateReducer(state: CRState, action: Action) -> CRState {
     switch action {
     case let action as CRActions.SetSession:
         state.session = action.response.data
+    case let action as CRActions.SetSeries:
+        if let series = action.response.data {
+            state.queries[action.q] = series
+        }
     case let action as CRActions.SetCollections:
         if let collections = action.response.data {
             state.series[action.seriesId] = collections

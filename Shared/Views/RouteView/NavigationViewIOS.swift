@@ -9,11 +9,12 @@ import SwiftUI
 
 struct NavigationViewIOS<Content: View>: View {
     let viewBuilder: () -> Content
+    let title: String
     var body: some View {
         #if os(iOS)
         NavigationView {
             viewBuilder()
-                .navigationBarTitle("Home")
+                .navigationBarTitle(title)
         }
         #else
         viewBuilder()
@@ -23,8 +24,8 @@ struct NavigationViewIOS<Content: View>: View {
 
 struct NavigationViewIOS_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationViewIOS {
+        NavigationViewIOS(viewBuilder: {
             Text("In a NavigationView when iOS")
-        }
+        }, title: "Title")
     }
 }

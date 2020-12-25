@@ -30,6 +30,36 @@ struct CRActions {
         }
     }
     
+    struct Autocomplete: AsyncAction {
+        let sessionId: String
+        let mediaTypes = "anime"
+        let q: String
+        
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            
+            let params = [
+                "session_id": sessionId,
+                "media_types": mediaTypes,
+                "q": q,
+            ]
+            
+            CRAPIService.shared.GET(
+                endpoint: .autocomplete,
+                params: params)
+            {
+                (result: Result<CRAPIResponse<[CRAPISeries]>, CRAPIService.APIError>) in
+                switch result {
+                case let .success(response):
+                    dispatch(SetSeries(mediaTypes: mediaTypes,
+                                       q: q,
+                                       response: response))
+                case .failure(_):
+                    break
+                }
+            }
+        }
+    }
+    
     struct ListCollections: AsyncAction {
         let sessionId: String
         let seriesId: Int
@@ -118,6 +148,12 @@ struct CRActions {
 
     struct SetSession: Action {
         let response: CRUnblockerResponse<CRUnblockerStartSession>
+    }
+    
+    struct SetSeries: Action {
+        let mediaTypes: String
+        let q: String
+        let response: CRAPIResponse<[CRAPISeries]>
     }
     
     struct SetCollections: Action {

@@ -23,7 +23,7 @@ struct HomeView: View {
     }
     
     var body: some View {
-        NavigationViewIOS {
+        NavigationViewIOS(viewBuilder: {
             ScrollView(.vertical, showsIndicators: false) {
                 // TODO: Add ForEach here
                 if let topBypopularity = topBypopularity {
@@ -45,7 +45,7 @@ struct HomeView: View {
                     )
                 }
             }
-        }
+        }, title: "Home")
         .onAppear() {
             store.dispatch(action: JikanActions.Top(type: .anime,
                                                     page: 1,
