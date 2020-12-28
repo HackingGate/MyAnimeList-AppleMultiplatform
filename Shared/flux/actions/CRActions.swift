@@ -14,12 +14,14 @@ struct CRActions {
     // MARK: - Requests
     
     struct StartSession: AsyncAction {
+        var unblock: Bool = false
+        
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
-            CRUnblockerService.shared.GET(
-                endpoint: .startSession,
+            CRAPIService.shared.GET(
+                endpoint: unblock ? .startUSSession : .startSession ,
                 params: nil)
             {
-                (result: Result<CRUnblockerResponse<CRUnblockerStartSession>, CRUnblockerService.APIError>) in
+                (result: Result<CRAPIResponse<CRAPIStartSession>, CRAPIService.APIError>) in
                 switch result {
                 case let .success(response):
                     dispatch(SetSession(response: response))
@@ -147,7 +149,7 @@ struct CRActions {
     }
 
     struct SetSession: Action {
-        let response: CRUnblockerResponse<CRUnblockerStartSession>
+        let response: CRAPIResponse<CRAPIStartSession>
     }
     
     struct SetSeries: Action {

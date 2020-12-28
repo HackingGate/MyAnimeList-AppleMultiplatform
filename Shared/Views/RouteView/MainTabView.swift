@@ -22,7 +22,7 @@ struct MainTabView : View {
                 }
         }
         .onAppear() {
-            store.dispatch(action: CRActions.StartSession())
+            store.dispatch(action: CRActions.StartSession(unblock: true))
         }
     }
 }
