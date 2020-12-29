@@ -120,6 +120,9 @@
 		C795B5BF25769838009EC5E8 /* CRReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B54325769529009EC5E8 /* CRReducer.swift */; };
 		C795B5C025769838009EC5E8 /* JikanCRState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B53825769529009EC5E8 /* JikanCRState.swift */; };
 		C795B5D0257699C9009EC5E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C795B3F62576922D009EC5E8 /* Assets.xcassets */; };
+		C79CDD28259AD45A0071EAF0 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = C79CDD27259AD45A0071EAF0 /* Introspect */; };
+		C79CDD2D259AD80B0071EAF0 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = C79CDD2C259AD80B0071EAF0 /* Introspect */; };
+		C79CDD2F259AD8110071EAF0 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = C79CDD2E259AD8110071EAF0 /* Introspect */; };
 		C7AD2EC3258BA181008804A2 /* AnimeInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AD2EC2258BA181008804A2 /* AnimeInformationView.swift */; };
 		C7AD2EC4258BA181008804A2 /* AnimeInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AD2EC2258BA181008804A2 /* AnimeInformationView.swift */; };
 		C7AD2EC5258BA181008804A2 /* AnimeInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AD2EC2258BA181008804A2 /* AnimeInformationView.swift */; };
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C795B51F257694AD009EC5E8 /* JikanSwift in Frameworks */,
+				C79CDD28259AD45A0071EAF0 /* Introspect in Frameworks */,
 				C795B51B257694AD009EC5E8 /* CrunchyrollSwift in Frameworks */,
 				C795B47B257693E1009EC5E8 /* SwiftUIFlux in Frameworks */,
 				C7BC4CBB257BD1A000EEBAFC /* MALSyncSwift in Frameworks */,
@@ -203,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C795B525257694B3009EC5E8 /* JikanSwift in Frameworks */,
+				C79CDD2F259AD8110071EAF0 /* Introspect in Frameworks */,
 				C795B521257694B3009EC5E8 /* CrunchyrollSwift in Frameworks */,
 				C795B481257693FE009EC5E8 /* SwiftUIFlux in Frameworks */,
 				C79519F1257BD34B00420BA9 /* MALSyncSwift in Frameworks */,
@@ -215,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C795B59C257697DD009EC5E8 /* CrunchyrollSwift in Frameworks */,
+				C79CDD2D259AD80B0071EAF0 /* Introspect in Frameworks */,
 				C795B5A2257697DD009EC5E8 /* SwiftUIFlux in Frameworks */,
 				C795B5A0257697DD009EC5E8 /* JikanSwift in Frameworks */,
 				C79519F3257BD35600420BA9 /* MALSyncSwift in Frameworks */,
@@ -464,6 +470,7 @@
 				C795B51E257694AD009EC5E8 /* JikanSwift */,
 				C7BC4CBA257BD1A000EEBAFC /* MALSyncSwift */,
 				C704B13D2580FAD5005C1B66 /* KingfisherSwiftUI */,
+				C79CDD27259AD45A0071EAF0 /* Introspect */,
 			);
 			productName = "MyAnimeList (iOS)";
 			productReference = C795B3FB2576922D009EC5E8 /* MyAnimeList.app */;
@@ -488,6 +495,7 @@
 				C795B524257694B3009EC5E8 /* JikanSwift */,
 				C79519F0257BD34B00420BA9 /* MALSyncSwift */,
 				C704B1422580FAF0005C1B66 /* KingfisherSwiftUI */,
+				C79CDD2E259AD8110071EAF0 /* Introspect */,
 			);
 			productName = "MyAnimeList (macOS)";
 			productReference = C795B4032576922D009EC5E8 /* MyAnimeList.app */;
@@ -512,6 +520,7 @@
 				C795B5A1257697DD009EC5E8 /* SwiftUIFlux */,
 				C79519F2257BD35600420BA9 /* MALSyncSwift */,
 				C704B1442580FAF9005C1B66 /* KingfisherSwiftUI */,
+				C79CDD2C259AD80B0071EAF0 /* Introspect */,
 			);
 			productName = MyAnimeList;
 			productReference = C795B583257697C1009EC5E8 /* MyAnimeList (tvOS).app */;
@@ -549,6 +558,7 @@
 			packageReferences = (
 				C795B479257693E1009EC5E8 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
 				C704B13C2580FAD5005C1B66 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				C79CDD26259AD45A0071EAF0 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = C795B3FC2576922D009EC5E8 /* Products */;
 			projectDirPath = "";
@@ -1034,6 +1044,14 @@
 				minimumVersion = 0.5.1;
 			};
 		};
+		C79CDD26259AD45A0071EAF0 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1098,6 +1116,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C795B479257693E1009EC5E8 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
 			productName = SwiftUIFlux;
+		};
+		C79CDD27259AD45A0071EAF0 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79CDD26259AD45A0071EAF0 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+		C79CDD2C259AD80B0071EAF0 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79CDD26259AD45A0071EAF0 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+		C79CDD2E259AD8110071EAF0 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79CDD26259AD45A0071EAF0 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 		C7BC4CBA257BD1A000EEBAFC /* MALSyncSwift */ = {
 			isa = XCSwiftPackageProductDependency;

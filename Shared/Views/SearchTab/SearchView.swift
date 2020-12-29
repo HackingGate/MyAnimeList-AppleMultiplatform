@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftUIFlux
 import CrunchyrollSwift
+import Introspect
 
 struct SearchView: View {
     @EnvironmentObject private var store: Store<AppState>
@@ -39,6 +40,9 @@ struct SearchView: View {
                     #else
                     $0
                     #endif
+                }
+                .introspectTextField { textfield in
+                  textfield.returnKeyType = .search
                 }
                 CRSearchResult(result: result)
             }
