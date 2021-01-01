@@ -15,6 +15,9 @@
 		C73CB101258BB1ED006A0C9C /* TextSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CB100258BB1ED006A0C9C /* TextSheetView.swift */; };
 		C73CB102258BB1ED006A0C9C /* TextSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CB100258BB1ED006A0C9C /* TextSheetView.swift */; };
 		C73CB103258BB1ED006A0C9C /* TextSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CB100258BB1ED006A0C9C /* TextSheetView.swift */; };
+		C7448BDD259C204F00B5439B /* CrunchyrollSwiftWeb in Frameworks */ = {isa = PBXBuildFile; productRef = C7448BDC259C204F00B5439B /* CrunchyrollSwiftWeb */; };
+		C7448BDF259C205600B5439B /* CrunchyrollSwiftWeb in Frameworks */ = {isa = PBXBuildFile; productRef = C7448BDE259C205600B5439B /* CrunchyrollSwiftWeb */; };
+		C7448BE1259C205D00B5439B /* CrunchyrollSwiftWeb in Frameworks */ = {isa = PBXBuildFile; productRef = C7448BE0259C205D00B5439B /* CrunchyrollSwiftWeb */; };
 		C75EBBDB2588F55300754DC6 /* NavigationViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */; };
 		C75EBBDC2588F55300754DC6 /* NavigationViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */; };
 		C75EBBDD2588F55300754DC6 /* NavigationViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */; };
@@ -195,6 +198,7 @@
 				C795B47B257693E1009EC5E8 /* SwiftUIFlux in Frameworks */,
 				C7BC4CBB257BD1A000EEBAFC /* MALSyncSwift in Frameworks */,
 				C704B13E2580FAD5005C1B66 /* KingfisherSwiftUI in Frameworks */,
+				C7448BDD259C204F00B5439B /* CrunchyrollSwiftWeb in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +211,7 @@
 				C795B481257693FE009EC5E8 /* SwiftUIFlux in Frameworks */,
 				C79519F1257BD34B00420BA9 /* MALSyncSwift in Frameworks */,
 				C704B1432580FAF0005C1B66 /* KingfisherSwiftUI in Frameworks */,
+				C7448BE1259C205D00B5439B /* CrunchyrollSwiftWeb in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +224,7 @@
 				C795B5A0257697DD009EC5E8 /* JikanSwift in Frameworks */,
 				C79519F3257BD35600420BA9 /* MALSyncSwift in Frameworks */,
 				C704B1452580FAF9005C1B66 /* KingfisherSwiftUI in Frameworks */,
+				C7448BDF259C205600B5439B /* CrunchyrollSwiftWeb in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +470,7 @@
 				C795B51E257694AD009EC5E8 /* JikanSwift */,
 				C7BC4CBA257BD1A000EEBAFC /* MALSyncSwift */,
 				C704B13D2580FAD5005C1B66 /* KingfisherSwiftUI */,
+				C7448BDC259C204F00B5439B /* CrunchyrollSwiftWeb */,
 			);
 			productName = "MyAnimeList (iOS)";
 			productReference = C795B3FB2576922D009EC5E8 /* MyAnimeList.app */;
@@ -488,6 +495,7 @@
 				C795B524257694B3009EC5E8 /* JikanSwift */,
 				C79519F0257BD34B00420BA9 /* MALSyncSwift */,
 				C704B1422580FAF0005C1B66 /* KingfisherSwiftUI */,
+				C7448BE0259C205D00B5439B /* CrunchyrollSwiftWeb */,
 			);
 			productName = "MyAnimeList (macOS)";
 			productReference = C795B4032576922D009EC5E8 /* MyAnimeList.app */;
@@ -512,6 +520,7 @@
 				C795B5A1257697DD009EC5E8 /* SwiftUIFlux */,
 				C79519F2257BD35600420BA9 /* MALSyncSwift */,
 				C704B1442580FAF9005C1B66 /* KingfisherSwiftUI */,
+				C7448BDE259C205600B5439B /* CrunchyrollSwiftWeb */,
 			);
 			productName = MyAnimeList;
 			productReference = C795B583257697C1009EC5E8 /* MyAnimeList (tvOS).app */;
@@ -1051,6 +1060,18 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C704B13C2580FAD5005C1B66 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = KingfisherSwiftUI;
+		};
+		C7448BDC259C204F00B5439B /* CrunchyrollSwiftWeb */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CrunchyrollSwiftWeb;
+		};
+		C7448BDE259C205600B5439B /* CrunchyrollSwiftWeb */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CrunchyrollSwiftWeb;
+		};
+		C7448BE0259C205D00B5439B /* CrunchyrollSwiftWeb */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CrunchyrollSwiftWeb;
 		};
 		C79519F0257BD34B00420BA9 /* MALSyncSwift */ = {
 			isa = XCSwiftPackageProductDependency;
