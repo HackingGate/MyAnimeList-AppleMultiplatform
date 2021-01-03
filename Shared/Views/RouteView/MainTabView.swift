@@ -21,6 +21,7 @@ struct MainTabView : View {
                     Text("Search")
                 }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {
             store.dispatch(action: CRActions.StartSession(unblock: true))
         }
