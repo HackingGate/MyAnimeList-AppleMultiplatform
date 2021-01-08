@@ -15,6 +15,8 @@
 		C73CB101258BB1ED006A0C9C /* TextSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CB100258BB1ED006A0C9C /* TextSheetView.swift */; };
 		C73CB102258BB1ED006A0C9C /* TextSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CB100258BB1ED006A0C9C /* TextSheetView.swift */; };
 		C73CB103258BB1ED006A0C9C /* TextSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CB100258BB1ED006A0C9C /* TextSheetView.swift */; };
+		C741235E25A89B05000EA38A /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = C741235D25A89B05000EA38A /* SwiftUIX */; };
+		C741236325A89B1E000EA38A /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = C741236225A89B1E000EA38A /* SwiftUIX */; };
 		C7448BDD259C204F00B5439B /* CrunchyrollSwiftWeb in Frameworks */ = {isa = PBXBuildFile; productRef = C7448BDC259C204F00B5439B /* CrunchyrollSwiftWeb */; };
 		C7448BDF259C205600B5439B /* CrunchyrollSwiftWeb in Frameworks */ = {isa = PBXBuildFile; productRef = C7448BDE259C205600B5439B /* CrunchyrollSwiftWeb */; };
 		C7448BE1259C205D00B5439B /* CrunchyrollSwiftWeb in Frameworks */ = {isa = PBXBuildFile; productRef = C7448BE0259C205D00B5439B /* CrunchyrollSwiftWeb */; };
@@ -193,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C741235E25A89B05000EA38A /* SwiftUIX in Frameworks */,
 				C795B51F257694AD009EC5E8 /* JikanSwift in Frameworks */,
 				C795B51B257694AD009EC5E8 /* CrunchyrollSwift in Frameworks */,
 				C795B47B257693E1009EC5E8 /* SwiftUIFlux in Frameworks */,
@@ -219,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C741236325A89B1E000EA38A /* SwiftUIX in Frameworks */,
 				C795B59C257697DD009EC5E8 /* CrunchyrollSwift in Frameworks */,
 				C795B5A2257697DD009EC5E8 /* SwiftUIFlux in Frameworks */,
 				C795B5A0257697DD009EC5E8 /* JikanSwift in Frameworks */,
@@ -471,6 +475,7 @@
 				C7BC4CBA257BD1A000EEBAFC /* MALSyncSwift */,
 				C704B13D2580FAD5005C1B66 /* KingfisherSwiftUI */,
 				C7448BDC259C204F00B5439B /* CrunchyrollSwiftWeb */,
+				C741235D25A89B05000EA38A /* SwiftUIX */,
 			);
 			productName = "MyAnimeList (iOS)";
 			productReference = C795B3FB2576922D009EC5E8 /* MyAnimeList.app */;
@@ -521,6 +526,7 @@
 				C79519F2257BD35600420BA9 /* MALSyncSwift */,
 				C704B1442580FAF9005C1B66 /* KingfisherSwiftUI */,
 				C7448BDE259C205600B5439B /* CrunchyrollSwiftWeb */,
+				C741236225A89B1E000EA38A /* SwiftUIX */,
 			);
 			productName = MyAnimeList;
 			productReference = C795B583257697C1009EC5E8 /* MyAnimeList (tvOS).app */;
@@ -558,6 +564,7 @@
 			packageReferences = (
 				C795B479257693E1009EC5E8 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
 				C704B13C2580FAD5005C1B66 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				C741235C25A89B05000EA38A /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = C795B3FC2576922D009EC5E8 /* Products */;
 			projectDirPath = "";
@@ -1035,6 +1042,14 @@
 				minimumVersion = 5.15.8;
 			};
 		};
+		C741235C25A89B05000EA38A /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.5;
+			};
+		};
 		C795B479257693E1009EC5E8 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Dimillian/SwiftUIFlux";
@@ -1060,6 +1075,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C704B13C2580FAD5005C1B66 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = KingfisherSwiftUI;
+		};
+		C741235D25A89B05000EA38A /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C741235C25A89B05000EA38A /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+		C741236225A89B1E000EA38A /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C741235C25A89B05000EA38A /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
 		};
 		C7448BDC259C204F00B5439B /* CrunchyrollSwiftWeb */ = {
 			isa = XCSwiftPackageProductDependency;
