@@ -8,11 +8,13 @@
 import SwiftUI
 import SwiftUIFlux
 import CrunchyrollSwift
+import SwiftUIX
 
 struct SearchView: View {
     @EnvironmentObject private var store: Store<AppState>
     
     @State var searchText = ""
+    @State var isEditing: Bool = false
     
     private var result: [CRAPISeries] {
         store.state.crState.queries[searchText] ?? []
@@ -21,6 +23,16 @@ struct SearchView: View {
     var body: some View {
         NavigationViewIOS(viewBuilder: {
             ScrollView(.vertical) {
+                #if os(iOS)
+                SearchBar("", text: $searchText, isEditing: $isEditing) {
+                    print("onCommit, text: \(searchText)")
+                    if let session = store.state.crState.session, searchText.trimmingCharacters(in: .whitespacesAndNewlines).count > 0 {
+                        store.dispatch(action: CRActions.Autocomplete(sessionId: session.id, q: searchText))
+                    }
+                }
+                .showsCancelButton(isEditing)
+                .onCancel { print("Search canceled") }
+                #elseif os(tvOS)
                 TextField("Search", text: $searchText) { changed in
                     print("changed: \(changed), text: \(searchText)")
                 } onCommit: {
@@ -30,16 +42,7 @@ struct SearchView: View {
                     }
                 }
                 .padding(7)
-                .modify {
-                    #if os(iOS)
-                    $0
-                        .background(Color(.systemGray6))
-                        .cornerRadius(8)
-                        .padding(.horizontal, 10)
-                    #else
-                    $0
-                    #endif
-                }
+                #endif
                 CRSearchResult(result: result)
             }
         }, title: "Search")
