@@ -48,6 +48,9 @@ struct Common {
     #if os(tvOS)
     let posterImage = Image(width: 200.0, height: 300.0)
     let episodeImage = Image(width: 320.0, height: 180.0)
+    #elseif targetEnvironment(macCatalyst)
+    let posterImage = Image(width: 150.0, height: 225.0)
+    let episodeImage = Image(width: 240.0, height: 135.0)
     #else
     let posterImage = Image(width: 100.0, height: 150.0)
     let episodeImage = Image(width: 160.0, height: 90.0)
