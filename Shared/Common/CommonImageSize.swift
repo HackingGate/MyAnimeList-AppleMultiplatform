@@ -5,17 +5,17 @@
 //  Created by HG on 2020/12/13.
 //
 
-import Foundation
+import CoreGraphics
 
 struct CommonImageSize {
     #if os(tvOS)
-    static let posterImage = HGSize(width: 200.0, ratio: 1.5)
-    static let episodeImage = HGSize(width: 320.0, ratio: 1.5)
+    static let posterImage = CGSize(width: 200.0, height: 300.0)
+    static let episodeImage = CGSize(width: 320.0, height: 180.0)
     #elseif targetEnvironment(macCatalyst)
-    static let posterImage = HGSize(width: 150.0, ratio: 1.5)
-    static let episodeImage = HGSize(width: 240.0, ratio: 1.5)
+    static let posterImage = CGSize(width: 150.0, height: 225.0)
+    static let episodeImage = CGSize(width: 240.0, height: 135.0)
     #else
-    static let posterImage = HGSize(width: 100.0, ratio: 1.5)
-    static let episodeImage = HGSize(width: 160.0, ratio: 1.5)
+    static let posterImage = CGSize(width: 100.0, height: 150.0)
+    static let episodeImage = CGSize(width: 160.0, height: 90.0)
     #endif
 }

@@ -9,9 +9,26 @@ import SwiftUI
 import JikanSwift
 import CrunchyrollSwift
 
-struct ImageTextView<D: Codable, Size: HGSizeProtocol, Content: View>: View {
+struct ImageTextView<D: Codable, Content: View>: View {
     let data: D
-    let imageSize: Size
+    let imageSize: CGSize
+    let useModal: Bool
+    var content: Content
+    var action: () -> Void
+
+    init(data: D,
+         imageSize: CGSize,
+         useModal: Bool = false,
+         @ViewBuilder content: () -> Content,
+         action: @escaping () -> Void
+    ) {
+        self.data = data
+        self.imageSize = imageSize
+        self.useModal = useModal
+        self.content = content()
+        self.action = action
+    }
+
     private var title: String? {
         if let anime = data as? JikanAPIAnime {
             return anime.title
@@ -37,26 +54,10 @@ struct ImageTextView<D: Codable, Size: HGSizeProtocol, Content: View>: View {
         }
         return nil
     }
-    
-    var action: () -> Void
-    var content: Content
-    var useModal: Bool
-    init(data: D,
-         imageSize: Size,
-         useModal: Bool = false,
-         @ViewBuilder content: () -> Content,
-         action: @escaping () -> Void
-    ) {
-        self.data = data
-        self.imageSize = imageSize
-        self.useModal = useModal
-        self.content = content()
-        self.action = action
-    }
-    
+
     @State private var isShowingDetailView = false
     @State private var modalDisplayed = false
-    
+
     var body: some View {
         VStack {
             if let title = title, let imageURL = imageURL {

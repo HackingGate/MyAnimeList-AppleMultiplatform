@@ -132,9 +132,6 @@
 		C7BC4CBB257BD1A000EEBAFC /* MALSyncSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7BC4CBA257BD1A000EEBAFC /* MALSyncSwift */; };
 		C7D13411258511600058F301 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13410258511600058F301 /* ImageTextView.swift */; };
 		C7D13419258511A90058F301 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13418258511A90058F301 /* ImageTextView.swift */; };
-		C7D805B3261220C200F0E579 /* HGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D805B2261220C200F0E579 /* HGSize.swift */; };
-		C7D805B4261220C200F0E579 /* HGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D805B2261220C200F0E579 /* HGSize.swift */; };
-		C7D805B5261220C200F0E579 /* HGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D805B2261220C200F0E579 /* HGSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -189,7 +186,6 @@
 		C7BC4CAB257BD17200EEBAFC /* MALSyncSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MALSyncSwift; sourceTree = "<group>"; };
 		C7D13410258511600058F301 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 		C7D13418258511A90058F301 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
-		C7D805B2261220C200F0E579 /* HGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,7 +259,6 @@
 		C77CDE8925864A3F00DD1FFC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				C7D805B2261220C200F0E579 /* HGSize.swift */,
 				C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */,
 			);
 			path = Common;
@@ -617,7 +612,6 @@
 				C795B55C25769529009EC5E8 /* JikanCRActions.swift in Sources */,
 				C790923A2592329100D93670 /* CRSearchResult.swift in Sources */,
 				C795B46A25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */,
-				C7D805B3261220C200F0E579 /* HGSize.swift in Sources */,
 				C783F8E8257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B55F25769529009EC5E8 /* JikanActions.swift in Sources */,
 				C704B14A2581077D005C1B66 /* ImageTextItem.swift in Sources */,
@@ -658,7 +652,6 @@
 				C795B55D25769529009EC5E8 /* JikanCRActions.swift in Sources */,
 				C795B46B25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */,
 				C783F8E9257CBAD9001EB646 /* MALSyncState.swift in Sources */,
-				C7D805B4261220C200F0E579 /* HGSize.swift in Sources */,
 				C795B56025769529009EC5E8 /* JikanActions.swift in Sources */,
 				C7AD2EC4258BA181008804A2 /* AnimeInformationView.swift in Sources */,
 				C795B55125769529009EC5E8 /* JikanCRState.swift in Sources */,
@@ -701,7 +694,6 @@
 				C795B5BE25769838009EC5E8 /* HomeView.swift in Sources */,
 				C790923C2592329100D93670 /* CRSearchResult.swift in Sources */,
 				C783F8EA257CBAD9001EB646 /* MALSyncState.swift in Sources */,
-				C7D805B5261220C200F0E579 /* HGSize.swift in Sources */,
 				C795B5BF25769838009EC5E8 /* CRReducer.swift in Sources */,
 				C704B14F258107AE005C1B66 /* ImageItem.swift in Sources */,
 				C795B5AE25769838009EC5E8 /* JikanCRReducer.swift in Sources */,

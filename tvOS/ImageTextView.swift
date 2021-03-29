@@ -9,9 +9,26 @@ import SwiftUI
 import JikanSwift
 import CrunchyrollSwift
 
-struct ImageTextView<D: Codable, Size: ImageSize, Content: View>: View {
+struct ImageTextView<D: Codable, Content: View>: View {
     let data: D
-    let imageSize: Size
+    let imageSize: CGSize
+    let useModal: Bool
+    var content: Content
+    var action: () -> Void
+
+    init(data: D,
+         imageSize: CGSize,
+         useModal: Bool = true,
+         @ViewBuilder content: () -> Content,
+         action: @escaping () -> Void
+    ) {
+        self.data = data
+        self.imageSize = imageSize
+        self.useModal = useModal
+        self.content = content()
+        self.action = action
+    }
+
     private var title: String? {
         if let anime = data as? JikanAPIAnime {
             return anime.title
@@ -37,33 +54,17 @@ struct ImageTextView<D: Codable, Size: ImageSize, Content: View>: View {
         }
         return nil
     }
-    
-    var action: () -> Void
-    var content: Content
-    var useModal: Bool
-    init(data: D,
-         ImageSizeSize: Size,
-         useModal: Bool = true,
-         @ViewBuilder content: () -> Content,
-         action: @escaping () -> Void
-    ) {
-        self.data = data
-        self.imageSize = imageSize
-        self.useModal = useModal
-        self.content = content()
-        self.action = action
-    }
-    
+
     @State private var isShowingDetailView = false
     @State private var modalDisplayed = false
     // https://stackoverflow.com/a/59196076/4063462
     @State private var cardButtonFocusd = false
-    
+
     private let paddingWhenFocused: CGFloat = 25.0
     private func carButtonAnimation(isFocused: Bool) -> Animation {
         return Animation.easeOut(duration: isFocused ? 0.1 : 0.3)
     }
-    
+
     var body: some View {
         VStack {
             if let title = title, let imageURL = imageURL {
@@ -73,7 +74,7 @@ struct ImageTextView<D: Codable, Size: ImageSize, Content: View>: View {
                 }) {
                     ImageItem(isFocusedBinding: $cardButtonFocusd,
                               imageURL: imageURL)
-                        .frame(width: ImageSize.width, height: ImageSize.height)
+                        .frame(width: imageSize.width, height: imageSize.height)
                 }
                 .buttonStyle(CardButtonStyle())
                 .padding(.all, paddingWhenFocused)
@@ -82,7 +83,7 @@ struct ImageTextView<D: Codable, Size: ImageSize, Content: View>: View {
                 }
                 Text(title)
                     .lineLimit(1)
-                    .frame(width: ImageSize.width + (cardButtonFocusd ? paddingWhenFocused : 0), alignment: .leading)
+                    .frame(width: imageSize.width + (cardButtonFocusd ? paddingWhenFocused : 0), alignment: .leading)
                     .padding(.top, cardButtonFocusd ? 0 : -paddingWhenFocused)
                     .padding(.bottom, cardButtonFocusd ? 0 : paddingWhenFocused)
                     .animation(carButtonAnimation(isFocused: cardButtonFocusd))
