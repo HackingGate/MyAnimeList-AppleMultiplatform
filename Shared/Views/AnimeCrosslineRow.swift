@@ -22,7 +22,7 @@ struct AnimeCrosslineRow: View {
                 LazyHStack(spacing: 20) {
                     ForEach(animes) { anime in
                         ImageTextView(data: anime,
-                                      imageType: Common().posterImage) {
+                                      imageSize: CommonImageSize.posterImage) {
                             AnimeDetailView(anime: anime).environmentObject(store)
                         } action: {
                             store.dispatch(action: JikanActions.Anime(id: anime.id,

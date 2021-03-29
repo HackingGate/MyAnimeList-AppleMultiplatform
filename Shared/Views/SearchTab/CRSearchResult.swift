@@ -36,7 +36,7 @@ struct CRSearchResult: View {
                             KFImage(imageURL)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: Common().posterImage.width, height: Common().posterImage.height)
+                                .frame(width: CommonImageSize.posterImage.width, height: CommonImageSize.posterImage.height)
                         }
                         VStack(alignment: .leading, spacing: 10) {
                             Text(series.name)

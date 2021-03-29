@@ -9,9 +9,9 @@ import SwiftUI
 import JikanSwift
 import CrunchyrollSwift
 
-struct ImageTextView<D: Codable, IT: ImageType, Content: View>: View {
+struct ImageTextView<D: Codable, Size: ImageSize, Content: View>: View {
     let data: D
-    let imageType: IT
+    let imageSize: Size
     private var title: String? {
         if let anime = data as? JikanAPIAnime {
             return anime.title
@@ -42,13 +42,13 @@ struct ImageTextView<D: Codable, IT: ImageType, Content: View>: View {
     var content: Content
     var useModal: Bool
     init(data: D,
-         imageType: IT,
+         ImageSizeSize: Size,
          useModal: Bool = true,
          @ViewBuilder content: () -> Content,
          action: @escaping () -> Void
     ) {
         self.data = data
-        self.imageType = imageType
+        self.imageSize = imageSize
         self.useModal = useModal
         self.content = content()
         self.action = action
@@ -73,7 +73,7 @@ struct ImageTextView<D: Codable, IT: ImageType, Content: View>: View {
                 }) {
                     ImageItem(isFocusedBinding: $cardButtonFocusd,
                               imageURL: imageURL)
-                        .frame(width: imageType.width, height: imageType.height)
+                        .frame(width: ImageSize.width, height: ImageSize.height)
                 }
                 .buttonStyle(CardButtonStyle())
                 .padding(.all, paddingWhenFocused)
@@ -82,7 +82,7 @@ struct ImageTextView<D: Codable, IT: ImageType, Content: View>: View {
                 }
                 Text(title)
                     .lineLimit(1)
-                    .frame(width: imageType.width + (cardButtonFocusd ? paddingWhenFocused : 0), alignment: .leading)
+                    .frame(width: ImageSize.width + (cardButtonFocusd ? paddingWhenFocused : 0), alignment: .leading)
                     .padding(.top, cardButtonFocusd ? 0 : -paddingWhenFocused)
                     .padding(.bottom, cardButtonFocusd ? 0 : paddingWhenFocused)
                     .animation(carButtonAnimation(isFocused: cardButtonFocusd))

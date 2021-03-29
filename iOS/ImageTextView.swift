@@ -9,9 +9,9 @@ import SwiftUI
 import JikanSwift
 import CrunchyrollSwift
 
-struct ImageTextView<D: Codable, IT: ImageType, Content: View>: View {
+struct ImageTextView<D: Codable, Size: HGSizeProtocol, Content: View>: View {
     let data: D
-    let imageType: IT
+    let imageSize: Size
     private var title: String? {
         if let anime = data as? JikanAPIAnime {
             return anime.title
@@ -42,13 +42,13 @@ struct ImageTextView<D: Codable, IT: ImageType, Content: View>: View {
     var content: Content
     var useModal: Bool
     init(data: D,
-         imageType: IT,
+         imageSize: Size,
          useModal: Bool = false,
          @ViewBuilder content: () -> Content,
          action: @escaping () -> Void
     ) {
         self.data = data
-        self.imageType = imageType
+        self.imageSize = imageSize
         self.useModal = useModal
         self.content = content()
         self.action = action
@@ -69,7 +69,7 @@ struct ImageTextView<D: Codable, IT: ImageType, Content: View>: View {
                     action()
                 }) {
                     ImageTextItem(title: title, imageURL: imageURL)
-                        .frame(width: imageType.width, height: imageType.height + 62)
+                        .frame(width: imageSize.width, height: imageSize.height + 62)
                 }
                 .fullScreenCover(isPresented: $modalDisplayed) {
                     content

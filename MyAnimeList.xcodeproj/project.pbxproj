@@ -24,9 +24,9 @@
 		C76D722225937F6B000E7514 /* ViewModifyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D722125937F6B000E7514 /* ViewModifyExtension.swift */; };
 		C76D722325937F6B000E7514 /* ViewModifyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D722125937F6B000E7514 /* ViewModifyExtension.swift */; };
 		C76D722425937F6B000E7514 /* ViewModifyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D722125937F6B000E7514 /* ViewModifyExtension.swift */; };
-		C77CDE8B25864A5700DD1FFC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* Common.swift */; };
-		C77CDE8C25864A5700DD1FFC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* Common.swift */; };
-		C77CDE8D25864A5700DD1FFC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* Common.swift */; };
+		C77CDE8B25864A5700DD1FFC /* CommonImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */; };
+		C77CDE8C25864A5700DD1FFC /* CommonImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */; };
+		C77CDE8D25864A5700DD1FFC /* CommonImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */; };
 		C783F8E1257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
 		C783F8E2257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
 		C783F8E3257CBACC001EB646 /* MALSyncReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */; };
@@ -132,6 +132,9 @@
 		C7BC4CBB257BD1A000EEBAFC /* MALSyncSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7BC4CBA257BD1A000EEBAFC /* MALSyncSwift */; };
 		C7D13411258511600058F301 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13410258511600058F301 /* ImageTextView.swift */; };
 		C7D13419258511A90058F301 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13418258511A90058F301 /* ImageTextView.swift */; };
+		C7D805B3261220C200F0E579 /* HGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D805B2261220C200F0E579 /* HGSize.swift */; };
+		C7D805B4261220C200F0E579 /* HGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D805B2261220C200F0E579 /* HGSize.swift */; };
+		C7D805B5261220C200F0E579 /* HGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D805B2261220C200F0E579 /* HGSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,7 +144,7 @@
 		C73CB100258BB1ED006A0C9C /* TextSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSheetView.swift; sourceTree = "<group>"; };
 		C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewIOS.swift; sourceTree = "<group>"; };
 		C76D722125937F6B000E7514 /* ViewModifyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifyExtension.swift; sourceTree = "<group>"; };
-		C77CDE8A25864A5700DD1FFC /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonImageSize.swift; sourceTree = "<group>"; };
 		C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncReducer.swift; sourceTree = "<group>"; };
 		C783F8E7257CBAD9001EB646 /* MALSyncState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncState.swift; sourceTree = "<group>"; };
 		C79092392592329100D93670 /* CRSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRSearchResult.swift; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 		C7BC4CAB257BD17200EEBAFC /* MALSyncSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MALSyncSwift; sourceTree = "<group>"; };
 		C7D13410258511600058F301 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 		C7D13418258511A90058F301 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
+		C7D805B2261220C200F0E579 /* HGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,7 +263,8 @@
 		C77CDE8925864A3F00DD1FFC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				C77CDE8A25864A5700DD1FFC /* Common.swift */,
+				C7D805B2261220C200F0E579 /* HGSize.swift */,
+				C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -612,6 +617,7 @@
 				C795B55C25769529009EC5E8 /* JikanCRActions.swift in Sources */,
 				C790923A2592329100D93670 /* CRSearchResult.swift in Sources */,
 				C795B46A25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */,
+				C7D805B3261220C200F0E579 /* HGSize.swift in Sources */,
 				C783F8E8257CBAD9001EB646 /* MALSyncState.swift in Sources */,
 				C795B55F25769529009EC5E8 /* JikanActions.swift in Sources */,
 				C704B14A2581077D005C1B66 /* ImageTextItem.swift in Sources */,
@@ -630,7 +636,7 @@
 				C795B46425769398009EC5E8 /* HomeView.swift in Sources */,
 				C795B55925769529009EC5E8 /* CRState.swift in Sources */,
 				C795B54A25769529009EC5E8 /* PlayerItem.swift in Sources */,
-				C77CDE8B25864A5700DD1FFC /* Common.swift in Sources */,
+				C77CDE8B25864A5700DD1FFC /* CommonImageSize.swift in Sources */,
 				C790924425923A7900D93670 /* CRCollectionView.swift in Sources */,
 				C795B5742576952A009EC5E8 /* JikanCRReducer.swift in Sources */,
 				C73CB101258BB1ED006A0C9C /* TextSheetView.swift in Sources */,
@@ -652,10 +658,11 @@
 				C795B55D25769529009EC5E8 /* JikanCRActions.swift in Sources */,
 				C795B46B25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */,
 				C783F8E9257CBAD9001EB646 /* MALSyncState.swift in Sources */,
+				C7D805B4261220C200F0E579 /* HGSize.swift in Sources */,
 				C795B56025769529009EC5E8 /* JikanActions.swift in Sources */,
 				C7AD2EC4258BA181008804A2 /* AnimeInformationView.swift in Sources */,
 				C795B55125769529009EC5E8 /* JikanCRState.swift in Sources */,
-				C77CDE8C25864A5700DD1FFC /* Common.swift in Sources */,
+				C77CDE8C25864A5700DD1FFC /* CommonImageSize.swift in Sources */,
 				C795B4082576922D009EC5E8 /* MyAnimeListApp.swift in Sources */,
 				C795B55425769529009EC5E8 /* PlayState.swift in Sources */,
 				C790924525923A7900D93670 /* CRCollectionView.swift in Sources */,
@@ -694,6 +701,7 @@
 				C795B5BE25769838009EC5E8 /* HomeView.swift in Sources */,
 				C790923C2592329100D93670 /* CRSearchResult.swift in Sources */,
 				C783F8EA257CBAD9001EB646 /* MALSyncState.swift in Sources */,
+				C7D805B5261220C200F0E579 /* HGSize.swift in Sources */,
 				C795B5BF25769838009EC5E8 /* CRReducer.swift in Sources */,
 				C704B14F258107AE005C1B66 /* ImageItem.swift in Sources */,
 				C795B5AE25769838009EC5E8 /* JikanCRReducer.swift in Sources */,
@@ -712,7 +720,7 @@
 				C795B5C025769838009EC5E8 /* JikanCRState.swift in Sources */,
 				C795B5A925769838009EC5E8 /* PlayReducer.swift in Sources */,
 				C795B5BC25769838009EC5E8 /* MainTabView.swift in Sources */,
-				C77CDE8D25864A5700DD1FFC /* Common.swift in Sources */,
+				C77CDE8D25864A5700DD1FFC /* CommonImageSize.swift in Sources */,
 				C790924625923A7900D93670 /* CRCollectionView.swift in Sources */,
 				C795B5AF25769838009EC5E8 /* SearchView.swift in Sources */,
 				C73CB103258BB1ED006A0C9C /* TextSheetView.swift in Sources */,

@@ -47,7 +47,7 @@ struct EpisodeView: View {
     let mediaId: Int
     var body: some View {
         ImageTextView(data: episode,
-                      imageType: Common().episodeImage,
+                      imageSize: CommonImageSize.episodeImage,
                       useModal: true) {
             FullscreenVideoPlayer(mediaId: mediaId).environmentObject(store)
         } action: {
