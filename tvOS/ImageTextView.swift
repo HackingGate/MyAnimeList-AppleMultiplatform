@@ -27,6 +27,9 @@ struct ImageTextView<D: Codable, Content: View>: View {
         self.useModal = useModal
         self.content = content()
         self.action = action
+        #if DEBUG
+        print("Lazy Loading ImageTextView for \(data)")
+        #endif
     }
 
     private var title: String? {
