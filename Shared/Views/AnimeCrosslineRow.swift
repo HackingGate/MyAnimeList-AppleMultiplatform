@@ -14,7 +14,7 @@ struct AnimeCrosslineRow: View {
     let title: String
     let animes: [JikanAPIAnime]
     var body: some View {
-        VStack(alignment: .leading) {
+        LazyVStack(alignment: .leading) {
             Divider()
             Text(title)
                 .padding(.leading)
@@ -33,6 +33,14 @@ struct AnimeCrosslineRow: View {
                 }
                 .padding(.horizontal)
             }
+        }
+        .modify {
+            #if os(tvOS)
+            // Fix scrollview jumps on tvOS
+            $0.frame(height: CommonImageSize.posterImage.height + 180)
+            #else
+            $0
+            #endif
         }
     }
 }

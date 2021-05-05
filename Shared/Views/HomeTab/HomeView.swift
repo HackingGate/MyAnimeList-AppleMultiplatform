@@ -21,28 +21,57 @@ struct HomeView: View {
     private var topTv: [JikanAPIAnime]? {
         store.state.jikanState.topTv?.top
     }
+    private var topMovie: [JikanAPIAnime]? {
+        store.state.jikanState.topMovie?.top
+    }
+    private var topOva: [JikanAPIAnime]? {
+        store.state.jikanState.topOva?.top
+    }
+    private var topUpcoming: [JikanAPIAnime]? {
+        store.state.jikanState.topUpcoming?.top
+    }
     
     var body: some View {
         NavigationViewIOS(viewBuilder: {
             ScrollView(.vertical, showsIndicators: false) {
                 // TODO: Add ForEach here
-                if let topBypopularity = topBypopularity {
-                    AnimeCrosslineRow(
-                        title: "Most Popular",
-                        animes: topBypopularity
-                    )
-                }
-                if let topAiring = topAiring {
-                    AnimeCrosslineRow(
-                        title: "Top Airing",
-                        animes: topAiring
-                    )
-                }
-                if let topTv = topTv {
-                    AnimeCrosslineRow(
-                        title: "Top TV Series",
-                        animes: topTv
-                    )
+                LazyVStack {
+                    if let topBypopularity = topBypopularity {
+                        AnimeCrosslineRow(
+                            title: "Most Popular",
+                            animes: topBypopularity
+                        )
+                    }
+                    if let topAiring = topAiring {
+                        AnimeCrosslineRow(
+                            title: "Top Airing",
+                            animes: topAiring
+                        )
+                    }
+                    if let topTv = topTv {
+                        AnimeCrosslineRow(
+                            title: "Top TV Series",
+                            animes: topTv
+                        )
+                    }
+                    if let topMovie = topMovie {
+                        AnimeCrosslineRow(
+                            title: "Top Movies",
+                            animes: topMovie
+                        )
+                    }
+                    if let topOva = topOva {
+                        AnimeCrosslineRow(
+                            title: "Top OVAs",
+                            animes: topOva
+                        )
+                    }
+                    if let topUpcoming = topUpcoming {
+                        AnimeCrosslineRow(
+                            title: "Top Upcoming",
+                            animes: topUpcoming
+                        )
+                    }
                 }
             }
         }, title: "Home")
@@ -56,6 +85,15 @@ struct HomeView: View {
             store.dispatch(action: JikanActions.Top(type: .anime,
                                                     page: 1,
                                                     subtype: .tv))
+            store.dispatch(action: JikanActions.Top(type: .anime,
+                                                    page: 1,
+                                                    subtype: .movie))
+            store.dispatch(action: JikanActions.Top(type: .anime,
+                                                    page: 1,
+                                                    subtype: .ova))
+            store.dispatch(action: JikanActions.Top(type: .anime,
+                                                    page: 1,
+                                                    subtype: .upcoming))
         }
     }
 }
