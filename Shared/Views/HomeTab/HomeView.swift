@@ -36,42 +36,30 @@ struct HomeView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 // TODO: Add ForEach here
                 LazyVStack {
-                    if let topBypopularity = topBypopularity {
-                        AnimeCrosslineRow(
-                            title: "Most Popular",
-                            animes: topBypopularity
-                        )
-                    }
-                    if let topAiring = topAiring {
-                        AnimeCrosslineRow(
-                            title: "Top Airing",
-                            animes: topAiring
-                        )
-                    }
-                    if let topTv = topTv {
-                        AnimeCrosslineRow(
-                            title: "Top TV Series",
-                            animes: topTv
-                        )
-                    }
-                    if let topMovie = topMovie {
-                        AnimeCrosslineRow(
-                            title: "Top Movies",
-                            animes: topMovie
-                        )
-                    }
-                    if let topOva = topOva {
-                        AnimeCrosslineRow(
-                            title: "Top OVAs",
-                            animes: topOva
-                        )
-                    }
-                    if let topUpcoming = topUpcoming {
-                        AnimeCrosslineRow(
-                            title: "Top Upcoming",
-                            animes: topUpcoming
-                        )
-                    }
+                    AnimeCrosslineRow(
+                        title: "Most Popular",
+                        animes: topBypopularity
+                    )
+                    AnimeCrosslineRow(
+                        title: "Top Airing",
+                        animes: topAiring
+                    )
+                    AnimeCrosslineRow(
+                        title: "Top TV Series",
+                        animes: topTv
+                    )
+                    AnimeCrosslineRow(
+                        title: "Top Movies",
+                        animes: topMovie
+                    )
+                    AnimeCrosslineRow(
+                        title: "Top OVAs",
+                        animes: topOva
+                    )
+                    AnimeCrosslineRow(
+                        title: "Top Upcoming",
+                        animes: topUpcoming
+                    )
                 }
             }
         }, title: "Home")

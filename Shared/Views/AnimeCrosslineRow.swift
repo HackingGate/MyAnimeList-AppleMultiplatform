@@ -12,35 +12,37 @@ import KingfisherSwiftUI
 
 struct AnimeCrosslineRow: View {
     let title: String
-    let animes: [JikanAPIAnime]
+    let animes: [JikanAPIAnime]?
     var body: some View {
-        LazyVStack(alignment: .leading) {
-            Divider()
-            Text(title)
-                .padding(.leading)
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(spacing: 20) {
-                    ForEach(animes) { anime in
-                        ImageTextView(data: anime,
-                                      imageSize: CommonImageSize.posterImage) {
-                            AnimeDetailView(anime: anime).environmentObject(store)
-                        } action: {
-                            store.dispatch(action: JikanActions.Anime(id: anime.id,
-                                                                      request: .all))
-                            store.dispatch(action: MALSyncActions.MALAnime(id: anime.id))
+        if let animes = animes {
+            LazyVStack(alignment: .leading) {
+                Divider()
+                Text(title)
+                    .padding(.leading)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack(spacing: 20) {
+                        ForEach(animes) { anime in
+                            ImageTextView(data: anime,
+                                          imageSize: CommonImageSize.posterImage) {
+                                AnimeDetailView(anime: anime).environmentObject(store)
+                            } action: {
+                                store.dispatch(action: JikanActions.Anime(id: anime.id,
+                                                                          request: .all))
+                                store.dispatch(action: MALSyncActions.MALAnime(id: anime.id))
+                            }
                         }
                     }
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
             }
-        }
-        .modify {
-            #if os(tvOS)
-            // Fix scrollview jumps on tvOS
-            $0.frame(height: CommonImageSize.posterImage.height + 180)
-            #else
-            $0
-            #endif
+            .modify {
+                #if os(tvOS)
+                // Fix scrollview jumps on tvOS
+                $0.frame(height: CommonImageSize.posterImage.height + 180)
+                #else
+                $0
+                #endif
+            }
         }
     }
 }
