@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/tid-kijyun/Kanna",
         "state": {
           "branch": null,
-          "revision": "609367a2cd84827a33383cf7923cb4fe8f69ee0a",
-          "version": "5.2.2"
+          "revision": "c657fb9f5827ef138068215c76ad0bb62bbc92da",
+          "version": "5.2.4"
         }
       },
       {
@@ -20,39 +20,21 @@
         }
       },
       {
-        "package": "LoggerKit",
-        "repositoryURL": "https://github.com/pvieito/LoggerKit.git",
-        "state": {
-          "branch": "master",
-          "revision": "7d88a110446af6dcaabcba57e3cc3d26e9d49e50",
-          "version": null
-        }
-      },
-      {
         "package": "PythonKit",
         "repositoryURL": "https://github.com/pvieito/PythonKit.git",
         "state": {
           "branch": "master",
-          "revision": "260ae70cddeadf42a7a0edce0dfc7f00343b5d1a",
+          "revision": "c77231820148515a77e9bba5016a57e5a88ef007",
           "version": null
-        }
-      },
-      {
-        "package": "Rainbow",
-        "repositoryURL": "https://github.com/onevcat/Rainbow",
-        "state": {
-          "branch": null,
-          "revision": "626c3d4b6b55354b4af3aa309f998fae9b31a3d9",
-          "version": "3.2.0"
         }
       },
       {
         "package": "swift-argument-parser",
         "repositoryURL": "https://github.com/apple/swift-argument-parser",
         "state": {
-          "branch": "main",
-          "revision": "4273ad222e6c51969e8585541f9da5187ad94e47",
-          "version": null
+          "branch": null,
+          "revision": "986d191f94cec88f6350056da59c2e59e83d1229",
+          "version": "0.4.3"
         }
       },
       {
