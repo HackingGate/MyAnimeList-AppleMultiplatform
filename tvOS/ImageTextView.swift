@@ -63,7 +63,6 @@ struct ImageTextView<D: Codable, Content: View>: View {
     // https://stackoverflow.com/a/59196076/4063462
     @State private var cardButtonFocusd = false
 
-    private let paddingWhenFocused: CGFloat = 25.0
     private func carButtonAnimation(isFocused: Bool) -> Animation {
         return Animation.easeOut(duration: isFocused ? 0.1 : 0.3)
     }
@@ -80,15 +79,16 @@ struct ImageTextView<D: Codable, Content: View>: View {
                         .frame(width: imageSize.width, height: imageSize.height)
                 }
                 .buttonStyle(CardButtonStyle())
-                .padding(.all, paddingWhenFocused)
+                .padding(.horizontal, imageSize.width * 0.08)
+                .padding(.vertical, imageSize.height * 0.08)
                 .sheet(isPresented: $isShowingDetailView) {
                     content
                 }
                 Text(title)
                     .lineLimit(1)
-                    .frame(width: imageSize.width + (cardButtonFocusd ? paddingWhenFocused : 0), alignment: .leading)
-                    .padding(.top, cardButtonFocusd ? 0 : -paddingWhenFocused)
-                    .padding(.bottom, cardButtonFocusd ? 0 : paddingWhenFocused)
+                    .frame(width: imageSize.width + (cardButtonFocusd ? imageSize.width * 0.12 : 0), alignment: .leading)
+                    .padding(.top, cardButtonFocusd ? 0 : -imageSize.height * 0.1)
+                    .padding(.bottom, cardButtonFocusd ? 0 : imageSize.height * 0.1)
                     .animation(carButtonAnimation(isFocused: cardButtonFocusd))
                 // TODO: sliding Text animation
                 // https://stackoverflow.com/questions/63726455/swiftui-sliding-text-animation-and-positioning
