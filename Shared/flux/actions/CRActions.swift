@@ -5,6 +5,10 @@
 //  Created by HG on 2020/07/26.
 //
 
+// Disable because Crunchyroll's parms are short
+// swiftlint:disable identifier_name
+
+
 import Foundation
 import SwiftUIFlux
 import CrunchyrollSwift

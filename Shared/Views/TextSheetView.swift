@@ -5,6 +5,8 @@
 //  Created by HG on 2020/12/18.
 //
 
+// swiftlint:disable line_length
+
 import SwiftUI
 
 struct TextSheetView: View {
