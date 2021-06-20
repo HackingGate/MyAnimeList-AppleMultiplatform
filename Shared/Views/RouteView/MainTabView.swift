@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct MainTabView : View {
+struct MainTabView: View {
     var body: some View {
-        TabView() {
+        TabView {
             HomeView()
                 .tabItem {
                     Image(systemName: "display")
@@ -22,7 +22,7 @@ struct MainTabView : View {
                 }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear() {
+        .onAppear {
             store.dispatch(action: CRActions.StartSession(unblock: true))
         }
     }

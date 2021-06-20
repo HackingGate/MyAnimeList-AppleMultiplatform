@@ -11,13 +11,13 @@ import CrunchyrollSwift
 
 struct SearchView: View {
     @EnvironmentObject private var store: Store<AppState>
-    
+
     @State var searchText = ""
-    
+
     private var result: [CRAPISeries] {
         store.state.crState.queries[searchText] ?? []
     }
-    
+
     var body: some View {
         NavigationViewIOS(viewBuilder: {
             ScrollView(.vertical) {

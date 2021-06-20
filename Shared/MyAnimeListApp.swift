@@ -15,7 +15,7 @@ struct MyAnimeListApp: App {
         WindowGroup {
             StoreProvider(store: store) {
                 MainTabView()
-            }.onAppear() {
+            }.onAppear {
                 // AVAudioSession not avaliable on macOS
                 #if canImport(UIKit)
                 // The app's AVAudioSession must be a PiP-appropriate audio category, such as AVAudioSessionCategoryPlayback.

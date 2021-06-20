@@ -10,9 +10,9 @@ import SwiftUI
 struct TextSheetView: View {
     let title: String
     let synopsis: String
-    
+
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-        
+
     var body: some View {
         NavigationView {
             #if os(tvOS)

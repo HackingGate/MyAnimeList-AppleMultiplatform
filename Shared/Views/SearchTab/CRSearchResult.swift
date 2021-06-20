@@ -10,12 +10,12 @@ import CrunchyrollSwift
 import KingfisherSwiftUI
 
 struct CRSearchResult: View {
-    
+
     let result: [CRAPISeries]
-    
+
     @State private var isShowingDetailView = false
     @State private var selectedSeries: CRAPISeries?
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             ForEach(result) { series in

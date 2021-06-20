@@ -14,13 +14,13 @@ struct FullscreenVideoPlayer: View {
     @EnvironmentObject private var store: Store<AppState>
 
     let mediaId: Int
-    
+
     private var media: CRAPIMedia? {
         return store.state.crState.medias[mediaId]
     }
-    
+
     @State private var player: AVPlayer?
-    
+
     var body: some View {
         if let media = media, let freeAvailable = media.freeAvailable, freeAvailable {
             if let player = player {
@@ -29,7 +29,7 @@ struct FullscreenVideoPlayer: View {
                       let adaptive = streamData.streams.last(where: { $0.quality == "adaptive" }) ?? streamData.streams.last,
                       let url = URL(string: adaptive.url) {
                 Text("Loaded")
-                    .onAppear() {
+                    .onAppear {
                         player = AVPlayer(url: url)
                     }
             } else {
@@ -45,7 +45,7 @@ struct FullscreenVideoPlayer: View {
 
 struct CloseButton: View {
     @Environment(\.presentationMode) private var presentationMode
-    
+
     var body: some View {
         #if os(tvOS)
         EmptyView()
@@ -67,14 +67,14 @@ struct AnimePlayer: View {
     var body: some View {
         VideoPlayer(player: player)
             .ignoresSafeArea()
-            .onAppear() {
+            .onAppear {
                 if let playerItem = store.state.playState.playerItems[itemId] {
                     let timeToSeek = CMTime(seconds: playerItem.currentTime, preferredTimescale: 1)
                     player.seek(to: timeToSeek)
                 }
                 player.play()
             }
-            .onDisappear() {
+            .onDisappear {
                 if let item = player.currentItem {
                     let currentTime = CMTimeGetSeconds(item.currentTime())
                     let duration = CMTimeGetSeconds(item.duration)

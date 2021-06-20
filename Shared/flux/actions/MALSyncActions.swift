@@ -19,8 +19,7 @@ struct MALSyncActions {
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             MALSyncAPIService.shared.loadMALAnime(
                 id: id,
-                params: params)
-            { (result: Result<MALSyncAPIMAL, MALSyncAPIService.APIError>) in
+                params: params) { (result: Result<MALSyncAPIMAL, MALSyncAPIService.APIError>) in
                 switch result {
                 case let .success(response):
                     dispatch(SetAnime(malID: id, response: response.sites))

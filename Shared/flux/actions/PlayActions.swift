@@ -12,13 +12,13 @@ struct PlayActions {
     struct SavePlayerItem: AsyncAction {
         let mediaId: Int
         let playerItem: PlayerItem
-        
+
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             dispatch(SetPlayerItem(mediaId: mediaId,
                                     playerItem: playerItem))
         }
     }
-    
+
     struct SetPlayerItem: Action {
         let mediaId: Int
         let playerItem: PlayerItem

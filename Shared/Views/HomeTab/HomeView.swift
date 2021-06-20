@@ -11,7 +11,7 @@ import JikanSwift
 
 struct HomeView: View {
     @EnvironmentObject private var store: Store<AppState>
-    
+
     private var topBypopularity: [JikanAPIAnime]? {
         store.state.jikanState.topBypopularity?.top
     }
@@ -30,7 +30,7 @@ struct HomeView: View {
     private var topUpcoming: [JikanAPIAnime]? {
         store.state.jikanState.topUpcoming?.top
     }
-    
+
     var body: some View {
         NavigationViewIOS(viewBuilder: {
             ScrollView(.vertical, showsIndicators: false) {
@@ -63,7 +63,7 @@ struct HomeView: View {
                 }
             }
         }, title: "Home")
-        .onAppear() {
+        .onAppear {
             store.dispatch(action: JikanActions.Top(type: .anime,
                                                     page: 1,
                                                     subtype: .bypopularity))

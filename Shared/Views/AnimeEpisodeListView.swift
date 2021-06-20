@@ -11,13 +11,13 @@ import CrunchyrollSwift
 
 struct EpisodeListView: View {
     @EnvironmentObject private var store: Store<AppState>
-    
+
     let collectionId: Int
-    
+
     private var episodes: [CRAPIMedia] {
         return store.state.crState.collections[collectionId] ?? []
     }
-    
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(alignment: .center, spacing: 20) {
@@ -29,9 +29,9 @@ struct EpisodeListView: View {
             }
             .padding(.horizontal)
         }
-        .onAppear() {
+        .onAppear {
             if let session = store.state.crState.session {
-                if (episodes.count == 0) {
+                if episodes.count == 0 {
                     // Request only when data not yet avaliable
                     store.dispatch(action: CRActions.ListMedia(sessionId: session.id,
                                                                collectionId: collectionId,
