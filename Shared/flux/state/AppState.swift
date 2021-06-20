@@ -14,7 +14,7 @@ struct AppState: FluxState, Codable {
     var malSyncState: MALSyncState
     var crState: CRState
     var playState: PlayState
-    
+
     init() {
         self.jikanState = JikanState()
         self.jikanCRState = JikanCRState()

@@ -14,20 +14,20 @@ import KingfisherSwiftUI
 
 struct AnimeDetailView: View {
     @EnvironmentObject private var store: Store<AppState>
-    
+
     let anime: JikanAPIAnime
-    
+
     private var animeDetail: JikanAPIAnime {
         store.state.jikanState.animes[anime.id] ?? anime
     }
-    
+
     private var sites: MALSyncAPIMALSites? {
         if let sites = store.state.malSyncState.malIDSites[anime.id] {
             return sites
         }
         return nil
     }
-    
+
     private var malSyncCRArray: [MALSyncMALSiteType1] {
         if let sites = sites,
            let crunchyroll = sites.crunchyroll {
@@ -35,7 +35,7 @@ struct AnimeDetailView: View {
         }
         return []
     }
-    
+
     private var malSyncCRMediaIds: [String: Int] {
         var result = [String: Int]()
         for malSyncCR in malSyncCRArray {
@@ -51,7 +51,7 @@ struct AnimeDetailView: View {
         }
         return result
     }
-    
+
     private var malSyncCRMediaIdsCollectionIds: [Int: Int] {
         var result = [Int: Int]()
         for malSyncCRMediaId in malSyncCRMediaIds {
@@ -61,7 +61,7 @@ struct AnimeDetailView: View {
         }
         return result
     }
-    
+
     var body: some View {
         ScrollView(.vertical) {
             LazyVStack(alignment: .leading) {
@@ -74,7 +74,7 @@ struct AnimeDetailView: View {
                 ForEach(malSyncCRArray) { malSyncCR in
                     if let mediaId = malSyncCRMediaIds[malSyncCR.id] {
                         Text(malSyncCR.title)
-                            .onAppear () {
+                            .onAppear {
                                 if let session = store.state.crState.session {
                                     // fetch info to know collectionId
                                     store.dispatch(action: CRActions.Info(sessionId: session.id,

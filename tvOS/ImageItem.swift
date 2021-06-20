@@ -12,9 +12,9 @@ import KingfisherSwiftUI
 struct ImageItem: View {
     @Environment(\.isFocused) private var isFocused
     var isFocusedBinding: Binding<Bool>?
-    
+
     let imageURL: String
-        
+
     var body: some View {
         ZStack {
             report()
@@ -25,7 +25,7 @@ struct ImageItem: View {
             }
         }
     }
-    
+
     func report() -> some View {
         DispatchQueue.main.async {
             self.isFocusedBinding?.wrappedValue = self.isFocused

@@ -11,7 +11,7 @@ import KingfisherSwiftUI
 
 struct AnimeInformationView: View {
     let animeDetail: JikanAPIAnime
-    
+
     @State private var modalDisplayed = false
 
     var body: some View {

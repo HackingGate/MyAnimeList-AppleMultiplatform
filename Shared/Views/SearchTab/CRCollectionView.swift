@@ -11,16 +11,16 @@ import CrunchyrollSwift
 
 struct CRCollectionView: View {
     @EnvironmentObject private var store: Store<AppState>
-    
+
     @Binding var series: CRAPISeries?
-    
+
     private var crCollections: [CRAPICollection]? {
         if let series = series, let seriesId = Int(series.id), let collections = store.state.crState.series[seriesId] {
             return collections
         }
         return nil
     }
-    
+
     var body: some View {
         if let series = series {
             ScrollView(.vertical) {
