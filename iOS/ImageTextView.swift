@@ -53,7 +53,7 @@ struct ImageTextView<D: Codable, Content: View>: View {
             return anime.imageURL
         }
         if let episode = data as? CRAPIMedia {
-            return episode.screenshotImage?.fwide_url
+            return episode.screenshotImage?.fwideUrl
         }
         return nil
     }

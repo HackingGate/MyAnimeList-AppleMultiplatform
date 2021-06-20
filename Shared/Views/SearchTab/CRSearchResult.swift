@@ -32,7 +32,7 @@ struct CRSearchResult: View {
                     }
                 }) {
                     HStack(alignment: .center, spacing: 20) {
-                        if let imageURL = URL(string: series.portraitImage.large_url) {
+                        if let imageURL = URL(string: series.portraitImage.largeUrl) {
                             KFImage(imageURL)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
