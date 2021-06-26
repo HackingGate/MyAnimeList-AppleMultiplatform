@@ -35,14 +35,10 @@ struct AnimeCrosslineRow: View {
                     .padding(.horizontal)
                 }
             }
-            .modify {
-                #if os(tvOS)
-                // Fix scrollview jumps on tvOS
-                $0.frame(height: CommonImageSize.posterImage.height + 180)
-                #else
-                $0
-                #endif
-            }
+            #if os(tvOS)
+            // Fix scrollview jumps on tvOS
+            .frame(height: CommonImageSize.posterImage.height + 180)
+            #endif
         }
     }
 }

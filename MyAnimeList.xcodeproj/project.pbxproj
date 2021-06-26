@@ -21,9 +21,6 @@
 		C75EBBDB2588F55300754DC6 /* NavigationViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */; };
 		C75EBBDC2588F55300754DC6 /* NavigationViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */; };
 		C75EBBDD2588F55300754DC6 /* NavigationViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */; };
-		C76D722225937F6B000E7514 /* ViewModifyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D722125937F6B000E7514 /* ViewModifyExtension.swift */; };
-		C76D722325937F6B000E7514 /* ViewModifyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D722125937F6B000E7514 /* ViewModifyExtension.swift */; };
-		C76D722425937F6B000E7514 /* ViewModifyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D722125937F6B000E7514 /* ViewModifyExtension.swift */; };
 		C77CDE8B25864A5700DD1FFC /* CommonImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */; };
 		C77CDE8C25864A5700DD1FFC /* CommonImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */; };
 		C77CDE8D25864A5700DD1FFC /* CommonImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */; };
@@ -140,7 +137,6 @@
 		C7387FA425793A1100EDC0B8 /* MyAnimeList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAnimeList.entitlements; sourceTree = "<group>"; };
 		C73CB100258BB1ED006A0C9C /* TextSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSheetView.swift; sourceTree = "<group>"; };
 		C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewIOS.swift; sourceTree = "<group>"; };
-		C76D722125937F6B000E7514 /* ViewModifyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifyExtension.swift; sourceTree = "<group>"; };
 		C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonImageSize.swift; sourceTree = "<group>"; };
 		C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncReducer.swift; sourceTree = "<group>"; };
 		C783F8E7257CBAD9001EB646 /* MALSyncState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncState.swift; sourceTree = "<group>"; };
@@ -248,14 +244,6 @@
 			path = RouteView;
 			sourceTree = "<group>";
 		};
-		C76D722025937F4B000E7514 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				C76D722125937F6B000E7514 /* ViewModifyExtension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		C77CDE8925864A3F00DD1FFC /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,7 +311,6 @@
 		C795B45425769398009EC5E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C76D722025937F4B000E7514 /* Extension */,
 				C75EBBE12588F5F900754DC6 /* RouteView */,
 				C795B45725769398009EC5E8 /* HomeTab */,
 				C795B45B25769398009EC5E8 /* SearchTab */,
@@ -604,7 +591,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7AD2EC3258BA181008804A2 /* AnimeInformationView.swift in Sources */,
-				C76D722225937F6B000E7514 /* ViewModifyExtension.swift in Sources */,
 				C795B45E25769398009EC5E8 /* FullscreenVideoPlayer.swift in Sources */,
 				C795B5622576952A009EC5E8 /* PlayActions.swift in Sources */,
 				C795B47025769398009EC5E8 /* AnimeDetailView.swift in Sources */,
@@ -660,7 +646,6 @@
 				C795B55425769529009EC5E8 /* PlayState.swift in Sources */,
 				C790924525923A7900D93670 /* CRCollectionView.swift in Sources */,
 				C795B55725769529009EC5E8 /* JikanState.swift in Sources */,
-				C76D722325937F6B000E7514 /* ViewModifyExtension.swift in Sources */,
 				C75EBBDC2588F55300754DC6 /* NavigationViewIOS.swift in Sources */,
 				C795B56F2576952A009EC5E8 /* AppReducer.swift in Sources */,
 				C7BC4C8E257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */,
@@ -686,7 +671,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7AD2EC5258BA181008804A2 /* AnimeInformationView.swift in Sources */,
-				C76D722425937F6B000E7514 /* ViewModifyExtension.swift in Sources */,
 				C795B5B725769838009EC5E8 /* JikanState.swift in Sources */,
 				C795B5AD25769838009EC5E8 /* CRActions.swift in Sources */,
 				C795B5B325769838009EC5E8 /* AnimeDetailView.swift in Sources */,
