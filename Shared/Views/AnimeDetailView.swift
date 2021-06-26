@@ -39,6 +39,7 @@ struct AnimeDetailView: View {
     private var malSyncCRMediaIds: [String: Int] {
         var result = [String: Int]()
         for malSyncCR in malSyncCRArray {
+            // TODO: MALSync has removed media_id in response. MALSync to Crunchyroll mapping is now borken.
             if let queryItems = URLComponents(string: malSyncCR.url)?.queryItems {
                 for item in queryItems {
                     if item.name == "media_id",
