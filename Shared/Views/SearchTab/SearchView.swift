@@ -30,16 +30,11 @@ struct SearchView: View {
                     }
                 }
                 .padding(7)
-                .modify {
-                    #if os(iOS)
-                    $0
-                        .background(Color(.systemGray6))
-                        .cornerRadius(8)
-                        .padding(.horizontal, 10)
-                    #else
-                    $0
-                    #endif
-                }
+                #if os(iOS)
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+                .padding(.horizontal, 10)
+                #endif
                 CRSearchResult(result: result)
             }
         }, title: "Search")

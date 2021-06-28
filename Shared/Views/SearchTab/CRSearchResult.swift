@@ -49,18 +49,12 @@ struct CRSearchResult: View {
                     }
                     .padding()
                 }
-                .modify {
-                    #if os(tvOS)
-                    $0
-                        .sheet(isPresented: $isShowingDetailView) {
-                            CRCollectionView(series: $selectedSeries).environmentObject(store)
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                    #else
-                    $0
-                        .buttonStyle(PlainButtonStyle())
-                    #endif
+                #if os(tvOS)
+                .sheet(isPresented: $isShowingDetailView) {
+                    CRCollectionView(series: $selectedSeries).environmentObject(store)
                 }
+                #endif
+                .buttonStyle(PlainButtonStyle())
                 Divider()
             }
         }
