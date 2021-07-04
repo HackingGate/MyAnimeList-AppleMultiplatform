@@ -6,7 +6,7 @@ Unofficial MyAnimeList app for Apple TV, iPhone, iPad and Mac rewritten in Swift
 ### Requirements
 
 - Xcode 13
-- tvOS 14 or iOS 14 or macOS 11
+- tvOS 15 or iOS 15 or macOS 12
 
 ### Dependencies
 

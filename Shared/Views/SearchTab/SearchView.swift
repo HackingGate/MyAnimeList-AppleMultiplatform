@@ -21,21 +21,13 @@ struct SearchView: View {
     var body: some View {
         NavigationViewIOS(viewBuilder: {
             ScrollView(.vertical) {
-                TextField("Search", text: $searchText) { changed in
-                    print("changed: \(changed), text: \(searchText)")
-                } onCommit: {
-                    print("onCommit, text: \(searchText)")
-                    if let session = store.state.crState.session, searchText.trimmingCharacters(in: .whitespacesAndNewlines).count > 0 {
-                        store.dispatch(action: CRActions.Autocomplete(sessionId: session.id, q: searchText))
-                    }
-                }
-                .padding(7)
-                #if os(iOS)
-                .background(Color(.systemGray6))
-                .cornerRadius(8)
-                .padding(.horizontal, 10)
-                #endif
                 CRSearchResult(result: result)
+            }
+            .searchable(text: $searchText)
+            .onSubmit(of: .search) {
+                if let session = store.state.crState.session, searchText.trimmingCharacters(in: .whitespacesAndNewlines).count > 0 {
+                    store.dispatch(action: CRActions.Autocomplete(sessionId: session.id, q: searchText))
+                }
             }
         }, title: "Search")
     }
