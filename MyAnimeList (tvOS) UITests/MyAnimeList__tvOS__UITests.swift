@@ -1,9 +1,4 @@
-//
-//  MyAnimeList__tvOS__UITests.swift
-//  MyAnimeList (tvOS) UITests
-//
-//  Created by HG on 2021/07/16.
-//
+// swiftlint:disable type_name
 
 import XCTest
 

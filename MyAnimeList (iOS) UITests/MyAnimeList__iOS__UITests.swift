@@ -1,9 +1,4 @@
-//
-//  MyAnimeList__iOS__UITests.swift
-//  MyAnimeList (iOS) UITests
-//
-//  Created by HG on 2021/07/16.
-//
+// swiftlint:disable type_name
 
 import XCTest
 
