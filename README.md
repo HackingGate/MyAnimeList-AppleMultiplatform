@@ -1,5 +1,6 @@
 # MyAnimeList-AppleMultiplatform
 [![SwiftLint](https://github.com/HackingGate/MyAnimeList-AppleMultiplatform/actions/workflows/swiftlint.yml/badge.svg)](https://github.com/HackingGate/MyAnimeList-AppleMultiplatform/actions/workflows/swiftlint.yml)
+[![Test](https://github.com/HackingGate/MyAnimeList-AppleMultiplatform/actions/workflows/test.yml/badge.svg)](https://github.com/HackingGate/MyAnimeList-AppleMultiplatform/actions/workflows/test.yml)
 
 Unofficial MyAnimeList app for Apple TV, iPhone, iPad and Mac rewritten in SwiftUI (previous was TVML/TVJS)
 

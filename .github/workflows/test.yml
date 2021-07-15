@@ -1,0 +1,24 @@
+name: Test
+
+on:
+  - push
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        platform:
+          - tvOS
+          - iOS
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+      - uses: mxcl/xcodebuild@v1
+        with:
+          xcode: ^13
+          platform: ${{ matrix.platform }}
+          scheme: MyAnimeList (${{ matrix.platform }})
+          action: test
+          code-coverage: true
