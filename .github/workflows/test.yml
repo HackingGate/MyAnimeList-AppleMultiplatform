@@ -1,4 +1,4 @@
-name: Build
+name: Test
 
 on:
   - push
@@ -19,4 +19,5 @@ jobs:
         with:
           xcode: ^13
           platform: ${{ matrix.platform }}
-          action: build
+          action: test
+          code-coverage: true
