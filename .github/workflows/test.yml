@@ -19,5 +19,6 @@ jobs:
         with:
           xcode: ^13
           platform: ${{ matrix.platform }}
+          scheme: MyAnimeList (${{ matrix.platform }})
           action: test
           code-coverage: true
