@@ -134,7 +134,6 @@
 		C7EC6AA326A3F8A60097A6E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */; };
 		C7EC6AA426A3F8A60097A6E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */; };
 		C7EC6AA626A3F96E0097A6E5 /* ToolbarTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC6AA526A3F96E0097A6E5 /* ToolbarTabView.swift */; };
-		C7FF052726A83F3000ABC0EC /* StackNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF052626A83F3000ABC0EC /* StackNavigationView.swift */; };
 		C7FF052826A8437700ABC0EC /* ImageTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C704B1492581077D005C1B66 /* ImageTextItem.swift */; };
 		C7FF052926A8437700ABC0EC /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13418258511A90058F301 /* ImageTextView.swift */; };
 /* End PBXBuildFile section */
@@ -212,7 +211,6 @@
 		C7D13418258511A90058F301 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 		C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7EC6AA526A3F96E0097A6E5 /* ToolbarTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarTabView.swift; sourceTree = "<group>"; };
-		C7FF052626A83F3000ABC0EC /* StackNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,7 +353,6 @@
 			children = (
 				C795B4062576922D009EC5E8 /* macOS.entitlements */,
 				C7EC6AA526A3F96E0097A6E5 /* ToolbarTabView.swift */,
-				C7FF052626A83F3000ABC0EC /* StackNavigationView.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -800,7 +797,6 @@
 				C7EC6AA626A3F96E0097A6E5 /* ToolbarTabView.swift in Sources */,
 				C795B5752576952A009EC5E8 /* JikanCRReducer.swift in Sources */,
 				C795B5662576952A009EC5E8 /* CRActions.swift in Sources */,
-				C7FF052726A83F3000ABC0EC /* StackNavigationView.swift in Sources */,
 				C795B5722576952A009EC5E8 /* JikanReducer.swift in Sources */,
 				C795B46225769398009EC5E8 /* AnimeEpisodeListView.swift in Sources */,
 				C7FF052826A8437700ABC0EC /* ImageTextItem.swift in Sources */,

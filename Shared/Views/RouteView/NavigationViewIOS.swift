@@ -16,10 +16,6 @@ struct NavigationViewIOS<Content: View>: View {
             viewBuilder()
                 .navigationBarTitle(title)
         }
-        #elseif os(macOS)
-        StackNavigationView {
-            viewBuilder()
-        }
         #else
         viewBuilder()
         #endif
