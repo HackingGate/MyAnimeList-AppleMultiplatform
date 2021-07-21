@@ -48,6 +48,7 @@ struct ImageTextView<D: Codable, Content: View>: View {
         }
         return nil
     }
+
     private var imageURL: String? {
         if let anime = data as? JikanAPIAnime {
             return anime.imageURL

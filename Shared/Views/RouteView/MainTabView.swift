@@ -22,9 +22,6 @@ struct MainTabView: View {
                 }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear {
-            store.dispatch(action: CRActions.StartSession(unblock: true))
-        }
     }
 }
 

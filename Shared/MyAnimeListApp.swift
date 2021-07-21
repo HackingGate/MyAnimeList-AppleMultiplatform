@@ -14,7 +14,10 @@ struct MyAnimeListApp: App {
     var body: some Scene {
         WindowGroup {
             StoreProvider(store: store) {
-                MainTabView()
+                ContentView()
+                    .onAppear {
+                        store.dispatch(action: CRActions.StartSession(unblock: true))
+                    }
             }.onAppear {
                 // AVAudioSession not avaliable on macOS
                 #if canImport(UIKit)

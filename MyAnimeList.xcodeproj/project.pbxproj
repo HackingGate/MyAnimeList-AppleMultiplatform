@@ -49,7 +49,6 @@
 		C795B46425769398009EC5E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45825769398009EC5E8 /* HomeView.swift */; };
 		C795B46525769398009EC5E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45825769398009EC5E8 /* HomeView.swift */; };
 		C795B46725769398009EC5E8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45925769398009EC5E8 /* MainTabView.swift */; };
-		C795B46825769398009EC5E8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45925769398009EC5E8 /* MainTabView.swift */; };
 		C795B46A25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45A25769398009EC5E8 /* AnimeCrosslineRow.swift */; };
 		C795B46B25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45A25769398009EC5E8 /* AnimeCrosslineRow.swift */; };
 		C795B46D25769398009EC5E8 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45C25769398009EC5E8 /* SearchView.swift */; };
@@ -127,13 +126,27 @@
 		C7BC4C8E257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BC4C8C257BCD9B00EEBAFC /* MALSyncActions.swift */; };
 		C7BC4C8F257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BC4C8C257BCD9B00EEBAFC /* MALSyncActions.swift */; };
 		C7BC4CBB257BD1A000EEBAFC /* MALSyncSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7BC4CBA257BD1A000EEBAFC /* MALSyncSwift */; };
+		C7C5FD5326A84AFD00153D61 /* MyAnimeList__macOS__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5FD5226A84AFD00153D61 /* MyAnimeList__macOS__UITests.swift */; };
 		C7CB5D0E26A0894E001590E3 /* MyAnimeList__iOS__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB5D0D26A0894E001590E3 /* MyAnimeList__iOS__UITests.swift */; };
 		C7CB5D1B26A0896B001590E3 /* MyAnimeList__tvOS__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB5D1A26A0896B001590E3 /* MyAnimeList__tvOS__UITests.swift */; };
 		C7D13411258511600058F301 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13410258511600058F301 /* ImageTextView.swift */; };
 		C7D13419258511A90058F301 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13418258511A90058F301 /* ImageTextView.swift */; };
+		C7EC6AA226A3F8A60097A6E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */; };
+		C7EC6AA326A3F8A60097A6E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */; };
+		C7EC6AA426A3F8A60097A6E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */; };
+		C7EC6AA626A3F96E0097A6E5 /* ToolbarTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC6AA526A3F96E0097A6E5 /* ToolbarTabView.swift */; };
+		C7FF052826A8437700ABC0EC /* ImageTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C704B1492581077D005C1B66 /* ImageTextItem.swift */; };
+		C7FF052926A8437700ABC0EC /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13418258511A90058F301 /* ImageTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C7C5FD5426A84AFD00153D61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C795B3EF2576922C009EC5E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C795B4022576922D009EC5E8;
+			remoteInfo = "MyAnimeList (macOS)";
+		};
 		C7CB5D0F26A0894E001590E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C795B3EF2576922C009EC5E8 /* Project object */;
@@ -155,6 +168,7 @@
 		C704B14E258107AE005C1B66 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		C7387FA425793A1100EDC0B8 /* MyAnimeList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAnimeList.entitlements; sourceTree = "<group>"; };
 		C73CB100258BB1ED006A0C9C /* TextSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSheetView.swift; sourceTree = "<group>"; };
+		C73E0BAF26A47368002B0C2B /* MyAnimeList (macOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyAnimeList (macOS).entitlements"; sourceTree = "<group>"; };
 		C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewIOS.swift; sourceTree = "<group>"; };
 		C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonImageSize.swift; sourceTree = "<group>"; };
 		C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncReducer.swift; sourceTree = "<group>"; };
@@ -196,13 +210,16 @@
 		C7AD2EC2258BA181008804A2 /* AnimeInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeInformationView.swift; sourceTree = "<group>"; };
 		C7BC4C8C257BCD9B00EEBAFC /* MALSyncActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncActions.swift; sourceTree = "<group>"; };
 		C7BC4CAB257BD17200EEBAFC /* MALSyncSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MALSyncSwift; sourceTree = "<group>"; };
-		C7CB5CDB26A088B7001590E3 /* MyAnimeListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeListUITests.swift; sourceTree = "<group>"; };
+		C7C5FD5026A84AFD00153D61 /* MyAnimeList (macOS) UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyAnimeList (macOS) UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C5FD5226A84AFD00153D61 /* MyAnimeList__macOS__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeList__macOS__UITests.swift; sourceTree = "<group>"; };
 		C7CB5D0B26A0894E001590E3 /* MyAnimeList (iOS) UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyAnimeList (iOS) UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CB5D0D26A0894E001590E3 /* MyAnimeList__iOS__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeList__iOS__UITests.swift; sourceTree = "<group>"; };
 		C7CB5D1826A0896B001590E3 /* MyAnimeList (tvOS) UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyAnimeList (tvOS) UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CB5D1A26A0896B001590E3 /* MyAnimeList__tvOS__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeList__tvOS__UITests.swift; sourceTree = "<group>"; };
 		C7D13410258511600058F301 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 		C7D13418258511A90058F301 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
+		C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C7EC6AA526A3F96E0097A6E5 /* ToolbarTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +262,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C7C5FD4D26A84AFD00153D61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7CB5D0826A0894E001590E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,6 +299,7 @@
 			children = (
 				C795B45925769398009EC5E8 /* MainTabView.swift */,
 				C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */,
+				C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */,
 			);
 			path = RouteView;
 			sourceTree = "<group>";
@@ -290,15 +315,16 @@
 		C795B3EE2576922C009EC5E8 = {
 			isa = PBXGroup;
 			children = (
+				C73E0BAF26A47368002B0C2B /* MyAnimeList (macOS).entitlements */,
 				C7A39699257BA95D000EB209 /* README.md */,
 				C795B3F32576922D009EC5E8 /* Shared */,
 				C795B3FD2576922D009EC5E8 /* iOS */,
 				C795B4042576922D009EC5E8 /* macOS */,
 				C795B584257697C1009EC5E8 /* tvOS */,
 				C795B48725769472009EC5E8 /* Packages */,
-				C7CB5CDA26A088B7001590E3 /* MyAnimeListUITests */,
 				C7CB5D0C26A0894E001590E3 /* MyAnimeList (iOS) UITests */,
 				C7CB5D1926A0896B001590E3 /* MyAnimeList (tvOS) UITests */,
+				C7C5FD5126A84AFD00153D61 /* MyAnimeList (macOS) UITests */,
 				C795B3FC2576922D009EC5E8 /* Products */,
 				C795B47F257693FE009EC5E8 /* Frameworks */,
 			);
@@ -324,6 +350,7 @@
 				C795B583257697C1009EC5E8 /* MyAnimeList (tvOS).app */,
 				C7CB5D0B26A0894E001590E3 /* MyAnimeList (iOS) UITests.xctest */,
 				C7CB5D1826A0896B001590E3 /* MyAnimeList (tvOS) UITests.xctest */,
+				C7C5FD5026A84AFD00153D61 /* MyAnimeList (macOS) UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -342,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				C795B4062576922D009EC5E8 /* macOS.entitlements */,
+				C7EC6AA526A3F96E0097A6E5 /* ToolbarTabView.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -472,12 +500,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		C7CB5CDA26A088B7001590E3 /* MyAnimeListUITests */ = {
+		C7C5FD5126A84AFD00153D61 /* MyAnimeList (macOS) UITests */ = {
 			isa = PBXGroup;
 			children = (
-				C7CB5CDB26A088B7001590E3 /* MyAnimeListUITests.swift */,
+				C7C5FD5226A84AFD00153D61 /* MyAnimeList__macOS__UITests.swift */,
 			);
-			path = MyAnimeListUITests;
+			path = "MyAnimeList (macOS) UITests";
 			sourceTree = "<group>";
 		};
 		C7CB5D0C26A0894E001590E3 /* MyAnimeList (iOS) UITests */ = {
@@ -574,6 +602,24 @@
 			productReference = C795B583257697C1009EC5E8 /* MyAnimeList (tvOS).app */;
 			productType = "com.apple.product-type.application";
 		};
+		C7C5FD4F26A84AFD00153D61 /* MyAnimeList (macOS) UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7C5FD5826A84AFD00153D61 /* Build configuration list for PBXNativeTarget "MyAnimeList (macOS) UITests" */;
+			buildPhases = (
+				C7C5FD4C26A84AFD00153D61 /* Sources */,
+				C7C5FD4D26A84AFD00153D61 /* Frameworks */,
+				C7C5FD4E26A84AFD00153D61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7C5FD5526A84AFD00153D61 /* PBXTargetDependency */,
+			);
+			name = "MyAnimeList (macOS) UITests";
+			productName = "MyAnimeList (macOS) UITests";
+			productReference = C7C5FD5026A84AFD00153D61 /* MyAnimeList (macOS) UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C7CB5D0A26A0894E001590E3 /* MyAnimeList (iOS) UITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7CB5D1126A0894E001590E3 /* Build configuration list for PBXNativeTarget "MyAnimeList (iOS) UITests" */;
@@ -629,6 +675,10 @@
 					C795B582257697C1009EC5E8 = {
 						CreatedOnToolsVersion = 13.0;
 					};
+					C7C5FD4F26A84AFD00153D61 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C795B4022576922D009EC5E8;
+					};
 					C7CB5D0A26A0894E001590E3 = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = C795B3FA2576922D009EC5E8;
@@ -661,6 +711,7 @@
 				C795B582257697C1009EC5E8 /* MyAnimeList (tvOS) */,
 				C7CB5D0A26A0894E001590E3 /* MyAnimeList (iOS) UITests */,
 				C7CB5D1726A0896B001590E3 /* MyAnimeList (tvOS) UITests */,
+				C7C5FD4F26A84AFD00153D61 /* MyAnimeList (macOS) UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -688,6 +739,13 @@
 			files = (
 				C795B5D0257699C9009EC5E8 /* Assets.xcassets in Resources */,
 				C795B58D257697C2009EC5E8 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C5FD4E26A84AFD00153D61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +786,7 @@
 				C75EBBDB2588F55300754DC6 /* NavigationViewIOS.swift in Sources */,
 				C795B55325769529009EC5E8 /* PlayState.swift in Sources */,
 				C795B55625769529009EC5E8 /* JikanState.swift in Sources */,
+				C7EC6AA226A3F8A60097A6E5 /* ContentView.swift in Sources */,
 				C795B56E2576952A009EC5E8 /* AppReducer.swift in Sources */,
 				C7BC4C8D257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */,
 				C795B46D25769398009EC5E8 /* SearchView.swift in Sources */,
@@ -754,6 +813,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C795B45F25769398009EC5E8 /* FullscreenVideoPlayer.swift in Sources */,
+				C7FF052926A8437700ABC0EC /* ImageTextView.swift in Sources */,
 				C795B5632576952A009EC5E8 /* PlayActions.swift in Sources */,
 				C795B47125769398009EC5E8 /* AnimeDetailView.swift in Sources */,
 				C795B56C2576952A009EC5E8 /* CRReducer.swift in Sources */,
@@ -776,15 +836,17 @@
 				C783F8E2257CBACC001EB646 /* MALSyncReducer.swift in Sources */,
 				C73CB102258BB1ED006A0C9C /* TextSheetView.swift in Sources */,
 				C795B54E25769529009EC5E8 /* AppState.swift in Sources */,
+				C7EC6AA326A3F8A60097A6E5 /* ContentView.swift in Sources */,
 				C795B46525769398009EC5E8 /* HomeView.swift in Sources */,
 				C790923B2592329100D93670 /* CRSearchResult.swift in Sources */,
 				C795B55A25769529009EC5E8 /* CRState.swift in Sources */,
 				C795B54B25769529009EC5E8 /* PlayerItem.swift in Sources */,
+				C7EC6AA626A3F96E0097A6E5 /* ToolbarTabView.swift in Sources */,
 				C795B5752576952A009EC5E8 /* JikanCRReducer.swift in Sources */,
 				C795B5662576952A009EC5E8 /* CRActions.swift in Sources */,
-				C795B46825769398009EC5E8 /* MainTabView.swift in Sources */,
 				C795B5722576952A009EC5E8 /* JikanReducer.swift in Sources */,
 				C795B46225769398009EC5E8 /* AnimeEpisodeListView.swift in Sources */,
+				C7FF052826A8437700ABC0EC /* ImageTextItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,6 +870,7 @@
 				C75EBBDD2588F55300754DC6 /* NavigationViewIOS.swift in Sources */,
 				C795B5B225769838009EC5E8 /* AnimeEpisodeListView.swift in Sources */,
 				C795B5B125769838009EC5E8 /* AppReducer.swift in Sources */,
+				C7EC6AA426A3F8A60097A6E5 /* ContentView.swift in Sources */,
 				C795B5B925769838009EC5E8 /* JikanReducer.swift in Sources */,
 				C7BC4C8F257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */,
 				C795B5B625769838009EC5E8 /* JikanActions.swift in Sources */,
@@ -826,6 +889,14 @@
 				C795B5AC25769838009EC5E8 /* PlayState.swift in Sources */,
 				C795B5AA25769838009EC5E8 /* FullscreenVideoPlayer.swift in Sources */,
 				C795B5AB25769838009EC5E8 /* PlayerItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C5FD4C26A84AFD00153D61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7C5FD5326A84AFD00153D61 /* MyAnimeList__macOS__UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,6 +919,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C7C5FD5526A84AFD00153D61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C795B4022576922D009EC5E8 /* MyAnimeList (macOS) */;
+			targetProxy = C7C5FD5426A84AFD00153D61 /* PBXContainerItemProxy */;
+		};
 		C7CB5D1026A0894E001590E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C795B3FA2576922D009EC5E8 /* MyAnimeList (iOS) */;
@@ -1044,6 +1120,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MyAnimeList (macOS).entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1073,6 +1150,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MyAnimeList (macOS).entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1151,6 +1229,54 @@
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 15.0;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7C5FD5626A84AFD00153D61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hackinggate.MyAnimeList--macOS--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "MyAnimeList (macOS)";
+			};
+			name = Debug;
+		};
+		C7C5FD5726A84AFD00153D61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hackinggate.MyAnimeList--macOS--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "MyAnimeList (macOS)";
 			};
 			name = Release;
 		};
@@ -1287,6 +1413,15 @@
 			buildConfigurations = (
 				C795B590257697C2009EC5E8 /* Debug */,
 				C795B591257697C2009EC5E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7C5FD5826A84AFD00153D61 /* Build configuration list for PBXNativeTarget "MyAnimeList (macOS) UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7C5FD5626A84AFD00153D61 /* Debug */,
+				C7C5FD5726A84AFD00153D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -48,6 +48,7 @@ struct ImageTextView<D: Codable, Content: View>: View {
         }
         return nil
     }
+
     private var imageURL: String? {
         if let anime = data as? JikanAPIAnime {
             return anime.imageURL
@@ -64,9 +65,11 @@ struct ImageTextView<D: Codable, Content: View>: View {
     var body: some View {
         VStack {
             if let title = title, let imageURL = imageURL {
+                #if os(iOS)
                 NavigationLink(destination: content, isActive: $isShowingDetailView) {
                     EmptyView()
                 }
+                #endif
                 Button(action: {
                     isShowingDetailView = true && !useModal
                     modalDisplayed = true && useModal
@@ -75,9 +78,11 @@ struct ImageTextView<D: Codable, Content: View>: View {
                     ImageTextItem(title: title, imageURL: imageURL)
                         .frame(width: imageSize.width, height: imageSize.height + 62)
                 }
+                #if os(iOS)
                 .fullScreenCover(isPresented: $modalDisplayed) {
                     content
                 }
+                #endif
                 .buttonStyle(PlainButtonStyle())
             }
         }
