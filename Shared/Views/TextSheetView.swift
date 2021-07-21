@@ -23,6 +23,7 @@ struct TextSheetView: View {
             ScrollView(.vertical) {
                 Text(synopsis)
                     .padding()
+                #if !os(macOS)
                     .navigationBarTitle(title, displayMode: .inline)
                     .navigationBarItems(trailing:
                         Button("Done") {
@@ -30,6 +31,7 @@ struct TextSheetView: View {
                             self.presentationMode.wrappedValue.dismiss()
                         }
                     )
+                #endif
             }
             #endif
         }

@@ -49,7 +49,6 @@
 		C795B46425769398009EC5E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45825769398009EC5E8 /* HomeView.swift */; };
 		C795B46525769398009EC5E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45825769398009EC5E8 /* HomeView.swift */; };
 		C795B46725769398009EC5E8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45925769398009EC5E8 /* MainTabView.swift */; };
-		C795B46825769398009EC5E8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45925769398009EC5E8 /* MainTabView.swift */; };
 		C795B46A25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45A25769398009EC5E8 /* AnimeCrosslineRow.swift */; };
 		C795B46B25769398009EC5E8 /* AnimeCrosslineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45A25769398009EC5E8 /* AnimeCrosslineRow.swift */; };
 		C795B46D25769398009EC5E8 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795B45C25769398009EC5E8 /* SearchView.swift */; };
@@ -131,6 +130,12 @@
 		C7CB5D1B26A0896B001590E3 /* MyAnimeList__tvOS__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB5D1A26A0896B001590E3 /* MyAnimeList__tvOS__UITests.swift */; };
 		C7D13411258511600058F301 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13410258511600058F301 /* ImageTextView.swift */; };
 		C7D13419258511A90058F301 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13418258511A90058F301 /* ImageTextView.swift */; };
+		C7EC6AA226A3F8A60097A6E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */; };
+		C7EC6AA326A3F8A60097A6E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */; };
+		C7EC6AA426A3F8A60097A6E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */; };
+		C7EC6AA626A3F96E0097A6E5 /* ToolbarTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC6AA526A3F96E0097A6E5 /* ToolbarTabView.swift */; };
+		C7FF052826A8437700ABC0EC /* ImageTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C704B1492581077D005C1B66 /* ImageTextItem.swift */; };
+		C7FF052926A8437700ABC0EC /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D13418258511A90058F301 /* ImageTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +160,7 @@
 		C704B14E258107AE005C1B66 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		C7387FA425793A1100EDC0B8 /* MyAnimeList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAnimeList.entitlements; sourceTree = "<group>"; };
 		C73CB100258BB1ED006A0C9C /* TextSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSheetView.swift; sourceTree = "<group>"; };
+		C73E0BAF26A47368002B0C2B /* MyAnimeList (macOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyAnimeList (macOS).entitlements"; sourceTree = "<group>"; };
 		C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewIOS.swift; sourceTree = "<group>"; };
 		C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonImageSize.swift; sourceTree = "<group>"; };
 		C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncReducer.swift; sourceTree = "<group>"; };
@@ -203,6 +209,8 @@
 		C7CB5D1A26A0896B001590E3 /* MyAnimeList__tvOS__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeList__tvOS__UITests.swift; sourceTree = "<group>"; };
 		C7D13410258511600058F301 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 		C7D13418258511A90058F301 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
+		C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C7EC6AA526A3F96E0097A6E5 /* ToolbarTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +283,7 @@
 			children = (
 				C795B45925769398009EC5E8 /* MainTabView.swift */,
 				C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */,
+				C7EC6AA126A3F8A60097A6E5 /* ContentView.swift */,
 			);
 			path = RouteView;
 			sourceTree = "<group>";
@@ -290,6 +299,7 @@
 		C795B3EE2576922C009EC5E8 = {
 			isa = PBXGroup;
 			children = (
+				C73E0BAF26A47368002B0C2B /* MyAnimeList (macOS).entitlements */,
 				C7A39699257BA95D000EB209 /* README.md */,
 				C795B3F32576922D009EC5E8 /* Shared */,
 				C795B3FD2576922D009EC5E8 /* iOS */,
@@ -342,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				C795B4062576922D009EC5E8 /* macOS.entitlements */,
+				C7EC6AA526A3F96E0097A6E5 /* ToolbarTabView.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -728,6 +739,7 @@
 				C75EBBDB2588F55300754DC6 /* NavigationViewIOS.swift in Sources */,
 				C795B55325769529009EC5E8 /* PlayState.swift in Sources */,
 				C795B55625769529009EC5E8 /* JikanState.swift in Sources */,
+				C7EC6AA226A3F8A60097A6E5 /* ContentView.swift in Sources */,
 				C795B56E2576952A009EC5E8 /* AppReducer.swift in Sources */,
 				C7BC4C8D257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */,
 				C795B46D25769398009EC5E8 /* SearchView.swift in Sources */,
@@ -754,6 +766,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C795B45F25769398009EC5E8 /* FullscreenVideoPlayer.swift in Sources */,
+				C7FF052926A8437700ABC0EC /* ImageTextView.swift in Sources */,
 				C795B5632576952A009EC5E8 /* PlayActions.swift in Sources */,
 				C795B47125769398009EC5E8 /* AnimeDetailView.swift in Sources */,
 				C795B56C2576952A009EC5E8 /* CRReducer.swift in Sources */,
@@ -776,15 +789,17 @@
 				C783F8E2257CBACC001EB646 /* MALSyncReducer.swift in Sources */,
 				C73CB102258BB1ED006A0C9C /* TextSheetView.swift in Sources */,
 				C795B54E25769529009EC5E8 /* AppState.swift in Sources */,
+				C7EC6AA326A3F8A60097A6E5 /* ContentView.swift in Sources */,
 				C795B46525769398009EC5E8 /* HomeView.swift in Sources */,
 				C790923B2592329100D93670 /* CRSearchResult.swift in Sources */,
 				C795B55A25769529009EC5E8 /* CRState.swift in Sources */,
 				C795B54B25769529009EC5E8 /* PlayerItem.swift in Sources */,
+				C7EC6AA626A3F96E0097A6E5 /* ToolbarTabView.swift in Sources */,
 				C795B5752576952A009EC5E8 /* JikanCRReducer.swift in Sources */,
 				C795B5662576952A009EC5E8 /* CRActions.swift in Sources */,
-				C795B46825769398009EC5E8 /* MainTabView.swift in Sources */,
 				C795B5722576952A009EC5E8 /* JikanReducer.swift in Sources */,
 				C795B46225769398009EC5E8 /* AnimeEpisodeListView.swift in Sources */,
+				C7FF052826A8437700ABC0EC /* ImageTextItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,6 +823,7 @@
 				C75EBBDD2588F55300754DC6 /* NavigationViewIOS.swift in Sources */,
 				C795B5B225769838009EC5E8 /* AnimeEpisodeListView.swift in Sources */,
 				C795B5B125769838009EC5E8 /* AppReducer.swift in Sources */,
+				C7EC6AA426A3F8A60097A6E5 /* ContentView.swift in Sources */,
 				C795B5B925769838009EC5E8 /* JikanReducer.swift in Sources */,
 				C7BC4C8F257BCD9B00EEBAFC /* MALSyncActions.swift in Sources */,
 				C795B5B625769838009EC5E8 /* JikanActions.swift in Sources */,
@@ -1044,6 +1060,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MyAnimeList (macOS).entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1073,6 +1090,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MyAnimeList (macOS).entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
