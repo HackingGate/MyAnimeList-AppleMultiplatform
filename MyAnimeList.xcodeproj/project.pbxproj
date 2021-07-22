@@ -166,9 +166,7 @@
 /* Begin PBXFileReference section */
 		C704B1492581077D005C1B66 /* ImageTextItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextItem.swift; sourceTree = "<group>"; };
 		C704B14E258107AE005C1B66 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
-		C7387FA425793A1100EDC0B8 /* MyAnimeList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAnimeList.entitlements; sourceTree = "<group>"; };
 		C73CB100258BB1ED006A0C9C /* TextSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSheetView.swift; sourceTree = "<group>"; };
-		C73E0BAF26A47368002B0C2B /* MyAnimeList (macOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyAnimeList (macOS).entitlements"; sourceTree = "<group>"; };
 		C75EBBDA2588F55300754DC6 /* NavigationViewIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewIOS.swift; sourceTree = "<group>"; };
 		C77CDE8A25864A5700DD1FFC /* CommonImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonImageSize.swift; sourceTree = "<group>"; };
 		C783F8E0257CBACC001EB646 /* MALSyncReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MALSyncReducer.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 		C795B3F62576922D009EC5E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C795B3FB2576922D009EC5E8 /* MyAnimeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAnimeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C795B4032576922D009EC5E8 /* MyAnimeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAnimeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C795B4062576922D009EC5E8 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		C795B45525769398009EC5E8 /* FullscreenVideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenVideoPlayer.swift; sourceTree = "<group>"; };
 		C795B45625769398009EC5E8 /* AnimeEpisodeListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeEpisodeListView.swift; sourceTree = "<group>"; };
 		C795B45825769398009EC5E8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -212,6 +209,8 @@
 		C7BC4CAB257BD17200EEBAFC /* MALSyncSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MALSyncSwift; sourceTree = "<group>"; };
 		C7C5FD5026A84AFD00153D61 /* MyAnimeList (macOS) UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyAnimeList (macOS) UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C5FD5226A84AFD00153D61 /* MyAnimeList__macOS__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeList__macOS__UITests.swift; sourceTree = "<group>"; };
+		C7C93C8F26A90B3D007A86B3 /* MyAnimeList (macOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyAnimeList (macOS).entitlements"; sourceTree = "<group>"; };
+		C7C93C9026A90B9C007A86B3 /* MyAnimeList (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyAnimeList (iOS).entitlements"; sourceTree = "<group>"; };
 		C7CB5D0B26A0894E001590E3 /* MyAnimeList (iOS) UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyAnimeList (iOS) UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CB5D0D26A0894E001590E3 /* MyAnimeList__iOS__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeList__iOS__UITests.swift; sourceTree = "<group>"; };
 		C7CB5D1826A0896B001590E3 /* MyAnimeList (tvOS) UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyAnimeList (tvOS) UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,7 +288,7 @@
 		C7387FAE25793B2F00EDC0B8 /* Mac Catalyst */ = {
 			isa = PBXGroup;
 			children = (
-				C7387FA425793A1100EDC0B8 /* MyAnimeList.entitlements */,
+				C7C93C9026A90B9C007A86B3 /* MyAnimeList (iOS).entitlements */,
 			);
 			path = "Mac Catalyst";
 			sourceTree = "<group>";
@@ -315,7 +314,6 @@
 		C795B3EE2576922C009EC5E8 = {
 			isa = PBXGroup;
 			children = (
-				C73E0BAF26A47368002B0C2B /* MyAnimeList (macOS).entitlements */,
 				C7A39699257BA95D000EB209 /* README.md */,
 				C795B3F32576922D009EC5E8 /* Shared */,
 				C795B3FD2576922D009EC5E8 /* iOS */,
@@ -368,7 +366,7 @@
 		C795B4042576922D009EC5E8 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				C795B4062576922D009EC5E8 /* macOS.entitlements */,
+				C7C93C8F26A90B3D007A86B3 /* MyAnimeList (macOS).entitlements */,
 				C7EC6AA526A3F96E0097A6E5 /* ToolbarTabView.swift */,
 			);
 			path = macOS;
@@ -1053,11 +1051,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "iOS/Mac Catalyst/MyAnimeList.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "iOS/Mac Catalyst/MyAnimeList (iOS).entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1086,11 +1085,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "iOS/Mac Catalyst/MyAnimeList.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "iOS/Mac Catalyst/MyAnimeList (iOS).entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1120,7 +1120,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "MyAnimeList (macOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS/MyAnimeList (macOS).entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1150,7 +1150,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "MyAnimeList (macOS).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "macOS/MyAnimeList (macOS).entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
