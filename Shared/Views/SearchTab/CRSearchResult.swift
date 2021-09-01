@@ -20,7 +20,7 @@ struct CRSearchResult: View {
         VStack(alignment: .leading) {
             ForEach(result) { series in
                 #if os(iOS)
-                NavigationLink(destination: CRCollectionView(series: $selectedSeries).environmentObject(store), isActive: $isShowingDetailView) {
+                NavigationLink(destination: CRCollectionView(series: selectedSeries).environmentObject(store), isActive: $isShowingDetailView) {
                     EmptyView()
                 }
                 #endif

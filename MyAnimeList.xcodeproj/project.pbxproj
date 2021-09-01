@@ -382,6 +382,7 @@
 				C795B45D25769398009EC5E8 /* AnimeDetailView.swift */,
 				C7AD2EC2258BA181008804A2 /* AnimeInformationView.swift */,
 				C73CB100258BB1ED006A0C9C /* TextSheetView.swift */,
+				C790924325923A7900D93670 /* CRCollectionView.swift */,
 				C795B45625769398009EC5E8 /* AnimeEpisodeListView.swift */,
 				C795B45525769398009EC5E8 /* FullscreenVideoPlayer.swift */,
 			);
@@ -401,7 +402,6 @@
 			children = (
 				C795B45C25769398009EC5E8 /* SearchView.swift */,
 				C79092392592329100D93670 /* CRSearchResult.swift */,
-				C790924325923A7900D93670 /* CRCollectionView.swift */,
 			);
 			path = SearchTab;
 			sourceTree = "<group>";
