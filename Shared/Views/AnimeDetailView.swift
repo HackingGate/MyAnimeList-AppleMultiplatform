@@ -113,6 +113,12 @@ struct AnimeDetailView: View {
                         CRCollectionView(series: crSeries).environmentObject(store)
                     } else if let crURLLastPathComponet = malSyncCRURLLastPathComponent[malSyncCR.id] {
                         // 1
+                        // TODO: unable to autocomplete some keywords
+                        // Example:
+                        // `curl https://api.malsync.moe/mal/anime/9253 | jq`
+                        // URL is http://www.crunchyroll.com/steinsgate
+                        // Unable to autocomplete "steinsgate"
+                        // But keyword Steins;Gate works
                         Text("Finding \"\(malSyncCR.title)\"")
                             .onAppear {
                                 if let session = store.state.crState.session {
