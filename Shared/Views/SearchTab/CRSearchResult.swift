@@ -51,7 +51,7 @@ struct CRSearchResult: View {
                 }
                 #if os(tvOS)
                 .sheet(isPresented: $isShowingDetailView) {
-                    CRCollectionView(series: $selectedSeries).environmentObject(store)
+                    CRCollectionView(series: selectedSeries).environmentObject(store)
                 }
                 #endif
                 .buttonStyle(PlainButtonStyle())
