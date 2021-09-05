@@ -12,7 +12,7 @@ import CrunchyrollSwift
 struct CRCollectionView: View {
     @EnvironmentObject private var store: Store<AppState>
 
-    @Binding var series: CRAPISeries?
+    var series: CRAPISeries?
 
     private var crCollections: [CRAPICollection]? {
         if let series = series, let seriesId = Int(series.id), let collections = store.state.crState.series[seriesId] {
