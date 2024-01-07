@@ -38,7 +38,7 @@ struct AnimeInformationView: View {
             }
         }
         Spacer()
-        if let imageURL = URL(string: animeDetail.imageURL) {
+        if let imageURL = URL(string: animeDetail.images.webp.imageURL) {
             KFImage(imageURL)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
