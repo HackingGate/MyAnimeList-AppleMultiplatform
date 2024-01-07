@@ -32,6 +32,10 @@ package_iOS() {
     popd
 }
 
+package_tvOS() {
+    package_iOS()
+}
+
 package_macOS() {
     pushd "${TMPDIR}"
     
