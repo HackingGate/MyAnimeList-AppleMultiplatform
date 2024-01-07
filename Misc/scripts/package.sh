@@ -33,7 +33,7 @@ package_iOS() {
 }
 
 package_tvOS() {
-    package_iOS()
+    package_iOS
 }
 
 package_macOS() {
