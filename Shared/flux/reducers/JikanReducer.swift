@@ -15,28 +15,18 @@ func jikanStateReducer(state: JikanState, action: Action) -> JikanState {
         state.animes[action.malID] = action.response
     case let action as JikanActions.SetTop:
         if action.page == 1 {
-            switch action.subtype {
-            case .airing:
-                state.topAiring = action.response
-            case .upcoming:
-                state.topUpcoming = action.response
-            case .tv:
-                state.topTv = action.response
-            case .movie:
-                state.topMovie = action.response
-            case .ova:
-                state.topOva = action.response
-            case .special:
-                state.topSpecial = action.response
-            case .bypopularity:
-                state.topBypopularity = action.response
-            case .favorite:
-                state.topFavorite = action.response
-            default:
-                fatalError("Unsupported subtype")
-            }
-            if action.subtype == .airing {
-                state.topAiring = action.response
+            if action.filter == .airing {
+                if action.type == .tv {
+                    state.topAnimeTvAiring = action.response
+                } else if action.type == .movie {
+                    state.topAnimeMovieAiring = action.response
+                }
+            } else if action.filter == .bypopularity {
+                if action.type == .tv {
+                    state.topAnimeTvBypopularity = action.response
+                } else if action.type == .movie {
+                    state.topAnimeMovieBypopularity = action.response
+                }
             }
         } else {
             // TODO: append

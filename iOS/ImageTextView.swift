@@ -51,7 +51,7 @@ struct ImageTextView<D: Codable, Content: View>: View {
 
     private var imageURL: String? {
         if let anime = data as? JikanAPIAnime {
-            return anime.imageURL
+            return anime.images.webp.imageURL
         }
         if let episode = data as? CRAPIMedia {
             return episode.screenshotImage?.fwideUrl
