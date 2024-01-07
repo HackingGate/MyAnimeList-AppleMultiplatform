@@ -24,7 +24,7 @@ jobs:
       with:
         xcode-version: latest-stable
     - name: Build ${{ matrix.platform }}
-      run: xcodebuild -workspace "MyAnimeList.xcodeproj" -scheme MyAnimeList -configuration Release -destination generic/platform=${{ matrix.platform }} archive -archivePath "build/MyAnimeList.${{ matrix.platform }}.xcarchive" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      run: xcodebuild -project "MyAnimeList.xcodeproj" -scheme MyAnimeList-${{ matrix.platform }} -configuration Release -destination generic/platform=${{ matrix.platform }} archive -archivePath "build/MyAnimeList.${{ matrix.platform }}.xcarchive" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     - name: Package ${{ matrix.platform }}
       run: ./Misc/scripts/package.sh "build/MyAnimeList.${{ matrix.platform }}.xcarchive" ${{ matrix.platform }} "MyAnimeList.${{ steps.commitinfo.outputs.sha_short }}.${{ matrix.platform }}"
     - name: Upload ${{ matrix.platform }} Symbols
